@@ -1,0 +1,25 @@
+// Re-export only the icons used across the site.
+// Named imports from lucide-react tree-shake correctly in production builds.
+export {
+  ArrowRight,
+  ChevronDown,
+  ChevronRight,
+  Clipboard,
+  Code2,
+  CodeXml,
+  Download,
+  FileSpreadsheet,
+  Globe,
+  Keyboard,
+  Menu,
+  MessageCircle,
+  Monitor,
+  Palette,
+  Play,
+  Search,
+  ShieldCheck,
+  Smartphone,
+  Terminal,
+  X,
+  Zap,
+} from 'lucide-react'

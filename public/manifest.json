@@ -1,0 +1,21 @@
+{
+  "name": "KeyShortcut",
+  "short_name": "KeyShortcut",
+  "description": "macOS keyboard shortcuts in a beautiful floating panel. Always visible, never in the way.",
+  "start_url": "/",
+  "display": "browser",
+  "theme_color": "#022D24",
+  "background_color": "#022D24",
+  "icons": [
+    {
+      "src": "/images/app-icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/app-icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

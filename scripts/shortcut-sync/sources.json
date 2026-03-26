@@ -1,0 +1,808 @@
+{
+  "version": 2,
+  "apps": {
+    "1password": {
+      "displayName": "1Password",
+      "tier": 2,
+      "sources": {
+        "macos": { "url": "https://support.1password.com/keyboard-shortcuts/", "parser": "ai-extract", "platformFilter": "mac" }
+      }
+    },
+    "acrobat": {
+      "displayName": "Acrobat",
+      "tier": 3,
+      "sources": {
+        "macos": { "url": "https://helpx.adobe.com/express/web/get-started/keyboard-shortcuts.html", "parser": "ai-extract", "platformFilter": "mac" },
+        "windows": { "url": "https://helpx.adobe.com/express/web/get-started/keyboard-shortcuts.html", "parser": "ai-extract", "platformFilter": "windows" }
+      }
+    },
+    "adobe-xd": {
+      "displayName": "Adobe XD",
+      "tier": 3,
+      "sources": {
+        "macos": { "url": "https://helpx.adobe.com/acrobat/desktop/get-started/preferences-and-settings/keyboard-shortcuts.html", "parser": "ai-extract", "platformFilter": "mac" },
+        "windows": { "url": "https://helpx.adobe.com/acrobat/desktop/get-started/preferences-and-settings/keyboard-shortcuts.html", "parser": "ai-extract", "platformFilter": "windows" }
+      }
+    },
+    "after-effects": {
+      "displayName": "After Effects",
+      "tier": 3,
+      "sources": {
+        "macos": { "url": "https://helpx.adobe.com/after-effects/using/keyboard-shortcuts-reference.html", "parser": "ai-extract", "platformFilter": "mac" }
+      }
+    },
+    "android-studio": {
+      "displayName": "Android Studio",
+      "tier": 3,
+      "sources": {
+        "macos": { "url": "https://developer.android.com/studio/intro/keyboard-shortcuts", "parser": "ai-extract", "platformFilter": "mac" }
+      }
+    },
+    "arc": {
+      "displayName": "Arc",
+      "tier": 2,
+      "sources": {
+        "macos": { "url": "https://resources.arc.net/hc/en-us/articles/20595231349911-Keyboard-Shortcuts", "parser": "ai-extract" }
+      }
+    },
+    "asana": {
+      "displayName": "Asana",
+      "tier": 3,
+      "sources": {
+        "macos": { "url": "https://asana.com/guide/help/faq/shortcuts", "parser": "ai-extract" }
+      }
+    },
+    "bear": {
+      "displayName": "Bear",
+      "tier": 3,
+      "sources": {
+        "macos": { "url": "https://bear.app/faq/mac-keyboard-shortcuts/", "parser": "ai-extract" }
+      }
+    },
+    "blender": {
+      "displayName": "Blender",
+      "tier": 2,
+      "sources": {
+        "macos": { "url": "https://docs.blender.org/manual/en/2.80/interface/keymap/introduction.html", "parser": "ai-extract" },
+        "linux": { "url": "https://docs.blender.org/manual/en/2.80/interface/keymap/introduction.html", "parser": "ai-extract" }
+      }
+    },
+    "brave": {
+      "displayName": "Brave",
+      "tier": 2,
+      "sources": {
+        "macos": { "url": "https://support.brave.app/hc/en-us/articles/360032272171-What-keyboard-shortcuts-can-I-use-in-Brave", "parser": "ai-extract" }
+      }
+    },
+    "calendar": {
+      "displayName": "Calendar",
+      "tier": 3,
+      "sources": {
+        "macos": { "url": "https://support.apple.com/guide/calendar/keyboard-shortcuts-icld0006/mac", "parser": "ai-extract" }
+      }
+    },
+    "canva": {
+      "displayName": "Canva",
+      "tier": 2,
+      "sources": {
+        "macos": { "url": "https://www.canva.com/help/canva-keyboard-shortcuts/", "parser": "ai-extract", "platformFilter": "mac" },
+        "windows": { "url": "https://www.canva.com/help/canva-keyboard-shortcuts/", "parser": "ai-extract", "platformFilter": "windows" }
+      }
+    },
+    "chrome": {
+      "displayName": "Chrome",
+      "tier": 1,
+      "sources": {
+        "macos": { "url": "https://support.google.com/chrome/answer/157179", "parser": "html-table", "platformFilter": "mac" },
+        "windows": { "url": "https://support.google.com/chrome/answer/157179", "parser": "html-table", "platformFilter": "windows" },
+        "linux": { "url": "https://support.google.com/chrome/answer/157179", "parser": "html-table", "platformFilter": "linux" }
+      }
+    },
+    "chrome-devtools": {
+      "displayName": "Chrome DevTools",
+      "tier": 2,
+      "sources": {
+        "macos": { "url": "https://developer.chrome.com/docs/devtools/shortcuts", "parser": "ai-extract", "platformFilter": "mac" }
+      }
+    },
+    "clickup": {
+      "displayName": "ClickUp",
+      "tier": 3,
+      "sources": {
+        "macos": { "url": "https://help.clickup.com/hc/en-us/articles/6309030550167-Use-keyboard-shortcuts", "parser": "ai-extract", "platformFilter": "mac" },
+        "windows": { "url": "https://help.clickup.com/hc/en-us/articles/6309030550167-Use-keyboard-shortcuts", "parser": "ai-extract", "platformFilter": "windows" }
+      }
+    },
+    "clion": {
+      "displayName": "CLion",
+      "tier": 3,
+      "sources": {
+        "macos": { "url": "https://www.jetbrains.com/help/clion/mastering-keyboard-shortcuts.html", "parser": "ai-extract", "platformFilter": "mac" }
+      }
+    },
+    "confluence": {
+      "displayName": "Confluence",
+      "tier": 3,
+      "sources": {
+        "macos": { "url": "https://support.atlassian.com/confluence-cloud/docs/keyboard-shortcuts-markdown-and-autocomplete/", "parser": "ai-extract", "platformFilter": "mac" },
+        "windows": { "url": "https://support.atlassian.com/confluence-cloud/docs/keyboard-shortcuts-markdown-and-autocomplete/", "parser": "ai-extract", "platformFilter": "windows" }
+      }
+    },
+    "cursor": {
+      "displayName": "Cursor",
+      "tier": 2,
+      "sources": {
+        "macos": { "url": "https://docs.cursor.com/get-started/keybindings", "parser": "ai-extract" }
+      }
+    },
+    "datagrip": {
+      "displayName": "DataGrip",
+      "tier": 3,
+      "sources": {
+        "macos": { "url": "https://www.jetbrains.com/help/datagrip/mastering-keyboard-shortcuts.html", "parser": "ai-extract", "platformFilter": "mac" },
+        "windows": { "url": "https://www.jetbrains.com/help/datagrip/mastering-keyboard-shortcuts.html", "parser": "ai-extract", "platformFilter": "windows" }
+      }
+    },
+    "dataspell": {
+      "displayName": "DataSpell",
+      "tier": 3,
+      "sources": {
+        "macos": { "url": "https://www.jetbrains.com/help/dataspell/mastering-keyboard-shortcuts.html", "parser": "ai-extract", "platformFilter": "mac" },
+        "windows": { "url": "https://www.jetbrains.com/help/dataspell/mastering-keyboard-shortcuts.html", "parser": "ai-extract", "platformFilter": "windows" }
+      }
+    },
+    "davinci-resolve": {
+      "displayName": "DaVinci Resolve",
+      "tier": 3,
+      "sources": {
+        "macos": { "url": "https://documents.blackmagicdesign.com/UserManuals/DaVinci-Resolve-Keyboard-Shortcuts.pdf", "parser": "manual", "notes": "PDF reference — manual extraction" }
+      }
+    },
+    "dbeaver": {
+      "displayName": "DBeaver",
+      "tier": 3,
+      "sources": {
+        "macos": { "url": "https://dbeaver.com/docs/dbeaver/Shortcuts/", "parser": "ai-extract" },
+        "windows": { "url": "https://dbeaver.com/docs/dbeaver/Shortcuts/", "parser": "ai-extract" }
+      }
+    },
+    "discord": {
+      "displayName": "Discord",
+      "tier": 2,
+      "sources": {
+        "macos": { "url": "https://support.discord.com/hc/en-us/articles/31232432266647-Discord-Commands-Shortcuts-and-Navigation-Guide", "parser": "ai-extract", "platformFilter": "mac" },
+        "windows": { "url": "https://support.discord.com/hc/en-us/articles/31232432266647-Discord-Commands-Shortcuts-and-Navigation-Guide", "parser": "ai-extract", "platformFilter": "windows" },
+        "linux": { "url": "https://support.discord.com/hc/en-us/articles/31232432266647-Discord-Commands-Shortcuts-and-Navigation-Guide", "parser": "ai-extract", "platformFilter": "linux" }
+      }
+    },
+    "eclipse": {
+      "displayName": "Eclipse",
+      "tier": 3,
+      "sources": {
+        "macos": { "url": "https://www.eclipse.org/getting_started/content/eclipse-ide-keybindings.pdf", "parser": "manual", "notes": "PDF reference" }
+      }
+    },
+    "edge": {
+      "displayName": "Edge",
+      "tier": 2,
+      "sources": {
+        "macos": { "url": "https://support.microsoft.com/en-us/microsoft-edge/keyboard-shortcuts-in-microsoft-edge-50d3edab-30d9-c7e4-21ce-37fe2713cfad", "parser": "ai-extract", "platformFilter": "mac" }
+      }
+    },
+    "emacs": {
+      "displayName": "GNU Emacs",
+      "tier": 3,
+      "sources": {
+        "macos": { "url": "https://www.gnu.org/software/emacs/refcards/pdf/refcard.pdf", "parser": "ai-extract" }
+      }
+    },
+    "excel": {
+      "displayName": "Excel",
+      "tier": 2,
+      "sources": {
+        "macos": { "url": "https://support.microsoft.com/en-us/office/keyboard-shortcuts-in-excel-1798d9d5-842a-42b8-9c99-9b7213f0040f", "parser": "ai-extract", "platformFilter": "mac" },
+        "windows": { "url": "https://support.microsoft.com/en-us/office/keyboard-shortcuts-in-excel-1798d9d5-842a-42b8-9c99-9b7213f0040f", "parser": "ai-extract", "platformFilter": "windows" }
+      }
+    },
+    "figma": {
+      "displayName": "Figma",
+      "tier": 1,
+      "sources": {
+        "macos": { "url": "https://help.figma.com/hc/en-us/articles/360040328653-Use-keyboard-shortcuts", "parser": "ai-extract", "platformFilter": "mac" },
+        "windows": { "url": "https://help.figma.com/hc/en-us/articles/360040328653-Use-keyboard-shortcuts", "parser": "ai-extract", "platformFilter": "windows" },
+        "linux": { "url": "https://help.figma.com/hc/en-us/articles/360040328653-Use-keyboard-shortcuts", "parser": "ai-extract", "platformFilter": "linux" }
+      }
+    },
+    "final-cut-pro": {
+      "displayName": "Final Cut Pro",
+      "tier": 3,
+      "sources": {
+        "macos": { "url": "https://support.apple.com/guide/final-cut-pro/keyboard-shortcuts-ver90ba5929/mac", "parser": "ai-extract" }
+      }
+    },
+    "firefox": {
+      "displayName": "Firefox",
+      "tier": 1,
+      "sources": {
+        "macos": { "url": "https://support.mozilla.org/en-US/kb/keyboard-shortcuts-perform-firefox-tasks-quickly", "parser": "ai-extract", "platformFilter": "mac" },
+        "windows": { "url": "https://support.mozilla.org/en-US/kb/keyboard-shortcuts-perform-firefox-tasks-quickly", "parser": "ai-extract", "platformFilter": "windows" },
+        "linux": { "url": "https://support.mozilla.org/en-US/kb/keyboard-shortcuts-perform-firefox-tasks-quickly", "parser": "ai-extract", "platformFilter": "linux" }
+      }
+    },
+    "gimp": {
+      "displayName": "GIMP",
+      "tier": 3,
+      "parser": "manual",
+      "notes": "PDF reference — manual extraction"
+    },
+    "github": {
+      "displayName": "GitHub",
+      "tier": 2,
+      "sources": {
+        "macos": { "url": "https://docs.github.com/en/get-started/accessibility/keyboard-shortcuts", "parser": "ai-extract" }
+      }
+    },
+    "gitlab": {
+      "displayName": "GitLab",
+      "tier": 3,
+      "sources": {
+        "macos": { "url": "https://docs.gitlab.com/ee/user/shortcuts.html", "parser": "ai-extract" },
+        "windows": { "url": "https://docs.gitlab.com/ee/user/shortcuts.html", "parser": "ai-extract" }
+      }
+    },
+    "gmail": {
+      "displayName": "Gmail",
+      "tier": 2,
+      "sources": {
+        "macos": { "url": "https://support.google.com/mail/answer/6594?hl=en&co=GENIE.Platform%3DDesktop", "parser": "html-table" }
+      }
+    },
+    "godot": {
+      "displayName": "Godot Engine",
+      "tier": 3,
+      "sources": {
+        "macos": { "url": "https://docs.godotengine.org/en/stable/tutorials/editor/default_key_mapping.html", "parser": "ai-extract" },
+        "windows": { "url": "https://docs.godotengine.org/en/stable/tutorials/editor/default_key_mapping.html", "parser": "ai-extract" }
+      }
+    },
+    "goland": {
+      "displayName": "GoLand",
+      "tier": 3,
+      "sources": {
+        "macos": { "url": "https://www.jetbrains.com/help/go/mastering-keyboard-shortcuts.html", "parser": "ai-extract", "platformFilter": "mac" }
+      }
+    },
+    "google-docs": {
+      "displayName": "Google Docs",
+      "tier": 2,
+      "sources": {
+        "macos": { "url": "https://support.google.com/docs/answer/179738?hl=en&co=GENIE.Platform%3DDesktop", "parser": "html-table", "platformFilter": "mac" }
+      }
+    },
+    "google-drive": {
+      "displayName": "Google Drive",
+      "tier": 3,
+      "sources": {
+        "macos": { "url": "https://support.google.com/drive/answer/2563044?hl=en&co=GENIE.Platform%3DDesktop", "parser": "html-table" }
+      }
+    },
+    "google-sheets": {
+      "displayName": "Google Sheets",
+      "tier": 2,
+      "sources": {
+        "macos": { "url": "https://support.google.com/docs/answer/181110?hl=en&co=GENIE.Platform%3DDesktop", "parser": "html-table", "platformFilter": "mac" }
+      }
+    },
+    "illustrator": {
+      "displayName": "Illustrator",
+      "tier": 3,
+      "sources": {
+        "macos": { "url": "https://helpx.adobe.com/illustrator/using/default-keyboard-shortcuts.html", "parser": "ai-extract", "platformFilter": "mac" }
+      }
+    },
+    "inkscape": {
+      "displayName": "Inkscape",
+      "tier": 3,
+      "sources": {
+        "macos": { "url": "https://inkscape.org/doc/keys.html", "parser": "ai-extract" },
+        "windows": { "url": "https://inkscape.org/doc/keys.html", "parser": "ai-extract" }
+      }
+    },
+    "insomnia": {
+      "displayName": "Insomnia",
+      "tier": 3,
+      "sources": {
+        "macos": { "url": "https://developer.konghq.com/insomnia/keyboard-shortcuts/", "parser": "ai-extract", "platformFilter": "mac" },
+        "windows": { "url": "https://developer.konghq.com/insomnia/keyboard-shortcuts/", "parser": "ai-extract", "platformFilter": "windows" }
+      }
+    },
+    "intellij": {
+      "displayName": "IntelliJ IDEA",
+      "tier": 2,
+      "sources": {
+        "macos": { "url": "https://www.jetbrains.com/help/idea/mastering-keyboard-shortcuts.html", "parser": "ai-extract", "platformFilter": "mac" }
+      }
+    },
+    "iterm": {
+      "displayName": "iTerm2",
+      "tier": 3,
+      "sources": {
+        "macos": { "url": "https://iterm2.com/documentation-one-page.html", "parser": "ai-extract" }
+      }
+    },
+    "jira": {
+      "displayName": "Jira",
+      "tier": 2,
+      "sources": {
+        "macos": { "url": "https://support.atlassian.com/jira-software-cloud/docs/use-keyboard-shortcuts/", "parser": "ai-extract" }
+      }
+    },
+    "jira-align": {
+      "displayName": "Jira Align",
+      "tier": 3,
+      "sources": {
+        "macos": { "url": "https://support.atlassian.com/jira-align/kb/jira-align-keyboards-accessibility/", "parser": "ai-extract" },
+        "windows": { "url": "https://support.atlassian.com/jira-align/kb/jira-align-keyboards-accessibility/", "parser": "ai-extract" }
+      }
+    },
+    "jupyter": {
+      "displayName": "Jupyter Notebook",
+      "tier": 3,
+      "sources": {
+        "macos": { "url": "https://jupyter-notebook.readthedocs.io/en/stable/examples/Notebook/Notebook%20Basics.html", "parser": "ai-extract" },
+        "windows": { "url": "https://jupyter-notebook.readthedocs.io/en/stable/examples/Notebook/Notebook%20Basics.html", "parser": "ai-extract" }
+      }
+    },
+    "keynote": {
+      "displayName": "Keynote",
+      "tier": 3,
+      "sources": {
+        "macos": { "url": "https://support.apple.com/guide/keynote/keyboard-shortcuts-tan23178f7ff/mac", "parser": "ai-extract" }
+      }
+    },
+    "labview": {
+      "displayName": "LabVIEW",
+      "tier": 3,
+      "sources": {
+        "windows": { "url": "https://labviewwiki.org/wiki/Keyboard_shortcut", "parser": "ai-extract" }
+      }
+    },
+    "linux": {
+      "displayName": "Linux Desktop",
+      "tier": 3,
+      "sources": {
+        "linux": { "url": "https://help.ubuntu.com/stable/ubuntu-help/shell-keyboard-shortcuts.html.en", "parser": "ai-extract" }
+      }
+    },
+    "macos": {
+      "displayName": "macOS",
+      "tier": 2,
+      "sources": {
+        "macos": { "url": "https://support.apple.com/en-us/102650", "parser": "ai-extract" }
+      }
+    },
+    "mail": {
+      "displayName": "Mail",
+      "tier": 3,
+      "sources": {
+        "macos": { "url": "https://support.apple.com/guide/mail/keyboard-shortcuts-mlhlp1236/mac", "parser": "ai-extract" }
+      }
+    },
+    "matlab": {
+      "displayName": "MATLAB",
+      "tier": 3,
+      "sources": {
+        "macos": { "url": "https://www.mathworks.com/help/matlab/matlab_env/accessibility-use-keyboard-shortcuts-to-navigate-matlab.html", "parser": "ai-extract", "platformFilter": "mac" },
+        "windows": { "url": "https://www.mathworks.com/help/matlab/matlab_env/accessibility-use-keyboard-shortcuts-to-navigate-matlab.html", "parser": "ai-extract", "platformFilter": "windows" }
+      }
+    },
+    "maya": {
+      "displayName": "Maya",
+      "tier": 3,
+      "sources": {
+        "macos": { "url": "https://help.autodesk.com/view/MAYAUL/2024/ENU/?guid=GUID-D1D50B5A-CEF0-4C40-A820-4F1E0A7B2E28", "parser": "ai-extract" },
+        "windows": { "url": "https://help.autodesk.com/view/MAYAUL/2024/ENU/?guid=GUID-D1D50B5A-CEF0-4C40-A820-4F1E0A7B2E28", "parser": "ai-extract" }
+      }
+    },
+    "messages": {
+      "displayName": "Messages",
+      "tier": 3,
+      "sources": {
+        "macos": { "url": "https://support.apple.com/guide/messages/keyboard-shortcuts-icht6e1c49/mac", "parser": "ai-extract" }
+      }
+    },
+    "minitab": {
+      "displayName": "Minitab",
+      "tier": 3,
+      "sources": {
+        "windows": { "url": "https://support.minitab.com/en-us/minitab/help-and-how-to/minitab-environment/interface/interface-components/shortcut-keys/", "parser": "ai-extract" }
+      }
+    },
+    "music": {
+      "displayName": "Music",
+      "tier": 3,
+      "sources": {
+        "macos": { "url": "https://support.apple.com/guide/music/keyboard-shortcuts-mus1019/mac", "parser": "ai-extract" }
+      }
+    },
+    "notes": {
+      "displayName": "Notes",
+      "tier": 3,
+      "sources": {
+        "macos": { "url": "https://support.apple.com/guide/notes/keyboard-shortcuts-apd27e401f39/mac", "parser": "ai-extract" }
+      }
+    },
+    "notion": {
+      "displayName": "Notion",
+      "tier": 1,
+      "sources": {
+        "macos": { "url": "https://www.notion.so/help/keyboard-shortcuts", "parser": "ai-extract", "platformFilter": "mac" },
+        "windows": { "url": "https://www.notion.so/help/keyboard-shortcuts", "parser": "ai-extract", "platformFilter": "windows" },
+        "linux": { "url": "https://www.notion.so/help/keyboard-shortcuts", "parser": "ai-extract", "platformFilter": "linux" }
+      }
+    },
+    "numbers": {
+      "displayName": "Numbers",
+      "tier": 3,
+      "sources": {
+        "macos": { "url": "https://support.apple.com/guide/numbers/keyboard-shortcuts-tan23178f7ff/mac", "parser": "ai-extract" }
+      }
+    },
+    "obsidian": {
+      "displayName": "Obsidian",
+      "tier": 2,
+      "sources": {
+        "macos": { "url": "https://help.obsidian.md/User+interface/Hotkeys", "parser": "ai-extract" }
+      }
+    },
+    "opera": {
+      "displayName": "Opera",
+      "tier": 3,
+      "sources": {
+        "macos": { "url": "https://help.opera.com/en/latest/browser-window/#keyboardShortcuts", "parser": "ai-extract" },
+        "windows": { "url": "https://help.opera.com/en/latest/browser-window/#keyboardShortcuts", "parser": "ai-extract" }
+      }
+    },
+    "pages": {
+      "displayName": "Pages",
+      "tier": 3,
+      "sources": {
+        "macos": { "url": "https://support.apple.com/guide/pages/keyboard-shortcuts-tanb91256f86/mac", "parser": "ai-extract" }
+      }
+    },
+    "photos": {
+      "displayName": "Photos",
+      "tier": 3,
+      "sources": {
+        "macos": { "url": "https://support.apple.com/guide/photos/keyboard-shortcuts-and-gestures-pht3a58a05d/mac", "parser": "ai-extract" }
+      }
+    },
+    "photoshop": {
+      "displayName": "Photoshop",
+      "tier": 2,
+      "sources": {
+        "macos": { "url": "https://helpx.adobe.com/photoshop/web/get-set-up/preferences-and-settings/keyboard-shortcuts.html", "parser": "ai-extract", "platformFilter": "mac" },
+        "windows": { "url": "https://helpx.adobe.com/photoshop/web/get-set-up/preferences-and-settings/keyboard-shortcuts.html", "parser": "ai-extract", "platformFilter": "windows" }
+      }
+    },
+    "phpstorm": {
+      "displayName": "PHPStorm",
+      "tier": 3,
+      "sources": {
+        "macos": { "url": "https://www.jetbrains.com/help/phpstorm/mastering-keyboard-shortcuts.html", "parser": "ai-extract", "platformFilter": "mac" }
+      }
+    },
+    "postman": {
+      "displayName": "Postman",
+      "tier": 3,
+      "sources": {
+        "macos": { "url": "https://learning.postman.com/docs/getting-started/basics/navigating-postman/#keyboard-shortcuts", "parser": "ai-extract" },
+        "windows": { "url": "https://learning.postman.com/docs/getting-started/basics/navigating-postman/#keyboard-shortcuts", "parser": "ai-extract" }
+      }
+    },
+    "powerpoint": {
+      "displayName": "PowerPoint",
+      "tier": 2,
+      "sources": {
+        "macos": { "url": "https://support.microsoft.com/en-us/office/use-keyboard-shortcuts-to-create-powerpoint-presentations-ebb3d20e-dcd4-444f-a38e-bb5c5ed180f4", "parser": "ai-extract", "platformFilter": "mac" },
+        "windows": { "url": "https://support.microsoft.com/en-us/office/use-keyboard-shortcuts-to-create-powerpoint-presentations-ebb3d20e-dcd4-444f-a38e-bb5c5ed180f4", "parser": "ai-extract", "platformFilter": "windows" }
+      }
+    },
+    "premiere-pro": {
+      "displayName": "Premiere Pro",
+      "tier": 3,
+      "sources": {
+        "macos": { "url": "https://helpx.adobe.com/premiere/desktop/get-started/keyboard-shortcuts/default-keyboard-shortcuts.html", "parser": "ai-extract", "platformFilter": "mac" },
+        "windows": { "url": "https://helpx.adobe.com/premiere/desktop/get-started/keyboard-shortcuts/default-keyboard-shortcuts.html", "parser": "ai-extract", "platformFilter": "windows" }
+      }
+    },
+    "preview": {
+      "displayName": "Preview",
+      "tier": 3,
+      "sources": {
+        "macos": { "url": "https://support.apple.com/guide/preview/keyboard-shortcuts-cpprvw003/mac", "parser": "ai-extract" }
+      }
+    },
+    "pycharm": {
+      "displayName": "PyCharm",
+      "tier": 2,
+      "sources": {
+        "macos": { "url": "https://www.jetbrains.com/help/pycharm/mastering-keyboard-shortcuts.html", "parser": "ai-extract", "platformFilter": "mac" }
+      }
+    },
+    "raycast": {
+      "displayName": "Raycast",
+      "tier": 2,
+      "sources": {
+        "macos": { "url": "https://manual.raycast.com/hotkey", "parser": "ai-extract" }
+      }
+    },
+    "reminders": {
+      "displayName": "Reminders",
+      "tier": 3,
+      "sources": {
+        "macos": { "url": "https://support.apple.com/guide/reminders/keyboard-shortcuts-rmndc0050/mac", "parser": "ai-extract" }
+      }
+    },
+    "rider": {
+      "displayName": "Rider",
+      "tier": 3,
+      "sources": {
+        "macos": { "url": "https://www.jetbrains.com/help/rider/mastering_keyboard_shortcuts.html#advanced-features", "parser": "ai-extract", "platformFilter": "mac" },
+        "windows": { "url": "https://www.jetbrains.com/help/rider/mastering_keyboard_shortcuts.html#advanced-features", "parser": "ai-extract", "platformFilter": "windows" }
+      }
+    },
+    "rstudio": {
+      "displayName": "RStudio",
+      "tier": 3,
+      "sources": {
+        "macos": { "url": "https://docs.posit.co/ide/user/ide/reference/shortcuts.html", "parser": "ai-extract" },
+        "windows": { "url": "https://docs.posit.co/ide/user/ide/reference/shortcuts.html", "parser": "ai-extract" }
+      }
+    },
+    "rubymine": {
+      "displayName": "RubyMine",
+      "tier": 3,
+      "sources": {
+        "macos": { "url": "https://www.jetbrains.com/help/ruby/mastering-keyboard-shortcuts.html", "parser": "ai-extract", "platformFilter": "mac" }
+      }
+    },
+    "safari": {
+      "displayName": "Safari",
+      "tier": 1,
+      "sources": {
+        "macos": { "url": "https://support.apple.com/guide/safari/keyboard-and-other-shortcuts-cpsh003/mac", "parser": "ai-extract" }
+      }
+    },
+    "sketch": {
+      "displayName": "Sketch",
+      "tier": 2,
+      "sources": {
+        "macos": { "url": "https://www.sketch.com/docs/shortcuts/", "parser": "ai-extract" }
+      }
+    },
+    "slack": {
+      "displayName": "Slack",
+      "tier": 1,
+      "sources": {
+        "macos": { "url": "https://slack.com/help/articles/201374536-Slack-keyboard-shortcuts", "parser": "ai-extract", "platformFilter": "mac" },
+        "windows": { "url": "https://slack.com/help/articles/201374536-Slack-keyboard-shortcuts", "parser": "ai-extract", "platformFilter": "windows" },
+        "linux": { "url": "https://slack.com/help/articles/201374536-Slack-keyboard-shortcuts", "parser": "ai-extract", "platformFilter": "linux" }
+      }
+    },
+    "spotify": {
+      "displayName": "Spotify",
+      "tier": 2,
+      "sources": {
+        "macos": { "url": "https://support.spotify.com/us/article/keyboard-shortcuts/", "parser": "ai-extract", "platformFilter": "mac" }
+      }
+    },
+    "spss": {
+      "displayName": "IBM SPSS Statistics",
+      "tier": 3,
+      "sources": {
+        "windows": { "url": "https://www.spss-tutorials.com/spss-keyboard-shortcuts/", "parser": "ai-extract" }
+      }
+    },
+    "sql-developer": {
+      "displayName": "Oracle SQL Developer",
+      "tier": 3,
+      "sources": {
+        "macos": { "url": "https://docs.oracle.com/en-us/iaas/database-tools/doc/keyboard-shortcuts.html", "parser": "ai-extract", "platformFilter": "mac" },
+        "windows": { "url": "https://docs.oracle.com/en-us/iaas/database-tools/doc/keyboard-shortcuts.html", "parser": "ai-extract", "platformFilter": "windows" }
+      }
+    },
+    "stata": {
+      "displayName": "Stata",
+      "tier": 3,
+      "sources": {
+        "macos": { "url": "https://www.statalist.org/forums/forum/general-stata-discussion/general/1622790-shortcuts-in-the-do-file-editor", "parser": "ai-extract" },
+        "windows": { "url": "https://www.statalist.org/forums/forum/general-stata-discussion/general/1622790-shortcuts-in-the-do-file-editor", "parser": "ai-extract" }
+      }
+    },
+    "sublime-text": {
+      "displayName": "Sublime Text",
+      "tier": 2,
+      "sources": {
+        "macos": { "url": "https://www.sublimetext.com/docs/key_bindings.html", "parser": "ai-extract" }
+      }
+    },
+    "teams": {
+      "displayName": "Teams",
+      "tier": 2,
+      "sources": {
+        "macos": { "url": "https://support.microsoft.com/en-us/office/keyboard-shortcuts-for-microsoft-teams-2e8e2a70-e8d8-4a19-949b-4c36dd5292d2", "parser": "ai-extract", "platformFilter": "mac" },
+        "windows": { "url": "https://support.microsoft.com/en-us/office/keyboard-shortcuts-for-microsoft-teams-2e8e2a70-e8d8-4a19-949b-4c36dd5292d2", "parser": "ai-extract", "platformFilter": "windows" }
+      }
+    },
+    "telegram": {
+      "displayName": "Telegram",
+      "tier": 3,
+      "sources": {
+        "macos": { "url": "https://telegram.org/blog/telegram-desktop-keyboard-shortcuts", "parser": "ai-extract" }
+      }
+    },
+    "terminal": {
+      "displayName": "Terminal",
+      "tier": 3,
+      "sources": {
+        "macos": { "url": "https://support.apple.com/guide/terminal/keyboard-shortcuts-trmlshtcts/mac", "parser": "ai-extract" }
+      }
+    },
+    "things": {
+      "displayName": "Things",
+      "tier": 3,
+      "sources": {
+        "macos": { "url": "https://culturedcode.com/things/support/articles/2803574/", "parser": "ai-extract" }
+      }
+    },
+    "todoist": {
+      "displayName": "Todoist",
+      "tier": 3,
+      "sources": {
+        "macos": { "url": "https://todoist.com/help/articles/keyboard-shortcuts-702345872", "parser": "ai-extract" }
+      }
+    },
+    "tor-browser": {
+      "displayName": "Tor Browser",
+      "tier": 3,
+      "parser": "manual",
+      "notes": "Uses Firefox shortcuts — synced via Firefox entry"
+    },
+    "tortoisegit": {
+      "displayName": "TortoiseGit",
+      "tier": 3,
+      "sources": {
+        "windows": { "url": "https://tortoisegit.org/docs/tortoisegitmerge/tme-keyboard.html", "parser": "ai-extract" }
+      }
+    },
+    "tower": {
+      "displayName": "Tower",
+      "tier": 3,
+      "sources": {
+        "macos": { "url": "https://www.git-tower.com/help/mac/faq-and-tips/keyboard-shortcuts", "parser": "ai-extract" }
+      }
+    },
+    "trello": {
+      "displayName": "Trello",
+      "tier": 3,
+      "sources": {
+        "macos": { "url": "https://support.atlassian.com/trello/docs/using-keyboard-shortcuts-in-trello/", "parser": "ai-extract" }
+      }
+    },
+    "unity": {
+      "displayName": "Unity",
+      "tier": 3,
+      "sources": {
+        "macos": { "url": "https://docs.unity3d.com/Manual/ShortcutsManager.html", "parser": "ai-extract" },
+        "windows": { "url": "https://docs.unity3d.com/Manual/ShortcutsManager.html", "parser": "ai-extract" }
+      }
+    },
+    "unreal-engine": {
+      "displayName": "Unreal Engine",
+      "tier": 3,
+      "sources": {
+        "macos": { "url": "https://dev.epicgames.com/documentation/en-us/unreal-engine/keyboard-shortcuts-in-unreal-editor", "parser": "ai-extract" },
+        "windows": { "url": "https://dev.epicgames.com/documentation/en-us/unreal-engine/keyboard-shortcuts-in-unreal-editor", "parser": "ai-extract" }
+      }
+    },
+    "vim": {
+      "displayName": "Vim",
+      "tier": 3,
+      "sources": {
+        "macos": { "url": "https://vim.rtorr.com", "parser": "ai-extract" },
+        "linux": { "url": "https://vim.rtorr.com", "parser": "ai-extract" }
+      }
+    },
+    "visual-studio": {
+      "displayName": "Visual Studio",
+      "tier": 2,
+      "sources": {
+        "macos": { "url": "https://learn.microsoft.com/en-us/visualstudio/mac/keyboard-shortcuts", "parser": "ai-extract" },
+        "windows": { "url": "https://learn.microsoft.com/en-us/visualstudio/ide/default-keyboard-shortcuts-in-visual-studio", "parser": "ai-extract" }
+      }
+    },
+    "vivaldi": {
+      "displayName": "Vivaldi",
+      "tier": 3,
+      "sources": {
+        "macos": { "url": "https://help.vivaldi.com/desktop/shortcuts/keyboard-shortcuts/", "parser": "ai-extract" }
+      }
+    },
+    "vlc": {
+      "displayName": "VLC",
+      "tier": 3,
+      "sources": {
+        "macos": { "url": "https://wiki.videolan.org/QtHotkeys/", "parser": "ai-extract" }
+      }
+    },
+    "vscode": {
+      "displayName": "VS Code",
+      "tier": 1,
+      "sources": {
+        "macos": { "url": "https://code.visualstudio.com/docs/getstarted/keybindings", "parser": "ai-extract", "platformFilter": "mac" },
+        "windows": { "url": "https://code.visualstudio.com/docs/getstarted/keybindings", "parser": "ai-extract", "platformFilter": "windows" },
+        "linux": { "url": "https://code.visualstudio.com/docs/getstarted/keybindings", "parser": "ai-extract", "platformFilter": "linux" }
+      }
+    },
+    "warp": {
+      "displayName": "Warp",
+      "tier": 3,
+      "sources": {
+        "macos": { "url": "https://docs.warp.dev/features/keyboard-shortcuts", "parser": "ai-extract" }
+      }
+    },
+    "webflow": {
+      "displayName": "Webflow",
+      "tier": 3,
+      "sources": {
+        "macos": { "url": "https://help.webflow.com/hc/en-us/articles/33961359609875-Keyboard-shortcuts-in-Webflow", "parser": "ai-extract", "platformFilter": "mac" },
+        "windows": { "url": "https://help.webflow.com/hc/en-us/articles/33961359609875-Keyboard-shortcuts-in-Webflow", "parser": "ai-extract", "platformFilter": "windows" }
+      }
+    },
+    "webstorm": {
+      "displayName": "WebStorm",
+      "tier": 2,
+      "sources": {
+        "macos": { "url": "https://www.jetbrains.com/help/webstorm/mastering-keyboard-shortcuts.html", "parser": "ai-extract", "platformFilter": "mac" },
+        "windows": { "url": "https://www.jetbrains.com/help/webstorm/mastering-keyboard-shortcuts.html", "parser": "ai-extract", "platformFilter": "windows" }
+      }
+    },
+    "windows": {
+      "displayName": "Windows",
+      "tier": 2,
+      "sources": {
+        "windows": { "url": "https://support.microsoft.com/en-us/windows/keyboard-shortcuts-in-windows-dcc61a57-8ff0-cffe-9796-cb9706c75eec", "parser": "ai-extract" }
+      }
+    },
+    "word": {
+      "displayName": "Word",
+      "tier": 2,
+      "sources": {
+        "macos": { "url": "https://support.microsoft.com/en-us/office/keyboard-shortcuts-in-word-95ef89dd-7142-4b50-afb2-f762f663ceb2", "parser": "ai-extract", "platformFilter": "mac" },
+        "windows": { "url": "https://support.microsoft.com/en-us/office/keyboard-shortcuts-in-word-95ef89dd-7142-4b50-afb2-f762f663ceb2", "parser": "ai-extract", "platformFilter": "windows" }
+      }
+    },
+    "wordpress": {
+      "displayName": "WordPress",
+      "tier": 3,
+      "sources": {
+        "macos": { "url": "https://wordpress.com/support/keyboard-shortcuts/", "parser": "ai-extract", "platformFilter": "mac" },
+        "windows": { "url": "https://wordpress.com/support/keyboard-shortcuts/", "parser": "ai-extract", "platformFilter": "windows" }
+      }
+    },
+    "xcode": {
+      "displayName": "Xcode",
+      "tier": 2,
+      "parser": "manual",
+      "notes": "No public shortcut documentation URL available"
+    },
+    "zoom": {
+      "displayName": "Zoom",
+      "tier": 2,
+      "sources": {
+        "macos": { "url": "https://support.zoom.com/hc/en/article?id=zm_kb&sysparm_article=KB0060720", "parser": "ai-extract", "platformFilter": "mac" }
+      }
+    }
+  }
+}

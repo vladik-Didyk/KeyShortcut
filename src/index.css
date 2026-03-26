@@ -1,0 +1,576 @@
+@import "tailwindcss";
+
+/* =========================================
+   RETRO STATIONERY THEME (single mode)
+   ========================================= */
+
+:root {
+  color-scheme: light;
+  --theme-accent: #1A1A1A;
+  --theme-accent-hover: #333333;
+  --theme-accent-secondary: #444444;
+
+  --color-theme-base: #F5F0E8;
+  --color-theme-base-alt: #EDE8DE;
+  --color-theme-surface: #E8E2D8;
+  --color-theme-border: #C8C0B4;
+  --color-theme-border-hover: #8B8478;
+  --color-theme-text: #1A1A1A;
+  --color-theme-muted: #6B6560;
+  --color-theme-shadow: rgba(0, 0, 0, 0.08);
+  --color-theme-floating-key: rgba(0, 0, 0, 0.02);
+  --color-theme-accent-text: #F5F0E8;
+  --color-theme-accent-glow: rgba(0, 0, 0, 0.15);
+
+  --theme-keycap: #F5F0E8;
+  --theme-keycap-dish: #C8C0B4;
+  --theme-keycap-legend: #1A1A1A;
+  --theme-keycap-sublabel: #6B6560;
+  --theme-light-tint: #F5F0E8;
+
+  --pattern-color: rgba(0, 0, 0, 0.03);
+  --theme-line-color: #DDD7CC;
+  --theme-placeholder: #A09A90;
+}
+
+/* =========================================
+   TAILWIND TOKENS
+   ========================================= */
+
+@theme {
+  --color-theme-base: var(--color-theme-base, #F5F0E8);
+  --color-theme-base-alt: var(--color-theme-base-alt, #EDE8DE);
+  --color-theme-surface: var(--color-theme-surface, #E8E2D8);
+  --color-theme-border: var(--color-theme-border, #C8C0B4);
+  --color-theme-border-hover: var(--color-theme-border-hover, #8B8478);
+  --color-theme-text: var(--color-theme-text, #1A1A1A);
+  --color-theme-muted: var(--color-theme-muted, #6B6560);
+  --color-theme-accent: var(--theme-accent, #1A1A1A);
+  --color-theme-shadow: var(--color-theme-shadow, rgba(0, 0, 0, 0.08));
+  --color-theme-floating-key: var(--color-theme-floating-key, rgba(0, 0, 0, 0.02));
+  --color-theme-accent-hover: var(--theme-accent-hover, #333333);
+  --color-theme-accent-secondary: var(--theme-accent-secondary, #444444);
+  --color-theme-accent-text: var(--color-theme-accent-text, #F5F0E8);
+  --color-theme-accent-glow: var(--color-theme-accent-glow, rgba(0, 0, 0, 0.15));
+  --color-theme-keycap: var(--theme-keycap, #F5F0E8);
+  --color-theme-keycap-dish: var(--theme-keycap-dish, #C8C0B4);
+  --color-theme-keycap-legend: var(--theme-keycap-legend, #1A1A1A);
+  --color-theme-keycap-sublabel: var(--theme-keycap-sublabel, #6B6560);
+  --color-theme-light-tint: var(--theme-light-tint, #F5F0E8);
+  --color-theme-pattern: var(--pattern-color, rgba(0, 0, 0, 0.03));
+
+  --radius-panel: 12px;
+  --radius-card: 10px;
+  --blur-glass: 0px;
+  --font-sans: 'IBM Plex Serif', Georgia, 'Times New Roman', serif;
+  --font-mono: 'IBM Plex Mono', 'SF Mono', 'Menlo', monospace;
+}
+
+/* =========================================
+   BASE STYLES
+   ========================================= */
+
+* { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--color-theme-base);
+}
+
+body {
+  margin: 0;
+  position: relative;
+  z-index: 0;
+  background-color: transparent;
+  color: var(--color-theme-text);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.5;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+
+/* =========================================
+   SECTION BACKGROUNDS
+   ========================================= */
+
+.section-alt {
+  background-color: var(--color-theme-base-alt);
+}
+
+/* =========================================
+   TEXT EFFECTS
+   ========================================= */
+
+.text-accent {
+  color: var(--theme-accent);
+}
+
+.text-gradient {
+  color: var(--theme-accent);
+  font-style: italic;
+}
+
+/* =========================================
+   KEYCAP INTERACTIVE — Hero & InteractiveKeyboard
+   ========================================= */
+
+.keycap-interactive {
+  font-family: var(--font-mono);
+  background: var(--theme-keycap);
+  color: var(--theme-keycap-legend);
+  border: 1.5px solid var(--theme-keycap-dish);
+  box-shadow: 2px 2px 0 var(--theme-keycap-dish);
+  transition: all 0.2s ease;
+}
+
+.keycap-interactive[data-active="true"] {
+  background: var(--theme-keycap-legend);
+  color: var(--theme-keycap);
+  border-color: var(--theme-keycap-legend);
+  box-shadow: 1px 1px 0 var(--theme-keycap-sublabel);
+}
+
+.keycap-hero[data-active="true"] {
+  transform: scale(0.94);
+}
+
+/* =========================================
+   ANIMATIONS
+   ========================================= */
+
+@keyframes hero-pop {
+  0% { opacity: 0; transform: translateY(10px) scale(0.85); }
+  60% { transform: translateY(-3px) scale(1.04); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes kb-pop {
+  from { opacity: 0; transform: translateY(6px) scale(0.95); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.fade-in-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.screenshot-shadow {
+  position: relative;
+}
+
+.screenshot-shadow::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  right: -6px;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, var(--theme-accent) 1px, transparent 1px);
+  background-size: 4px 4px;
+  border-radius: inherit;
+  z-index: -1;
+  opacity: 0.3;
+}
+
+/* =========================================
+   HERO APP SCREENSHOT
+   ========================================= */
+
+.hero-app-screenshot {
+  width: 100%;
+  height: auto;
+}
+
+/* Always show dark screenshot */
+.hero-app-dark {
+  display: block;
+}
+.hero-app-light {
+  display: none;
+}
+
+/* =========================================
+   SEPARATOR
+   ========================================= */
+
+.section-separator {
+  width: 100%;
+  max-width: 980px;
+  margin: 0 auto;
+  border: none;
+  border-top: 1.5px solid var(--color-theme-border);
+}
+
+/* =========================================
+   APP MARQUEE CAROUSEL
+   ========================================= */
+
+.marquee-mask {
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
+  );
+  overflow: hidden;
+}
+
+.animate-marquee-left {
+  animation: marquee-left 40s linear infinite;
+  width: max-content;
+}
+
+.animate-marquee-right {
+  animation: marquee-right 40s linear infinite;
+  width: max-content;
+}
+
+.marquee-mask:hover .animate-marquee-left,
+.marquee-mask:hover .animate-marquee-right {
+  animation-play-state: paused;
+}
+
+/* =========================================
+   KEYCAP BADGES — Retro bordered keys
+   ========================================= */
+
+.keycap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 28px;
+  height: 28px;
+  padding: 0 8px;
+  border-radius: 5px;
+  font-size: 13px;
+  font-weight: 500;
+  font-family: var(--font-mono);
+  line-height: 1;
+  color: var(--theme-keycap-legend);
+  background: var(--theme-keycap);
+  border: 1.5px solid var(--theme-keycap-legend);
+  box-shadow: 2px 2px 0 var(--theme-keycap-legend);
+  white-space: nowrap;
+  user-select: none;
+}
+
+/* =========================================
+   SHORTCUT TABLE (app pages)
+   ========================================= */
+
+.shortcut-table {
+  width: 100%;
+  text-align: left;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+.shortcut-table tbody tr {
+  border-bottom: 1px solid var(--color-theme-border);
+}
+
+.shortcut-table tbody tr:hover td {
+  background-color: var(--color-theme-base-alt);
+}
+
+/* =========================================
+   KEYFRAMES
+   ========================================= */
+
+@keyframes marquee-left {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes marquee-right {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+/* =========================================
+   HERO PANEL MOCKUP
+   ========================================= */
+
+.panel-crossfade {
+  animation: panel-crossfade-cycle 0.5s ease-in-out;
+}
+
+@keyframes panel-crossfade-cycle {
+  0% { opacity: 0; transform: translateY(6px) scale(0.97); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* Mini keycap badges inside the panel */
+.keycap-mini {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 22px;
+  height: 22px;
+  padding: 0 5px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 500;
+  font-family: var(--font-mono);
+  line-height: 1;
+  color: var(--theme-keycap-legend);
+  background: var(--theme-keycap);
+  border: 1.5px solid var(--theme-keycap-legend);
+  box-shadow: 1.5px 1.5px 0 var(--theme-keycap-legend);
+  white-space: nowrap;
+  user-select: none;
+}
+
+.keycap-mini-active {
+  background: var(--theme-keycap-legend);
+  color: var(--theme-keycap);
+  border-color: var(--theme-keycap-legend);
+  box-shadow: 1.5px 1.5px 0 var(--theme-keycap-sublabel);
+}
+
+/* Even smaller keycap badges for compact panel */
+.keycap-tiny {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 4px;
+  border-radius: 3px;
+  font-size: 10px;
+  font-weight: 500;
+  font-family: var(--font-mono);
+  line-height: 1;
+  color: var(--theme-keycap-legend);
+  background: var(--theme-keycap);
+  border: 1.5px solid var(--theme-keycap-legend);
+  box-shadow: 1px 1px 0 var(--theme-keycap-legend);
+  white-space: nowrap;
+  user-select: none;
+}
+
+.keycap-tiny-active {
+  background: var(--theme-keycap-legend);
+  color: var(--theme-keycap);
+  border-color: var(--theme-keycap-legend);
+  box-shadow: 1px 1px 0 var(--theme-keycap-sublabel);
+}
+
+/* =========================================
+   DIRECTORY: Horizontal scrollable chips
+   ========================================= */
+
+.directory-search::placeholder {
+  color: var(--theme-placeholder);
+}
+
+.chips-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.chips-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+/* =========================================
+   NAVIGATION LOADING BAR
+   ========================================= */
+
+@keyframes nav-loading {
+  0% { width: 0; margin-left: 0; }
+  50% { width: 70%; margin-left: 0; }
+  100% { width: 100%; margin-left: 0; }
+}
+
+.animate-nav-loading {
+  animation: nav-loading 1.5s ease-in-out infinite;
+}
+
+/* =========================================
+   DIRECTORY: Scrollspy active state
+   ========================================= */
+
+.toc-link-active {
+  border-color: var(--theme-accent) !important;
+  color: var(--theme-accent) !important;
+  font-weight: 600;
+}
+
+/* =========================================
+   DIRECTORY: App card — retro bordered style
+   ========================================= */
+
+.app-card-perspective {
+  perspective: none;
+}
+
+.app-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 16px 24px;
+  border-radius: 10px;
+  background: var(--color-theme-base);
+  border: 1.5px solid var(--theme-accent);
+  position: relative;
+  overflow: visible;
+  text-decoration: none;
+  transition: transform 0.2s ease,
+              box-shadow 0.2s ease;
+}
+
+.app-card::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  right: -5px;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, var(--theme-accent) 1px, transparent 1px);
+  background-size: 4px 4px;
+  border-radius: inherit;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.app-card:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 4px 4px 0 var(--theme-accent);
+  z-index: 2;
+}
+
+.app-card:hover::after {
+  opacity: 0;
+}
+
+/* Remove old accent gradient line */
+.app-card-accent {
+  display: none;
+}
+
+/* =========================================
+   DIRECTORY: Stagger fade-in for cards
+   ========================================= */
+
+.fade-in-stagger {
+  opacity: 0;
+  animation: fade-in-stagger-anim 0.4s ease forwards;
+}
+
+@keyframes fade-in-stagger-anim {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================================
+   DIRECTORY: Alternating shortcut rows
+   ========================================= */
+
+.shortcut-row-alt td {
+  background-color: color-mix(in srgb, var(--color-theme-base-alt) 50%, transparent);
+}
+
+/* Modifier-matching row: subtle tint */
+.shortcut-row-mod-match {
+  background: rgba(0, 0, 0, 0.04);
+}
+
+/* Exact-match row: inverted */
+.shortcut-row-exact-match {
+  background: var(--theme-accent) !important;
+  color: var(--theme-keycap);
+  box-shadow: none;
+}
+
+/* =========================================
+   ACCESSIBILITY: Focus-visible styles
+   ========================================= */
+
+:focus-visible {
+  outline: 2px solid var(--theme-accent);
+  outline-offset: 2px;
+}
+
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* =========================================
+   RETRO WINDOW FRAME
+   ========================================= */
+
+.retro-window {
+  border: 1.5px solid var(--theme-accent);
+  border-radius: 10px;
+  background: var(--color-theme-base);
+  overflow: hidden;
+}
+
+.retro-window-titlebar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 14px;
+  border-bottom: 1.5px solid var(--theme-accent);
+  background: var(--color-theme-base-alt);
+}
+
+.retro-window-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1.5px solid var(--theme-accent);
+  background: transparent;
+}
+
+
+/* =========================================
+   ACCESSIBILITY: Reduced motion
+   ========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .fade-in-up {
+    opacity: 1;
+    transform: none;
+  }
+
+  .animate-marquee-left,
+  .animate-marquee-right {
+    animation: none;
+  }
+}

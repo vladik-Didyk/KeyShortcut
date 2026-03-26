@@ -1,0 +1,3 @@
+# Legacy redirects
+/shortcuts/*  /:splat  301
+/directory    /        301
