@@ -18,6 +18,10 @@ pnpm lint         # ESLint (flat config, React hooks + refresh plugins)
 pnpm test         # Vitest test suite (single run)
 pnpm test:watch   # Vitest in watch mode
 pnpm run deploy   # Build + deploy to Cloudflare Pages (production)
+pnpm sync         # Run shortcut sync pipeline (scrape → diff → write to Supabase)
+pnpm sync:dry     # Dry run (no writes to Supabase)
+pnpm sync:health  # Health check for sync sources
+pnpm readme       # Regenerate README app directory from Supabase
 ```
 
 Run a single test file: `pnpm test src/test/data-integrity.test.js`
@@ -63,7 +67,7 @@ Product page sections use anchor links (`#features`, `#faq`, `#policies`, `#down
 - `src/utils/` — Helpers (directoryHelpers for icons, platformHelpers for data lookups)
 - `src/data/` — Static content arrays and generated data files
 - `public/data/` — Runtime JSON data (manifest + per-platform shortcut files)
-- `scripts/` — Build scripts (download-icons, generate-sitemap) + shortcut-sync pipeline
+- `scripts/` — Build scripts (download-icons, generate-sitemap, update-readme-apps) + shortcut-sync pipeline
 
 ### Data architecture (Supabase → Platform → Category → App)
 
@@ -165,3 +169,22 @@ This runs `pnpm build` then `wrangler pages deploy build/client`. All ~175 route
 Cloudflare Pages config files in `public/`:
 - `_headers` — security headers (X-Frame-Options, HSTS, etc.)
 - `_redirects` — legacy redirect rules (`/shortcuts/*`, `/directory`)
+
+### CI/CD Workflows (`.github/workflows/`)
+
+- **`ci.yml`** — Main pipeline: lint → test → build → deploy to Cloudflare Pages (on main push only). Node 24, pnpm 9. Supabase credentials from GitHub Secrets.
+- **`update-readme.yml`** — Auto-updates README app directory from Supabase. Runs weekly (Monday 6:00 UTC), after successful CI/CD deploy, or manually via `workflow_dispatch`.
+- **`shortcut-sync.yml`** — Runs shortcut sync pipeline (scrape external docs → extract shortcuts via Gemini AI → diff → create PR).
+- **`shortcut-sync-deploy.yml`** — Auto-deploys after merging PRs with `shortcut-sync` label.
+
+### Build scripts pipeline
+
+During `pnpm build`, scripts run in order:
+1. `scripts/download-icons.mjs` — Fetches app icons from Supabase Storage into `public/images/app-icons/`
+2. `scripts/generate-sitemap.mjs` — Generates `public/sitemap.xml` from pre-rendered routes
+3. React Router build — SSR + pre-renders all ~175 pages to `build/client/`
+
+Standalone scripts:
+- `scripts/update-readme-apps.mjs` — Queries Supabase, regenerates the Supported Apps section in README.md between `APP-DIRECTORY:START/END` markers
+- `scripts/validate-content.mjs` — Validates content data structure
+- `scripts/shortcut-sync/run.mjs` — Full sync pipeline with `--dry-run` and `--health-check` flags
