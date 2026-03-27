@@ -6,7 +6,8 @@ import { dirname, join } from 'path'
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const ROOT = join(__dirname, '..')
 
-process.loadEnvFile(join(ROOT, '.env'))
+try { process.loadEnvFile(join(ROOT, '.env')) } catch {}
+
 
 const SUPABASE_URL = process.env.VITE_SUPABASE_URL
 const SUPABASE_KEY = process.env.VITE_SUPABASE_ANON_KEY

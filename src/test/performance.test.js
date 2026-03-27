@@ -12,7 +12,7 @@ import { buildPlatformLookups, groupByCategories, getPopularApps } from '../util
 
 import { join } from 'path'
 
-process.loadEnvFile(join(import.meta.dirname, '../../.env'))
+try { process.loadEnvFile(join(import.meta.dirname, '../../.env')) } catch {}
 const SUPABASE_URL = process.env.VITE_SUPABASE_URL
 const SUPABASE_KEY = process.env.VITE_SUPABASE_ANON_KEY
 const BASE = `${SUPABASE_URL}/rest/v1`
