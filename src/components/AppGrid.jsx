@@ -1,87 +1,23 @@
 import { Link } from 'react-router'
-import { getIconData, slugToIconName } from '../utils/directoryHelpers'
+import AppIcon from './directory/AppIcon'
 import { useInView } from '../hooks/useInView'
 import { CONTENT } from '../data/content'
 
-// Build display name → slug mapping from the existing slugToIconName reverse map
-const nameToSlug = {}
-for (const [slug, name] of Object.entries(slugToIconName)) {
-  nameToSlug[name] = slug
-}
-// Also add simple names where slug === lowercase name
-const simpleNames = [
-  'Finder','Mail','Notes','Calendar','Reminders','Photos','Preview','Pages',
-  'Numbers','Keynote','Messages','Music','Safari','Terminal','Chrome','Edge',
-  'Firefox','Brave','Arc','Vivaldi','Chromium','Opera','Xcode','Cursor',
-  'Eclipse','Vim','Atom','Postman','Slack','Discord','Telegram','Zoom',
-  'Teams','Notion','Obsidian','Things','Todoist','Linear','Raycast','Jira',
-  'Trello','Asana','Bear','Confluence','GitLab','Figma','Sketch','Blender',
-  'Canva','GIMP','Inkscape','Maya','Webflow','Photoshop','Illustrator',
-  'Acrobat','Word','Excel','Spotify','VLC','Tower','Unity','Rider',
-  'Processing','Insomnia','Stata','Minitab',
-]
-for (const name of simpleNames) {
-  if (!nameToSlug[name]) nameToSlug[name] = name.toLowerCase()
-}
-
-function AppIcon({ name }) {
-  const data = getIconData(name)
-
-  if (data.type === 'image') {
-    return (
-      <img
-        src={data.src}
-        alt=""
-        width={32}
-        height={32}
-        className="shrink-0 rounded-lg"
-        aria-hidden="true"
-        loading="lazy"
-      />
-    )
-  }
-
+function AppCard({ app }) {
   return (
-    <span
-      className="w-8 h-8 rounded-lg flex items-center justify-center text-xs font-bold text-white shrink-0"
-      style={{ backgroundColor: `#${data.hex}` }}
-      aria-hidden="true"
+    <Link
+      to={`/macos/${app.slug}`}
+      className="flex items-center gap-3 px-3 py-2.5 rounded-xl border border-transparent hover:border-theme-border hover:bg-theme-surface transition-all hover:-translate-y-0.5"
     >
-      {data.label}
-    </span>
+      <AppIcon slug={app.slug} displayName={app.displayName} size={32} className="rounded-lg" />
+      <span className="text-sm font-medium text-theme-text truncate">{app.displayName}</span>
+    </Link>
   )
 }
 
-function AppCard({ name }) {
-  const slug = nameToSlug[name]
-  const inner = (
-    <>
-      <AppIcon name={name} />
-      <span className="text-sm font-medium text-theme-text truncate">{name}</span>
-    </>
-  )
-
-  const className = "flex items-center gap-3 px-3 py-2.5 rounded-xl border border-transparent hover:border-theme-border hover:bg-theme-surface transition-all hover:-translate-y-0.5"
-
-  if (slug) {
-    return (
-      <Link to={`/macos/${slug}`} className={className}>
-        {inner}
-      </Link>
-    )
-  }
-
-  return (
-    <div className={className}>
-      {inner}
-    </div>
-  )
-}
-
-export default function AppGrid() {
+export default function AppGrid({ appCategories }) {
   const [ref, isVisible] = useInView()
   const { appGrid } = CONTENT.productPage
-  const { categories: appCategories } = appGrid
 
   return (
     <section className="py-20 md:py-28 px-5 md:px-6">
@@ -105,7 +41,7 @@ export default function AppGrid() {
               </h3>
               <div className="grid grid-cols-4 lg:grid-cols-6 gap-2">
                 {cat.apps.map((app) => (
-                  <AppCard key={app} name={app} />
+                  <AppCard key={app.slug} app={app} />
                 ))}
               </div>
             </div>
@@ -122,7 +58,7 @@ export default function AppGrid() {
               </summary>
               <div className="pb-5 grid grid-cols-2 gap-2">
                 {cat.apps.map((app) => (
-                  <AppCard key={app} name={app} />
+                  <AppCard key={app.slug} app={app} />
                 ))}
               </div>
             </details>

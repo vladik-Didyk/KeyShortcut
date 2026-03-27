@@ -1,10 +1,12 @@
+import { useState } from 'react'
 import { slugToIconName, getIconData } from '../../utils/directoryHelpers'
 
 export default function AppIcon({ slug, displayName, size = 48, className = '' }) {
+  const [imgError, setImgError] = useState(false)
   const iconName = slugToIconName[slug] || displayName
   const data = getIconData(iconName)
 
-  if (data.type === 'image') {
+  if (data.type === 'image' && !imgError) {
     return (
       <img
         src={data.src}
@@ -14,9 +16,13 @@ export default function AppIcon({ slug, displayName, size = 48, className = '' }
         className={`shrink-0 ${className}`}
         aria-hidden="true"
         loading="lazy"
+        onError={() => setImgError(true)}
       />
     )
   }
+
+  const label = data.type === 'fallback' ? data.label : (iconName || displayName || '?')[0]
+  const hex = data.type === 'fallback' ? data.hex : '86868b'
 
   return (
     <span
@@ -25,11 +31,11 @@ export default function AppIcon({ slug, displayName, size = 48, className = '' }
         width: size,
         height: size,
         fontSize: size * 0.35,
-        backgroundColor: `#${data.hex}`,
+        backgroundColor: `#${hex}`,
       }}
       aria-hidden="true"
     >
-      {data.label}
+      {label}
     </span>
   )
 }

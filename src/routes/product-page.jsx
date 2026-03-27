@@ -1,4 +1,7 @@
+import { useLoaderData } from "react-router";
 import { CONTENT, buildMeta } from "../data/content";
+import { getPlatformApps, getCategories } from "../utils/supabase.server";
+import { groupByCategories } from "../utils/platformHelpers";
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import Problem from "../components/Problem";
@@ -17,7 +20,23 @@ export function meta() {
   return buildMeta(CONTENT.meta.productPage);
 }
 
+export async function loader() {
+  const [macosApps, categories] = await Promise.all([
+    getPlatformApps("macos"),
+    getCategories(),
+  ]);
+  const categoryOrder = categories.map((c) => c.display_name);
+  const appCategories = groupByCategories(macosApps, categoryOrder).map(
+    (group) => ({
+      name: group.name,
+      apps: group.apps.map(({ slug, displayName }) => ({ slug, displayName })),
+    })
+  );
+  return { appCategories };
+}
+
 export default function ProductPageRoute() {
+  const { appCategories } = useLoaderData();
   return (
     <>
       <Navbar />
@@ -29,7 +48,7 @@ export default function ProductPageRoute() {
         <Details />
         <ShortcutPreview />
         <AppCoverage />
-        <AppGrid />
+        <AppGrid appCategories={appCategories} />
         <AdSlot adSlot="1234567891" />
         <FAQ />
         <AdSlot adSlot="1234567892" />

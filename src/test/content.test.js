@@ -70,12 +70,10 @@ describe('CONTENT structure', () => {
     }
   })
 
-  it('appGrid categories have apps', () => {
-    expect(CONTENT.productPage.appGrid.categories.length).toBeGreaterThan(0)
-    for (const cat of CONTENT.productPage.appGrid.categories) {
-      expect(cat.name).toBeTruthy()
-      expect(cat.apps.length).toBeGreaterThan(0)
-    }
+  it('appGrid has title, subtitle, and viewAll', () => {
+    expect(CONTENT.productPage.appGrid.title).toBeTruthy()
+    expect(CONTENT.productPage.appGrid.subtitle).toBeTruthy()
+    expect(CONTENT.productPage.appGrid.viewAll).toBeTruthy()
   })
 
   it('appCoverage has two rows of apps', () => {

@@ -240,62 +240,6 @@ export const CONTENT = {
       title: 'Browse by category',
       subtitle: 'Find shortcuts for your favorite apps, organized by workflow.',
       viewAll: `View all ${APP_COUNT} apps`,
-      categories: [
-        {
-          name: 'macOS System',
-          apps: ['Finder', 'macOS'],
-        },
-        {
-          name: 'Apple Apps',
-          apps: ['Safari', 'Mail', 'Notes', 'Calendar', 'Music', 'Preview', 'Pages', 'Numbers', 'Keynote', 'Bear'],
-        },
-        {
-          name: 'Browsers',
-          apps: ['Chrome', 'Arc', 'Firefox', 'Brave', 'Edge', 'Vivaldi', 'Opera', 'Chrome DevTools'],
-        },
-        {
-          name: 'Development',
-          apps: [
-            'VS Code', 'Cursor', 'Xcode', 'IntelliJ IDEA', 'Sublime Text',
-            'PyCharm', 'GoLand', 'PHPStorm', 'CLion', 'RubyMine', 'WebStorm',
-            'Android Studio', 'Eclipse', 'iTerm2', 'Warp', 'Vim',
-            'Atom', 'DataGrip', 'DataSpell', 'DBeaver', 'GNU Emacs', 'Godot Engine',
-            'Insomnia', 'Jupyter Notebook', 'LabVIEW', 'MATLAB',
-            'Postman', 'Processing', 'PuTTY', 'Rider', 'RStudio',
-            'SourceTree', 'Oracle SQL Developer', 'TortoiseGit', 'Tower',
-            'Unity', 'Unreal Engine', 'Visual Studio',
-          ],
-        },
-        {
-          name: 'Communication',
-          apps: ['Slack', 'Discord', 'Telegram', 'Zoom', 'Teams', 'Gmail'],
-        },
-        {
-          name: 'Productivity',
-          apps: [
-            'Notion', 'Obsidian', 'Things', 'Todoist', 'Linear',
-            'Jira', 'Jira Align', 'Trello', 'Asana', 'ClickUp', 'WordPress',
-            'Confluence', 'GitLab', 'ShotGrid', 'Stata', 'Minitab',
-            'IBM SPSS Statistics',
-            'GitHub', 'Google Docs', 'Google Sheets', 'Google Drive', 'Raycast', '1Password',
-          ],
-        },
-        {
-          name: 'Design',
-          apps: [
-            'Figma', 'Sketch', 'Photoshop', 'Illustrator', 'After Effects', 'Blender', 'Acrobat',
-            'Adobe XD', 'Canva', 'GIMP', 'Inkscape', 'Maya', 'Webflow',
-          ],
-        },
-        {
-          name: 'Microsoft Office',
-          apps: ['Word', 'Excel', 'PowerPoint'],
-        },
-        {
-          name: 'Media',
-          apps: ['Spotify', 'VLC', 'Final Cut Pro', 'DaVinci Resolve', 'Premiere Pro'],
-        },
-      ],
     },
 
     interactiveKeyboard: {
@@ -526,6 +470,62 @@ export const CONTENT = {
           heading: 'Children\'s Privacy',
           content: [
             { type: 'paragraph', text: 'KeyShortcut does not collect any data from any user, including children.' },
+          ],
+        },
+        {
+          heading: 'Cookies',
+          content: [
+            { type: 'paragraph', text: 'The KeyShortcut macOS app does not use cookies. The keyshortcut.com website uses cookies only through third-party services:' },
+            {
+              type: 'list',
+              items: [
+                { bold: 'Google AdSense', text: ' — may set cookies to serve and measure ads. These are governed by Google\'s privacy policy.' },
+                { bold: 'Cloudflare', text: ' — may set a technical cookie (__cf_bm) for bot protection. This is not used for tracking.' },
+              ],
+            },
+            { type: 'paragraph', text: 'You can control cookies through your browser settings. Disabling cookies may affect ad display but will not affect site functionality.' },
+          ],
+        },
+        {
+          heading: 'Your Rights (GDPR / EEA)',
+          content: [
+            { type: 'paragraph', text: 'If you are located in the European Economic Area (EEA), you have rights under the General Data Protection Regulation (GDPR):' },
+            {
+              type: 'list',
+              items: [
+                { bold: 'Right of access', text: ' — request a copy of any personal data we hold about you.' },
+                { bold: 'Right to rectification', text: ' — request correction of inaccurate data.' },
+                { bold: 'Right to erasure', text: ' — request deletion of your personal data.' },
+                { bold: 'Right to restrict processing', text: ' — request that we limit how we use your data.' },
+                { bold: 'Right to data portability', text: ' — request your data in a portable format.' },
+                { bold: 'Right to object', text: ' — object to processing of your data, including for advertising purposes.' },
+              ],
+            },
+            { type: 'paragraph', text: 'Since KeyShortcut does not collect personal data through its app, these rights primarily apply to any data collected by third-party services on the website (Google AdSense). You can opt out of personalized ads via Google Ads Settings or by using the Google consent banner.' },
+            { type: 'contact', text: 'To exercise any of these rights, contact us at' },
+          ],
+        },
+        {
+          heading: 'Your Rights (CCPA / California)',
+          content: [
+            { type: 'paragraph', text: 'If you are a California resident, the California Consumer Privacy Act (CCPA) gives you additional rights:' },
+            {
+              type: 'list',
+              items: [
+                { bold: 'Right to know', text: ' — what personal information is collected, used, or shared.' },
+                { bold: 'Right to delete', text: ' — request deletion of your personal information.' },
+                { bold: 'Right to opt out', text: ' — opt out of the sale or sharing of personal information.' },
+                { bold: 'Right to non-discrimination', text: ' — you will not be penalized for exercising your rights.' },
+              ],
+            },
+            { type: 'paragraph', text: 'KeyShortcut does not sell personal information. Google AdSense on the website may use data for ad targeting, which may qualify as "sharing" under CCPA. You can opt out via Google Ads Settings or by enabling "Do Not Track" in your browser.' },
+            { type: 'contact', text: 'For CCPA requests, contact us at' },
+          ],
+        },
+        {
+          heading: 'Data Retention',
+          content: [
+            { type: 'paragraph', text: 'KeyShortcut does not retain any personal data. App preferences are stored locally on your device and are deleted when you uninstall the app. Any data collected by third-party services on the website (Cloudflare, Google) is governed by their respective retention policies.' },
           ],
         },
         {
