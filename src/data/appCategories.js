@@ -1,11 +1,14 @@
 export const appCategories = [
   {
     name: 'macOS System',
-    apps: ['Finder', 'macOS'],
+    apps: ['Finder', 'macOS', 'Spotlight'],
   },
   {
     name: 'Apple Apps',
-    apps: ['Safari', 'Mail', 'Notes', 'Calendar', 'Music', 'Preview', 'Pages', 'Numbers', 'Keynote', 'Bear'],
+    apps: [
+      'Safari', 'Mail', 'Notes', 'Calendar', 'Music', 'Preview', 'Pages', 'Numbers', 'Keynote',
+      'Messages', 'Photos', 'Reminders', 'Terminal', 'iMovie', 'Maps', 'News', 'Podcasts', 'Voice Memos', 'Bear',
+    ],
   },
   {
     name: 'Browsers',

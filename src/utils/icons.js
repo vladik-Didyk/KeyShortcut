@@ -8,6 +8,7 @@ export {
   Code2,
   CodeXml,
   Download,
+  ExternalLink,
   FileSpreadsheet,
   Globe,
   Keyboard,

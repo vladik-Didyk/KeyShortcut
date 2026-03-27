@@ -12,17 +12,23 @@ Keyboard shortcuts directory website — a React site that serves as a multi-pla
 pnpm dev          # Start React Router dev server (HMR)
 pnpm build        # Build icons + sitemap + React Router build (SSR + pre-render) → build/
 pnpm sitemap      # Regenerate sitemap.xml only
+pnpm icons        # Download app icons from Supabase Storage only
 pnpm preview      # Preview production build via react-router-serve
 pnpm start        # Serve production build
 pnpm lint         # ESLint (flat config, React hooks + refresh plugins)
 pnpm test         # Vitest test suite (single run)
 pnpm test:watch   # Vitest in watch mode
+pnpm test:perf    # Run performance benchmarks
 pnpm run deploy   # Build + deploy to Cloudflare Pages (production)
 pnpm sync         # Run shortcut sync pipeline (scrape → diff → write to Supabase)
 pnpm sync:dry     # Dry run (no writes to Supabase)
 pnpm sync:health  # Health check for sync sources
 pnpm readme       # Regenerate README app directory from Supabase
+pnpm add-app      # Interactive CLI to add a new app (icon, shortcuts, all files)
+pnpm add-app:dry  # Preview add-app without writing
 ```
+
+Add an app from JSON: `pnpm add-app -- --from-json path/to/app.json`
 
 Run a single test file: `pnpm test src/test/data-integrity.test.js`
 
@@ -75,7 +81,7 @@ Product page sections use anchor links (`#features`, `#faq`, `#policies`, `#down
 
 **Supabase tables**:
 - `platforms` — platform definitions (macos, windows, linux)
-- `apps` — app metadata (slug, display_name, category_id, icon_url)
+- `apps` — app metadata (slug, display_name, category_id, icon_url, docs_url)
 - `app_platforms` — many-to-many link between apps and platforms
 - `categories` — category definitions (Design, Browsers, Productivity, etc.)
 - `sections` — shortcut sections within an app (per platform)
@@ -148,9 +154,12 @@ Hero uses an HTML/CSS animated keyboard mockup with `AppPanelMockup` — no 3D/c
 Vitest with jsdom environment, globals enabled, setup in `src/test/setup.js` (imports `@testing-library/jest-dom`). Separate `vitest.config.js` uses `@vitejs/plugin-react` (not the React Router plugin) to avoid framework conflicts. Test files live in `src/test/`. Key test suites:
 - `data-integrity.test.js` — validates platform JSON structure across all platforms
 - `directory-helpers.test.js` — tests platformHelpers utility functions
+- `search-helpers.test.js` — tests search/filtering utilities
 - `sitemap.test.js` — validates sitemap.xml generation
+- `content.test.js` — validates content data structure
+- `deployment.test.js` — validates deployment configuration
 - `use-platform-data.test.js` — tests usePlatformData hook (loading, fetch, error, cache)
-- `components.test.jsx` — tests NotFound, ErrorBoundary, Footer, MacAppStoreButton, AdSlot
+- `performance.test.js` — benchmarks page load and rendering
 
 ### ESLint
 
@@ -188,3 +197,33 @@ Standalone scripts:
 - `scripts/update-readme-apps.mjs` — Queries Supabase, regenerates the Supported Apps section in README.md between `APP-DIRECTORY:START/END` markers
 - `scripts/validate-content.mjs` — Validates content data structure
 - `scripts/shortcut-sync/run.mjs` — Full sync pipeline with `--dry-run` and `--health-check` flags
+- `scripts/sync-apple-docs.mjs` — Bulk sync script for Apple app shortcuts (18 apps, idempotent)
+
+### Shortcut sync pipeline (`scripts/shortcut-sync/`)
+
+The sync pipeline scrapes official documentation pages, extracts shortcuts via Gemini AI, diffs against Supabase, and creates PRs with changes.
+
+**Key files**:
+- `sources.json` — Registry of all apps with their docs URLs, parser type, and tier (1-3)
+- `pipeline/supabase-writer.mjs` — Writes shortcut data to Supabase using service role key (REST API, bypasses RLS)
+- `pipeline/normalize.mjs` — Normalizes scraped data (modifiers, keys, actions)
+- `pipeline/modifier-map.mjs` — Canonical modifier names per platform (command/option/control/shift/fn for macOS)
+- `pipeline/key-map.mjs` — Canonical key names (Left/Right/Up/Down for arrows, Enter, Delete, Escape, Space, Tab)
+- `diff/` — Diff engine comparing scraped data against existing Supabase data
+
+**Data conventions**:
+- Modifiers stored as PostgreSQL arrays of canonical names: `{command,shift}` (not symbols like ⌘⇧)
+- `action_key` format: `shortcuts.{slug}.{camelCaseAction}` (e.g., `shortcuts.chrome.selectAll`)
+- Action text lives in `translations` table (key=action_key, language='en', value='Select All')
+- `docs_url` on `apps` table links to official documentation; displayed as external link icon on shortcut pages
+- `app_platforms` junction table links apps to platforms (macos, windows, linux)
+
+**Adding a new app** requires changes in multiple places:
+1. **Supabase** — Create `apps` row (slug, display_name, category_id, docs_url), `app_platforms` link, sections, shortcuts, translations
+2. **Icon** — Upload 128x128 WebP to Supabase Storage `icons/app-icons/{slug}.webp`, set `icon_url` on the app row
+3. **`src/utils/directoryHelpers.js`** — Add entry to `imageIcons` map (display name → slug) AND `slugToIconName` map (slug → display name). Without this, the icon shows a letter placeholder fallback even if the image file exists.
+4. **`src/data/appCategories.js`** — Add display name to the appropriate category array
+5. **`scripts/shortcut-sync/sources.json`** — Add entry for the sync automation pipeline (alphabetically sorted)
+6. **Clear build cache** before deploying: `rm -rf node_modules/.cache/supabase`
+
+**Supabase query limits**: The `batchIn` helper in `supabase.server.js` uses `.limit(10000)` to override Supabase's default 1000-row limit per query. Without this, shortcuts from apps that land in truncated batches silently disappear from pre-rendered pages.

@@ -8,6 +8,10 @@ const imageIcons = {
   'Pages': 'pages', 'Numbers': 'numbers', 'Keynote': 'keynote',
   'Messages': 'messages', 'Music': 'music', 'Safari': 'safari',
   'macOS': 'macos', 'Terminal': 'terminal',
+  'Apple TV': 'apple-tv', 'App Store': 'app-store', 'Contacts': 'contacts',
+  'Disk Utility': 'disk-utility', 'Find My': 'find-my', 'iMovie': 'imovie',
+  'Maps': 'maps', 'News': 'news', 'Podcasts': 'podcasts',
+  'Spotlight': 'spotlight', 'Voice Memos': 'voice-memos',
   // Browsers
   'Chrome': 'chrome', 'Chrome DevTools': 'chrome-devtools', 'Edge': 'edge', 'Firefox': 'firefox', 'Brave': 'brave', 'Arc': 'arc',
   'Vivaldi': 'vivaldi', 'Tor Browser': 'tor-browser', 'Chromium': 'chromium', 'Opera': 'opera',
@@ -74,6 +78,11 @@ export const slugToIconName = {
   'rstudio': 'RStudio', 'sourcetree': 'SourceTree', 'sql-developer': 'Oracle SQL Developer',
   'tortoisegit': 'TortoiseGit', 'unreal-engine': 'Unreal Engine',
   'visual-studio': 'Visual Studio',
+  // Apple apps
+  'apple-tv': 'Apple TV', 'app-store': 'App Store', 'contacts': 'Contacts',
+  'disk-utility': 'Disk Utility', 'find-my': 'Find My', 'imovie': 'iMovie',
+  'maps': 'Maps', 'news': 'News', 'podcasts': 'Podcasts',
+  'spotlight': 'Spotlight', 'voice-memos': 'Voice Memos',
   // Cross-platform entries
   'windows': 'Windows', 'linux': 'Linux Desktop',
 }

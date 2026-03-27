@@ -58,12 +58,12 @@ function cached(key, fn) {
 }
 
 // ── Batch helper: run all batches in parallel ────────────────
-const BATCH = 100;
+const BATCH = 50;
 async function batchIn(table, column, ids, select, extraFilters) {
   if (!ids.length) return [];
   const batches = [];
   for (let i = 0; i < ids.length; i += BATCH) {
-    let q = supabase.from(table).select(select).in(column, ids.slice(i, i + BATCH));
+    let q = supabase.from(table).select(select).in(column, ids.slice(i, i + BATCH)).limit(10000);
     if (extraFilters) q = extraFilters(q);
     batches.push(q);
   }
@@ -124,7 +124,7 @@ export function getPlatformApps(platformId) {
 
     // Step 2: Fetch apps, sections, modifiers, categories — ALL IN PARALLEL
     const [apps, sections, modSymbols, catMap] = await Promise.all([
-      batchIn("apps", "id", appIds, "id, slug, display_name, category_id, icon_url, sort_order"),
+      batchIn("apps", "id", appIds, "id, slug, display_name, category_id, icon_url, sort_order, docs_url"),
       supabase
         .from("sections")
         .select("id, app_id, name, sort_order")
@@ -183,6 +183,7 @@ export function getPlatformApps(platformId) {
         category: catMap[app.category_id] || app.category_id,
         shortcutCount: appSections.reduce((sum, s) => sum + s.shortcuts.length, 0),
         iconUrl: app.icon_url,
+        docsUrl: app.docs_url,
         sections: appSections,
       };
     });

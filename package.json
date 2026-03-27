@@ -19,7 +19,9 @@
     "sync": "node scripts/shortcut-sync/run.mjs",
     "sync:dry": "node scripts/shortcut-sync/run.mjs --dry-run",
     "sync:health": "node scripts/shortcut-sync/run.mjs --health-check",
-    "readme": "node scripts/update-readme-apps.mjs"
+    "readme": "node scripts/update-readme-apps.mjs",
+    "add-app": "node scripts/add-app.mjs",
+    "add-app:dry": "node scripts/add-app.mjs --dry-run"
   },
   "dependencies": {
     "@react-router/node": "^7.13.1",

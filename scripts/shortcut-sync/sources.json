@@ -38,6 +38,20 @@
         "macos": { "url": "https://developer.android.com/studio/intro/keyboard-shortcuts", "parser": "ai-extract", "platformFilter": "mac" }
       }
     },
+    "app-store": {
+      "displayName": "App Store",
+      "tier": 3,
+      "sources": {
+        "macos": { "url": "https://support.apple.com/guide/app-store/keyboard-shortcuts-and-gestures-fir03dbca/mac", "parser": "ai-extract" }
+      }
+    },
+    "apple-tv": {
+      "displayName": "Apple TV",
+      "tier": 3,
+      "sources": {
+        "macos": { "url": "https://support.apple.com/guide/tvapp/keyboard-shortcuts-atvb5f0d71f/mac", "parser": "ai-extract" }
+      }
+    },
     "arc": {
       "displayName": "Arc",
       "tier": 2,
@@ -128,6 +142,13 @@
         "windows": { "url": "https://support.atlassian.com/confluence-cloud/docs/keyboard-shortcuts-markdown-and-autocomplete/", "parser": "ai-extract", "platformFilter": "windows" }
       }
     },
+    "contacts": {
+      "displayName": "Contacts",
+      "tier": 3,
+      "sources": {
+        "macos": { "url": "https://support.apple.com/guide/contacts/keyboard-shortcuts-adrbk1012/mac", "parser": "ai-extract" }
+      }
+    },
     "cursor": {
       "displayName": "Cursor",
       "tier": 2,
@@ -175,6 +196,13 @@
         "linux": { "url": "https://support.discord.com/hc/en-us/articles/31232432266647-Discord-Commands-Shortcuts-and-Navigation-Guide", "parser": "ai-extract", "platformFilter": "linux" }
       }
     },
+    "disk-utility": {
+      "displayName": "Disk Utility",
+      "tier": 3,
+      "sources": {
+        "macos": { "url": "https://support.apple.com/guide/disk-utility/keyboard-shortcuts-dskua0b50e14/mac", "parser": "ai-extract" }
+      }
+    },
     "eclipse": {
       "displayName": "Eclipse",
       "tier": 3,
@@ -218,6 +246,13 @@
       "tier": 3,
       "sources": {
         "macos": { "url": "https://support.apple.com/guide/final-cut-pro/keyboard-shortcuts-ver90ba5929/mac", "parser": "ai-extract" }
+      }
+    },
+    "find-my": {
+      "displayName": "Find My",
+      "tier": 3,
+      "sources": {
+        "macos": { "url": "https://support.apple.com/guide/findmy/keyboard-shortcuts-and-gestures-fmycd53f07/mac", "parser": "ai-extract" }
       }
     },
     "firefox": {
@@ -298,6 +333,13 @@
       "tier": 3,
       "sources": {
         "macos": { "url": "https://helpx.adobe.com/illustrator/using/default-keyboard-shortcuts.html", "parser": "ai-extract", "platformFilter": "mac" }
+      }
+    },
+    "imovie": {
+      "displayName": "iMovie",
+      "tier": 3,
+      "sources": {
+        "macos": { "url": "https://support.apple.com/en-ca/guide/imovie/movd9d8f91e8/mac", "parser": "ai-extract" }
       }
     },
     "inkscape": {
@@ -388,6 +430,13 @@
         "macos": { "url": "https://support.apple.com/guide/mail/keyboard-shortcuts-mlhlp1236/mac", "parser": "ai-extract" }
       }
     },
+    "maps": {
+      "displayName": "Maps",
+      "tier": 3,
+      "sources": {
+        "macos": { "url": "https://support.apple.com/en-ca/guide/maps/mps36380d1ed/mac", "parser": "ai-extract" }
+      }
+    },
     "matlab": {
       "displayName": "MATLAB",
       "tier": 3,
@@ -423,6 +472,13 @@
       "tier": 3,
       "sources": {
         "macos": { "url": "https://support.apple.com/guide/music/keyboard-shortcuts-mus1019/mac", "parser": "ai-extract" }
+      }
+    },
+    "news": {
+      "displayName": "News",
+      "tier": 3,
+      "sources": {
+        "macos": { "url": "https://support.apple.com/en-ca/guide/news/iphc13bdbe67/mac", "parser": "ai-extract" }
       }
     },
     "notes": {
@@ -490,6 +546,13 @@
       "tier": 3,
       "sources": {
         "macos": { "url": "https://www.jetbrains.com/help/phpstorm/mastering-keyboard-shortcuts.html", "parser": "ai-extract", "platformFilter": "mac" }
+      }
+    },
+    "podcasts": {
+      "displayName": "Podcasts",
+      "tier": 3,
+      "sources": {
+        "macos": { "url": "https://support.apple.com/en-ca/guide/podcasts/podcd31cff4/mac", "parser": "ai-extract" }
       }
     },
     "postman": {
@@ -602,6 +665,13 @@
       "tier": 3,
       "sources": {
         "windows": { "url": "https://www.spss-tutorials.com/spss-keyboard-shortcuts/", "parser": "ai-extract" }
+      }
+    },
+    "spotlight": {
+      "displayName": "Spotlight",
+      "tier": 3,
+      "sources": {
+        "macos": { "url": "https://support.apple.com/en-ca/guide/mac-help/mh26783/mac", "parser": "ai-extract" }
       }
     },
     "sql-developer": {
@@ -734,6 +804,13 @@
       "tier": 3,
       "sources": {
         "macos": { "url": "https://wiki.videolan.org/QtHotkeys/", "parser": "ai-extract" }
+      }
+    },
+    "voice-memos": {
+      "displayName": "Voice Memos",
+      "tier": 3,
+      "sources": {
+        "macos": { "url": "https://support.apple.com/en-ca/guide/voice-memos/vm5b49792b0d/mac", "parser": "ai-extract" }
       }
     },
     "vscode": {

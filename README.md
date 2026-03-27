@@ -286,6 +286,77 @@ KeyShortcut lists every shortcut for popular apps across **macOS**, **Windows**,
 
 <!-- APP-DIRECTORY:END -->
 
+## Adding a new app
+
+Use the built-in CLI to add a new app with its icon, source URL, and shortcuts in one step:
+
+```bash
+pnpm add-app              # Interactive mode — prompts for everything
+pnpm add-app:dry          # Preview without writing anything
+```
+
+Or provide a JSON file for automation:
+
+```bash
+pnpm add-app -- --from-json app.json
+```
+
+**JSON format:**
+
+```json
+{
+  "slug": "my-app",
+  "displayName": "My App",
+  "category": "productivity",
+  "docsUrl": "https://example.com/keyboard-shortcuts",
+  "iconFromApp": "/Applications/My App.app",
+  "platform": "macos",
+  "sections": [
+    {
+      "name": "General",
+      "shortcuts": [
+        { "modifiers": ["command"], "key": "N", "action": "New document" },
+        { "modifiers": ["command", "shift"], "key": "S", "action": "Save as" }
+      ]
+    }
+  ]
+}
+```
+
+The script handles all of the following automatically:
+- Extracts and converts the app icon to 128x128 WebP, uploads to Supabase Storage
+- Creates the app, sections, shortcuts, and translations in Supabase
+- Updates frontend icon mappings (`directoryHelpers.js`)
+- Adds the app to its category (`appCategories.js`)
+- Registers the docs URL in the sync pipeline (`sources.json`)
+
+After running, deploy with: `rm -rf node_modules/.cache/supabase && pnpm run deploy`
+
+<details>
+<summary><strong>Icon options</strong></summary>
+
+| Field | Description |
+|-------|-------------|
+| `iconFromApp` | Path to a macOS `.app` bundle — extracts the icon automatically |
+| `iconPath` | Path to an image file (`.png`, `.webp`, `.icns`, `.svg`) |
+| *(omit both)* | App displays a letter fallback until an icon is added |
+
+</details>
+
+<details>
+<summary><strong>Available categories</strong></summary>
+
+`apple-apps`, `macos-system`, `browsers`, `development`, `communication`, `productivity`, `design`, `microsoft-office`, `media`, `system-utils`
+
+</details>
+
+<details>
+<summary><strong>Modifier names</strong></summary>
+
+Use canonical names: `command`, `option`, `control`, `shift`, `fn` (macOS) or `alt`, `super`, `control`, `shift` (Windows/Linux)
+
+</details>
+
 ## Contributing
 
 Please use [GitHub Issues](https://github.com/vladik-Didyk/KeyShortcut/issues) to report bugs, suggest apps, or request features. If you can fix it yourself, please send a PR.

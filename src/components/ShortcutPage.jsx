@@ -1,6 +1,6 @@
 import { Link, useLoaderData } from 'react-router'
 import { useState, useEffect, useMemo, useRef } from 'react'
-import { Search, X, Download } from '../utils/icons'
+import { Search, X, Download, ExternalLink } from '../utils/icons'
 import AppIcon from './directory/AppIcon'
 import { useScrollspy } from '../hooks/useScrollspy'
 import { CONTENT } from '../data/content'
@@ -170,6 +170,18 @@ export default function ShortcutPage() {
             >
               <Download size={14} />
             </button>
+            {app.docsUrl && (
+              <a
+                href={app.docsUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-1.5 rounded-lg border border-theme-border hover:bg-theme-base-alt text-theme-muted hover:text-theme-text transition-colors shrink-0 no-underline"
+                title="View official documentation"
+                aria-label="View official documentation"
+              >
+                <ExternalLink size={14} />
+              </a>
+            )}
           </div>
           {/* Search feedback */}
           {search && (
