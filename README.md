@@ -26,16 +26,7 @@
 
 Hi! I'm Vlad, the creator of [KeyShortcut.com](https://keyshortcut.com).
 
-KeyShortcut is a keyboard shortcuts directory that lists shortcuts for popular apps across **macOS**, **Windows**, and **Linux** — all in one place, organized by category and fully searchable. It helps thousands of users every month find the shortcuts they need to speed up their workflow.
-
-### What you get
-
-- **Search across all apps** — type "Figma copy" or "paste in Chrome" and get instant results
-- **Multi-platform** — switch between macOS, Windows, and Linux with one click
-- **Many apps covered** — Productivity, Design, Development, Browsers, Communication, and more
-- **Organized by category** — find related apps together
-- **Clean, fast interface** — pre-rendered static pages, no loading spinners
-- **Printable cheat sheets** — export any app's shortcuts as a PDF
+KeyShortcut lists every shortcut for popular apps across **macOS**, **Windows**, and **Linux** — all in one place, organized by category and fully searchable. Search across apps, switch platforms, and export printable PDF cheat sheets.
 
 ## Supported apps
 
@@ -291,111 +282,27 @@ KeyShortcut is a keyboard shortcuts directory that lists shortcuts for popular a
 
 ## Contributing
 
-This is an open-source project and contributions are very welcome! Whether it's fixing a typo, reporting a missing shortcut, suggesting a new app, or improving the UI — every bit helps.
+Please use [GitHub Issues](https://github.com/vladik-Didyk/KeyShortcut/issues) to report bugs, suggest apps, or request features. If you can fix it yourself, please send a PR.
 
-**Ways to contribute:**
-
-- **Report bugs or request features** — Open a [GitHub Issue](https://github.com/vladik-Didyk/KeyShortcut/issues)
-- **Suggest a new app or missing shortcuts** — Open an issue with the app name and a link to its official shortcut docs
-- **Fix something yourself** — Fork the repo, make your changes, and send a PR
-- **Improve the data** — Shortcut data lives in Supabase, but you can propose corrections via issues
-
-If you can fix it yourself, please send a PR! Before submitting:
+Before submitting:
 
 ```bash
-pnpm lint         # Must pass with no errors
-pnpm test         # Must pass all tests
-pnpm build        # Must build successfully
+pnpm lint && pnpm test && pnpm build
 ```
 
-## Running the project locally
+## Running the project
 
 ```bash
-# Clone
 git clone https://github.com/vladik-Didyk/KeyShortcut.git
 cd KeyShortcut
-
-# Copy env and fill in your Supabase keys
-cp .env.example .env
-
-# Install
+cp .env.example .env   # fill in your Supabase keys
 pnpm install
-
-# Run
 pnpm dev
 ```
 
-Open [http://localhost:5173](http://localhost:5173) in your browser.
+Open [http://localhost:5173](http://localhost:5173) in your browser. You'll need Supabase credentials — see `.env.example` for all required and optional variables.
 
-> **Note**: You'll need Supabase credentials to run locally. See the [Environment variables](#environment-variables) section below.
-
-## Environment variables
-
-Copy `.env.example` to `.env` and fill in the required values:
-
-| Variable | Required | Description |
-|----------|----------|-------------|
-| `VITE_SUPABASE_URL` | Yes | Supabase project URL |
-| `VITE_SUPABASE_ANON_KEY` | Yes | Supabase anonymous key |
-| `SUPABASE_SERVICE_ROLE_KEY` | For sync | Supabase service role key (shortcut-sync writes) |
-| `GEMINI_API_KEY` | For sync | Google Gemini API key (AI-powered scraping) |
-| `VITE_CF_ANALYTICS_TOKEN` | No | Cloudflare Web Analytics token |
-| `VITE_ADSENSE_ID` | No | Google AdSense publisher ID |
-| `VITE_APP_STORE_ID` | No | Mac App Store app ID |
-
-## Scripts
-
-```bash
-pnpm dev          # Dev server with HMR
-pnpm build        # Production build (icons + sitemap + pre-render)
-pnpm preview      # Preview production build locally
-pnpm lint         # Run ESLint
-pnpm test         # Run test suite
-pnpm test:watch   # Run tests in watch mode
-pnpm deploy       # Build + deploy to Cloudflare Pages
-pnpm sync         # Run shortcut sync pipeline
-pnpm sync:dry     # Dry run (no writes to Supabase)
-```
-
-## Tech stack
-
-- **React 19** + **React Router v7** (framework mode with SSR + static pre-rendering)
-- **Vite 7** + **Tailwind CSS 4**
-- **Supabase** (PostgreSQL backend + Storage for app icons)
-- **Cloudflare Pages** (static hosting)
-
-All ~175 pages are pre-rendered at build time as static HTML. No Node.js server needed in production.
-
-## Project structure
-
-```
-src/
-  routes/          Route modules (loaders, meta, components)
-  components/      Page sections and reusable UI
-  hooks/           Custom hooks (useTheme, useInView, usePlatformData)
-  utils/           Helpers (search, platform detection, icons)
-  data/            Static content and config
-  test/            Test suites
-public/
-  data/            Runtime JSON (manifest + per-platform shortcut files)
-  images/          App icons, platform icons, OG image
-scripts/
-  download-icons.mjs       Fetch icons from Supabase Storage
-  generate-sitemap.mjs     Generate sitemap.xml
-  shortcut-sync/           AI-powered shortcut extraction pipeline
-```
-
-## Data architecture
-
-All app and shortcut data lives in **Supabase** (PostgreSQL). Route loaders query Supabase at build time during pre-rendering:
-
-```
-Supabase → Route loaders → Pre-rendered HTML + .data files → Static deploy
-```
-
-**Adding a new platform**: Create `public/data/platforms/{platform}.json`, add an entry to `manifest.json`, run `pnpm build`. No code changes needed.
-
-**Shortcut sync pipeline**: An automated system (`scripts/shortcut-sync/`) that scrapes official documentation, extracts shortcuts using Gemini AI, diffs against existing data, and creates PRs for review.
+Built with React 19, Vite, Tailwind CSS, and Supabase. Hosted on Cloudflare Pages.
 
 ## Links
 
