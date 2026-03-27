@@ -12,7 +12,7 @@ const ROOT = join(__dirname, "..");
 const APP_ICONS_DIR = join(ROOT, "public/images/app-icons");
 const PLATFORM_ICONS_DIR = join(ROOT, "public/images/platform-icons");
 
-process.loadEnvFile(join(ROOT, ".env"));
+try { process.loadEnvFile(join(ROOT, ".env")); } catch { /* env vars from CI secrets */ }
 const SUPABASE_URL = process.env.VITE_SUPABASE_URL;
 const SUPABASE_KEY = process.env.VITE_SUPABASE_ANON_KEY;
 if (!SUPABASE_URL || !SUPABASE_KEY) {
