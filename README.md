@@ -42,7 +42,7 @@ KeyShortcut is a keyboard shortcuts directory that lists shortcuts for popular a
 <!-- APP-DIRECTORY:START — auto-generated, do not edit manually -->
 
 <details>
-<summary><strong>macOS</strong> — 102 apps</summary>
+<summary><strong>macOS</strong> — 107 apps</summary>
 
 <h4>macOS System</h4>
 
@@ -56,7 +56,10 @@ KeyShortcut is a keyboard shortcuts directory that lists shortcuts for popular a
 
 <table>
 <tr>
-<td align="center"><a href="https://keyshortcut.com/macos/calendar"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/calendar.webp" width="36" height="36" alt="Calendar" /><br /><sub>Calendar</sub></a></td><td align="center"><a href="https://keyshortcut.com/macos/keynote"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/keynote.webp" width="36" height="36" alt="Keynote" /><br /><sub>Keynote</sub></a></td><td align="center"><a href="https://keyshortcut.com/macos/mail"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/mail.webp" width="36" height="36" alt="Mail" /><br /><sub>Mail</sub></a></td><td align="center"><a href="https://keyshortcut.com/macos/numbers"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/numbers.webp" width="36" height="36" alt="Numbers" /><br /><sub>Numbers</sub></a></td><td align="center"><a href="https://keyshortcut.com/macos/pages"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/pages.webp" width="36" height="36" alt="Pages" /><br /><sub>Pages</sub></a></td><td align="center"><a href="https://keyshortcut.com/macos/photos"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/photos.webp" width="36" height="36" alt="Photos" /><br /><sub>Photos</sub></a></td><td align="center"><a href="https://keyshortcut.com/macos/preview"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/preview.webp" width="36" height="36" alt="Preview" /><br /><sub>Preview</sub></a></td><td align="center"><a href="https://keyshortcut.com/macos/reminders"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/reminders.webp" width="36" height="36" alt="Reminders" /><br /><sub>Reminders</sub></a></td>
+<td align="center"><a href="https://keyshortcut.com/macos/app-store"><img src="" width="36" height="36" alt="App Store" /><br /><sub>App Store</sub></a></td><td align="center"><a href="https://keyshortcut.com/macos/apple-tv"><img src="" width="36" height="36" alt="Apple TV" /><br /><sub>Apple TV</sub></a></td><td align="center"><a href="https://keyshortcut.com/macos/calendar"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/calendar.webp" width="36" height="36" alt="Calendar" /><br /><sub>Calendar</sub></a></td><td align="center"><a href="https://keyshortcut.com/macos/contacts"><img src="" width="36" height="36" alt="Contacts" /><br /><sub>Contacts</sub></a></td><td align="center"><a href="https://keyshortcut.com/macos/find-my"><img src="" width="36" height="36" alt="Find My" /><br /><sub>Find My</sub></a></td><td align="center"><a href="https://keyshortcut.com/macos/keynote"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/keynote.webp" width="36" height="36" alt="Keynote" /><br /><sub>Keynote</sub></a></td><td align="center"><a href="https://keyshortcut.com/macos/mail"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/mail.webp" width="36" height="36" alt="Mail" /><br /><sub>Mail</sub></a></td><td align="center"><a href="https://keyshortcut.com/macos/numbers"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/numbers.webp" width="36" height="36" alt="Numbers" /><br /><sub>Numbers</sub></a></td>
+</tr>
+<tr>
+<td align="center"><a href="https://keyshortcut.com/macos/pages"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/pages.webp" width="36" height="36" alt="Pages" /><br /><sub>Pages</sub></a></td><td align="center"><a href="https://keyshortcut.com/macos/photos"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/photos.webp" width="36" height="36" alt="Photos" /><br /><sub>Photos</sub></a></td><td align="center"><a href="https://keyshortcut.com/macos/preview"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/preview.webp" width="36" height="36" alt="Preview" /><br /><sub>Preview</sub></a></td><td align="center"><a href="https://keyshortcut.com/macos/reminders"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/reminders.webp" width="36" height="36" alt="Reminders" /><br /><sub>Reminders</sub></a></td>
 </tr>
 </table>
 
@@ -137,6 +140,14 @@ KeyShortcut is a keyboard shortcuts directory that lists shortcuts for popular a
 <table>
 <tr>
 <td align="center"><a href="https://keyshortcut.com/macos/davinci-resolve"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/davinci-resolve.webp" width="36" height="36" alt="DaVinci Resolve" /><br /><sub>DaVinci Resolve</sub></a></td><td align="center"><a href="https://keyshortcut.com/macos/final-cut-pro"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/final-cut-pro.webp" width="36" height="36" alt="Final Cut Pro" /><br /><sub>Final Cut Pro</sub></a></td><td align="center"><a href="https://keyshortcut.com/macos/music"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/music.webp" width="36" height="36" alt="Music" /><br /><sub>Music</sub></a></td><td align="center"><a href="https://keyshortcut.com/macos/premiere-pro"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/premiere-pro.webp" width="36" height="36" alt="Premiere Pro" /><br /><sub>Premiere Pro</sub></a></td><td align="center"><a href="https://keyshortcut.com/macos/spotify"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/spotify.webp" width="36" height="36" alt="Spotify" /><br /><sub>Spotify</sub></a></td><td align="center"><a href="https://keyshortcut.com/macos/vlc"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/vlc.webp" width="36" height="36" alt="VLC" /><br /><sub>VLC</sub></a></td>
+</tr>
+</table>
+
+<h4>System Utils</h4>
+
+<table>
+<tr>
+<td align="center"><a href="https://keyshortcut.com/macos/disk-utility"><img src="" width="36" height="36" alt="Disk Utility" /><br /><sub>Disk Utility</sub></a></td>
 </tr>
 </table>
 
