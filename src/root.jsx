@@ -33,6 +33,7 @@ export function Layout({ children }) {
         <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#F5F0E8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="google-adsense-account" content="ca-pub-7739329133284929" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
         <link
@@ -84,6 +85,15 @@ export function Layout({ children }) {
         {children}
         <ScrollRestoration />
         <Scripts />
+
+        {/* Google AdSense (production only) */}
+        {import.meta.env.PROD && import.meta.env.VITE_ADSENSE_ID && (
+          <script
+            async
+            src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${import.meta.env.VITE_ADSENSE_ID}`}
+            crossOrigin="anonymous"
+          />
+        )}
 
         {/* Analytics: Cloudflare Web Analytics (production only) */}
         {import.meta.env.PROD && import.meta.env.VITE_CF_ANALYTICS_TOKEN && (
