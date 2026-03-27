@@ -31,7 +31,6 @@ export default function ProductPageRoute() {
         <AppCoverage />
         <AppGrid />
         <AdSlot adSlot="1234567891" />
-        {/* <InteractiveKeyboard /> */}
         <FAQ />
         <AdSlot adSlot="1234567892" />
         <Policies />

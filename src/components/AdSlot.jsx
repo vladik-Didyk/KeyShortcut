@@ -1,12 +1,10 @@
 import { useEffect, useRef } from 'react'
 import { CONTENT } from '../data/content'
 
-const KEYFLOW_ADSENSE_ID = 'ca-pub-XXXXXXXXXXXXXXXX'
+const ADSENSE_ID = import.meta.env.VITE_ADSENSE_ID || ''
 
 export default function AdSlot({ adSlot, format = 'auto', sponsor, className = '' }) {
-  // TODO: Replace KEYFLOW_ADSENSE_ID with real AdSense publisher ID
-  // Guard: don't render AdSense if using placeholder ID
-  if (!sponsor && KEYFLOW_ADSENSE_ID.includes('XXXX')) return null
+  if (!sponsor && !ADSENSE_ID) return null
 
   // Direct sponsor mode
   if (sponsor) {
@@ -58,7 +56,7 @@ function AdSenseUnit({ adSlot, format }) {
   return (
     <ins
       className="adsbygoogle block"
-      data-ad-client={KEYFLOW_ADSENSE_ID}
+      data-ad-client={ADSENSE_ID}
       data-ad-slot={adSlot}
       data-ad-format={format}
       data-full-width-responsive="true"

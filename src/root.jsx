@@ -59,16 +59,19 @@ export function Layout({ children }) {
 
         {/* Open Graph defaults */}
         <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="KeyShortcut" />
         <meta
           property="og:image"
-          content="https://keyshortcut.com/images/screenshots/keyflow-screen1-hero-2880x1800.jpg"
+          content="https://keyshortcut.com/images/og-image.png"
         />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
 
         {/* Twitter Card defaults */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:image"
-          content="https://keyshortcut.com/images/screenshots/keyflow-screen1-hero-2880x1800.jpg"
+          content="https://keyshortcut.com/images/og-image.png"
         />
 
         {/* JSON-LD WebSite — static content, safe to inline */}
@@ -83,11 +86,11 @@ export function Layout({ children }) {
         <Scripts />
 
         {/* Analytics: Cloudflare Web Analytics (production only) */}
-        {import.meta.env.PROD && (
+        {import.meta.env.PROD && import.meta.env.VITE_CF_ANALYTICS_TOKEN && (
           <script
             defer
             src="https://static.cloudflareinsights.com/beacon.min.js"
-            data-cf-beacon='{"token": "PLACEHOLDER_TOKEN"}'
+            data-cf-beacon={`{"token": "${import.meta.env.VITE_CF_ANALYTICS_TOKEN}"}`}
           />
         )}
       </body>
