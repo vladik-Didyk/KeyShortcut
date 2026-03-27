@@ -28,6 +28,12 @@ Hi! I'm Vlad, the creator of [KeyShortcut.com](https://keyshortcut.com).
 
 KeyShortcut lists every shortcut for popular apps across **macOS**, **Windows**, and **Linux** — all in one place, organized by category and fully searchable. Search across apps, switch platforms, and export printable PDF cheat sheets.
 
+<p align="center">
+  <img src="public/images/screenshot-pdf-cheatsheet.png" alt="PDF cheat sheet example — Figma shortcuts" width="500" />
+  <br/>
+  <sub>Example: Figma shortcuts exported as a PDF cheat sheet</sub>
+</p>
+
 ## Supported apps
 
 <!-- APP-DIRECTORY:START — auto-generated, do not edit manually -->
