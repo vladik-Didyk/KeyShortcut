@@ -49,13 +49,6 @@ KeyShortcut is a keyboard shortcuts directory that lists shortcuts for popular a
 <table>
 <tr>
 <td align="center"><a href="https://keyshortcut.com/macos/macos"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/macos.webp" width="36" height="36" alt="macOS" /><br /><sub>macOS</sub></a></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
 </tr>
 </table>
 
@@ -75,12 +68,6 @@ KeyShortcut is a keyboard shortcuts directory that lists shortcuts for popular a
 </tr>
 <tr>
 <td align="center"><a href="https://keyshortcut.com/macos/tor-browser"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/tor-browser.webp" width="36" height="36" alt="Tor Browser" /><br /><sub>Tor Browser</sub></a></td><td align="center"><a href="https://keyshortcut.com/macos/vivaldi"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/vivaldi.webp" width="36" height="36" alt="Vivaldi" /><br /><sub>Vivaldi</sub></a></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
 </tr>
 </table>
 
@@ -101,13 +88,6 @@ KeyShortcut is a keyboard shortcuts directory that lists shortcuts for popular a
 </tr>
 <tr>
 <td align="center"><a href="https://keyshortcut.com/macos/xcode"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/xcode.webp" width="36" height="36" alt="Xcode" /><br /><sub>Xcode</sub></a></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
 </tr>
 </table>
 
@@ -116,7 +96,6 @@ KeyShortcut is a keyboard shortcuts directory that lists shortcuts for popular a
 <table>
 <tr>
 <td align="center"><a href="https://keyshortcut.com/macos/discord"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/discord.webp" width="36" height="36" alt="Discord" /><br /><sub>Discord</sub></a></td><td align="center"><a href="https://keyshortcut.com/macos/gmail"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/gmail.webp" width="36" height="36" alt="Gmail" /><br /><sub>Gmail</sub></a></td><td align="center"><a href="https://keyshortcut.com/macos/messages"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/messages.webp" width="36" height="36" alt="Messages" /><br /><sub>Messages</sub></a></td><td align="center"><a href="https://keyshortcut.com/macos/slack"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/slack.webp" width="36" height="36" alt="Slack" /><br /><sub>Slack</sub></a></td><td align="center"><a href="https://keyshortcut.com/macos/teams"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/teams.webp" width="36" height="36" alt="Teams" /><br /><sub>Teams</sub></a></td><td align="center"><a href="https://keyshortcut.com/macos/telegram"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/telegram.webp" width="36" height="36" alt="Telegram" /><br /><sub>Telegram</sub></a></td><td align="center"><a href="https://keyshortcut.com/macos/zoom"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/zoom.webp" width="36" height="36" alt="Zoom" /><br /><sub>Zoom</sub></a></td>
-<td></td>
 </tr>
 </table>
 
@@ -131,9 +110,6 @@ KeyShortcut is a keyboard shortcuts directory that lists shortcuts for popular a
 </tr>
 <tr>
 <td align="center"><a href="https://keyshortcut.com/macos/stata"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/stata.webp" width="36" height="36" alt="Stata" /><br /><sub>Stata</sub></a></td><td align="center"><a href="https://keyshortcut.com/macos/things"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/things.webp" width="36" height="36" alt="Things" /><br /><sub>Things</sub></a></td><td align="center"><a href="https://keyshortcut.com/macos/todoist"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/todoist.webp" width="36" height="36" alt="Todoist" /><br /><sub>Todoist</sub></a></td><td align="center"><a href="https://keyshortcut.com/macos/trello"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/trello.webp" width="36" height="36" alt="Trello" /><br /><sub>Trello</sub></a></td><td align="center"><a href="https://keyshortcut.com/macos/wordpress"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/wordpress.webp" width="36" height="36" alt="WordPress" /><br /><sub>WordPress</sub></a></td>
-<td></td>
-<td></td>
-<td></td>
 </tr>
 </table>
 
@@ -145,9 +121,6 @@ KeyShortcut is a keyboard shortcuts directory that lists shortcuts for popular a
 </tr>
 <tr>
 <td align="center"><a href="https://keyshortcut.com/macos/inkscape"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/inkscape.webp" width="36" height="36" alt="Inkscape" /><br /><sub>Inkscape</sub></a></td><td align="center"><a href="https://keyshortcut.com/macos/maya"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/maya.webp" width="36" height="36" alt="Maya" /><br /><sub>Maya</sub></a></td><td align="center"><a href="https://keyshortcut.com/macos/photoshop"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/photoshop.webp" width="36" height="36" alt="Photoshop" /><br /><sub>Photoshop</sub></a></td><td align="center"><a href="https://keyshortcut.com/macos/sketch"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/sketch.webp" width="36" height="36" alt="Sketch" /><br /><sub>Sketch</sub></a></td><td align="center"><a href="https://keyshortcut.com/macos/webflow"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/webflow.webp" width="36" height="36" alt="Webflow" /><br /><sub>Webflow</sub></a></td>
-<td></td>
-<td></td>
-<td></td>
 </tr>
 </table>
 
@@ -156,11 +129,6 @@ KeyShortcut is a keyboard shortcuts directory that lists shortcuts for popular a
 <table>
 <tr>
 <td align="center"><a href="https://keyshortcut.com/macos/excel"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/excel.webp" width="36" height="36" alt="Excel" /><br /><sub>Excel</sub></a></td><td align="center"><a href="https://keyshortcut.com/macos/powerpoint"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/powerpoint.webp" width="36" height="36" alt="PowerPoint" /><br /><sub>PowerPoint</sub></a></td><td align="center"><a href="https://keyshortcut.com/macos/word"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/word.webp" width="36" height="36" alt="Word" /><br /><sub>Word</sub></a></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
 </tr>
 </table>
 
@@ -169,8 +137,6 @@ KeyShortcut is a keyboard shortcuts directory that lists shortcuts for popular a
 <table>
 <tr>
 <td align="center"><a href="https://keyshortcut.com/macos/davinci-resolve"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/davinci-resolve.webp" width="36" height="36" alt="DaVinci Resolve" /><br /><sub>DaVinci Resolve</sub></a></td><td align="center"><a href="https://keyshortcut.com/macos/final-cut-pro"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/final-cut-pro.webp" width="36" height="36" alt="Final Cut Pro" /><br /><sub>Final Cut Pro</sub></a></td><td align="center"><a href="https://keyshortcut.com/macos/music"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/music.webp" width="36" height="36" alt="Music" /><br /><sub>Music</sub></a></td><td align="center"><a href="https://keyshortcut.com/macos/premiere-pro"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/premiere-pro.webp" width="36" height="36" alt="Premiere Pro" /><br /><sub>Premiere Pro</sub></a></td><td align="center"><a href="https://keyshortcut.com/macos/spotify"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/spotify.webp" width="36" height="36" alt="Spotify" /><br /><sub>Spotify</sub></a></td><td align="center"><a href="https://keyshortcut.com/macos/vlc"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/vlc.webp" width="36" height="36" alt="VLC" /><br /><sub>VLC</sub></a></td>
-<td></td>
-<td></td>
 </tr>
 </table>
 
@@ -184,10 +150,6 @@ KeyShortcut is a keyboard shortcuts directory that lists shortcuts for popular a
 <table>
 <tr>
 <td align="center"><a href="https://keyshortcut.com/windows/chrome"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/chrome.webp" width="36" height="36" alt="Chrome" /><br /><sub>Chrome</sub></a></td><td align="center"><a href="https://keyshortcut.com/windows/firefox"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/firefox.webp" width="36" height="36" alt="Firefox" /><br /><sub>Firefox</sub></a></td><td align="center"><a href="https://keyshortcut.com/windows/opera"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/opera.webp" width="36" height="36" alt="Opera" /><br /><sub>Opera</sub></a></td><td align="center"><a href="https://keyshortcut.com/windows/tor-browser"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/tor-browser.webp" width="36" height="36" alt="Tor Browser" /><br /><sub>Tor Browser</sub></a></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
 </tr>
 </table>
 
@@ -202,12 +164,6 @@ KeyShortcut is a keyboard shortcuts directory that lists shortcuts for popular a
 </tr>
 <tr>
 <td align="center"><a href="https://keyshortcut.com/windows/vscode"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/vscode.webp" width="36" height="36" alt="VS Code" /><br /><sub>VS Code</sub></a></td><td align="center"><a href="https://keyshortcut.com/windows/webstorm"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/webstorm.webp" width="36" height="36" alt="WebStorm" /><br /><sub>WebStorm</sub></a></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
 </tr>
 </table>
 
@@ -216,11 +172,6 @@ KeyShortcut is a keyboard shortcuts directory that lists shortcuts for popular a
 <table>
 <tr>
 <td align="center"><a href="https://keyshortcut.com/windows/discord"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/discord.webp" width="36" height="36" alt="Discord" /><br /><sub>Discord</sub></a></td><td align="center"><a href="https://keyshortcut.com/windows/slack"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/slack.webp" width="36" height="36" alt="Slack" /><br /><sub>Slack</sub></a></td><td align="center"><a href="https://keyshortcut.com/windows/teams"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/teams.webp" width="36" height="36" alt="Teams" /><br /><sub>Teams</sub></a></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
 </tr>
 </table>
 
@@ -232,13 +183,6 @@ KeyShortcut is a keyboard shortcuts directory that lists shortcuts for popular a
 </tr>
 <tr>
 <td align="center"><a href="https://keyshortcut.com/windows/wordpress"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/wordpress.webp" width="36" height="36" alt="WordPress" /><br /><sub>WordPress</sub></a></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
 </tr>
 </table>
 
@@ -250,13 +194,6 @@ KeyShortcut is a keyboard shortcuts directory that lists shortcuts for popular a
 </tr>
 <tr>
 <td align="center"><a href="https://keyshortcut.com/windows/webflow"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/webflow.webp" width="36" height="36" alt="Webflow" /><br /><sub>Webflow</sub></a></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
 </tr>
 </table>
 
@@ -265,11 +202,6 @@ KeyShortcut is a keyboard shortcuts directory that lists shortcuts for popular a
 <table>
 <tr>
 <td align="center"><a href="https://keyshortcut.com/windows/excel"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/excel.webp" width="36" height="36" alt="Excel" /><br /><sub>Excel</sub></a></td><td align="center"><a href="https://keyshortcut.com/windows/powerpoint"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/powerpoint.webp" width="36" height="36" alt="PowerPoint" /><br /><sub>PowerPoint</sub></a></td><td align="center"><a href="https://keyshortcut.com/windows/word"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/word.webp" width="36" height="36" alt="Word" /><br /><sub>Word</sub></a></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
 </tr>
 </table>
 
@@ -278,13 +210,6 @@ KeyShortcut is a keyboard shortcuts directory that lists shortcuts for popular a
 <table>
 <tr>
 <td align="center"><a href="https://keyshortcut.com/windows/premiere-pro"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/premiere-pro.webp" width="36" height="36" alt="Premiere Pro" /><br /><sub>Premiere Pro</sub></a></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
 </tr>
 </table>
 
@@ -293,13 +218,6 @@ KeyShortcut is a keyboard shortcuts directory that lists shortcuts for popular a
 <table>
 <tr>
 <td align="center"><a href="https://keyshortcut.com/windows/windows"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/windows.webp" width="36" height="36" alt="Windows" /><br /><sub>Windows</sub></a></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
 </tr>
 </table>
 
@@ -313,12 +231,6 @@ KeyShortcut is a keyboard shortcuts directory that lists shortcuts for popular a
 <table>
 <tr>
 <td align="center"><a href="https://keyshortcut.com/linux/chrome"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/chrome.webp" width="36" height="36" alt="Chrome" /><br /><sub>Chrome</sub></a></td><td align="center"><a href="https://keyshortcut.com/linux/firefox"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/firefox.webp" width="36" height="36" alt="Firefox" /><br /><sub>Firefox</sub></a></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
 </tr>
 </table>
 
@@ -327,12 +239,6 @@ KeyShortcut is a keyboard shortcuts directory that lists shortcuts for popular a
 <table>
 <tr>
 <td align="center"><a href="https://keyshortcut.com/linux/vim"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/vim.webp" width="36" height="36" alt="Vim" /><br /><sub>Vim</sub></a></td><td align="center"><a href="https://keyshortcut.com/linux/vscode"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/vscode.webp" width="36" height="36" alt="VS Code" /><br /><sub>VS Code</sub></a></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
 </tr>
 </table>
 
@@ -341,12 +247,6 @@ KeyShortcut is a keyboard shortcuts directory that lists shortcuts for popular a
 <table>
 <tr>
 <td align="center"><a href="https://keyshortcut.com/linux/discord"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/discord.webp" width="36" height="36" alt="Discord" /><br /><sub>Discord</sub></a></td><td align="center"><a href="https://keyshortcut.com/linux/slack"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/slack.webp" width="36" height="36" alt="Slack" /><br /><sub>Slack</sub></a></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
 </tr>
 </table>
 
@@ -355,13 +255,6 @@ KeyShortcut is a keyboard shortcuts directory that lists shortcuts for popular a
 <table>
 <tr>
 <td align="center"><a href="https://keyshortcut.com/linux/notion"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/notion.webp" width="36" height="36" alt="Notion" /><br /><sub>Notion</sub></a></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
 </tr>
 </table>
 
@@ -370,12 +263,6 @@ KeyShortcut is a keyboard shortcuts directory that lists shortcuts for popular a
 <table>
 <tr>
 <td align="center"><a href="https://keyshortcut.com/linux/blender"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/blender.webp" width="36" height="36" alt="Blender" /><br /><sub>Blender</sub></a></td><td align="center"><a href="https://keyshortcut.com/linux/figma"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/figma.webp" width="36" height="36" alt="Figma" /><br /><sub>Figma</sub></a></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
 </tr>
 </table>
 
@@ -384,13 +271,6 @@ KeyShortcut is a keyboard shortcuts directory that lists shortcuts for popular a
 <table>
 <tr>
 <td align="center"><a href="https://keyshortcut.com/linux/linux"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/linux.webp" width="36" height="36" alt="Linux Desktop" /><br /><sub>Linux Desktop</sub></a></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
 </tr>
 </table>
 

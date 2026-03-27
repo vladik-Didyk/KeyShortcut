@@ -85,8 +85,6 @@ function generateMarkdown({ apps, links, categories, platforms }) {
         const row = sorted.slice(i, i + COLS);
         lines.push("<tr>");
         lines.push(row.map((a) => appCell(a, platform.id)).join(""));
-        // Pad empty cells to keep grid aligned
-        for (let j = row.length; j < COLS; j++) lines.push("<td></td>");
         lines.push("</tr>");
       }
 
