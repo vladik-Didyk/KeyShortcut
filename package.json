@@ -18,7 +18,8 @@
     "deploy": "pnpm build && pnpm wrangler pages deploy build/client --project-name=keyshortcut --commit-dirty=true",
     "sync": "node scripts/shortcut-sync/run.mjs",
     "sync:dry": "node scripts/shortcut-sync/run.mjs --dry-run",
-    "sync:health": "node scripts/shortcut-sync/run.mjs --health-check"
+    "sync:health": "node scripts/shortcut-sync/run.mjs --health-check",
+    "readme": "node scripts/update-readme-apps.mjs"
   },
   "dependencies": {
     "@react-router/node": "^7.13.1",

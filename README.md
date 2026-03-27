@@ -44,107 +44,355 @@ KeyShortcut is a keyboard shortcuts directory that lists shortcuts for popular a
 <details>
 <summary><strong>macOS</strong> — 102 apps</summary>
 
-**macOS System**
+<h4>macOS System</h4>
 
-<a href="https://keyshortcut.com/macos/macos"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/macos.webp" width="16" height="16" alt="macOS" /></a> macOS
+<table>
+<tr>
+<td align="center"><a href="https://keyshortcut.com/macos/macos"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/macos.webp" width="36" height="36" alt="macOS" /><br /><sub>macOS</sub></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</table>
 
-**Apple Apps**
+<h4>Apple Apps</h4>
 
-<a href="https://keyshortcut.com/macos/calendar"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/calendar.webp" width="16" height="16" alt="Calendar" /></a> Calendar &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/macos/keynote"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/keynote.webp" width="16" height="16" alt="Keynote" /></a> Keynote &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/macos/mail"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/mail.webp" width="16" height="16" alt="Mail" /></a> Mail &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/macos/numbers"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/numbers.webp" width="16" height="16" alt="Numbers" /></a> Numbers &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/macos/pages"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/pages.webp" width="16" height="16" alt="Pages" /></a> Pages &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/macos/photos"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/photos.webp" width="16" height="16" alt="Photos" /></a> Photos &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/macos/preview"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/preview.webp" width="16" height="16" alt="Preview" /></a> Preview &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/macos/reminders"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/reminders.webp" width="16" height="16" alt="Reminders" /></a> Reminders
+<table>
+<tr>
+<td align="center"><a href="https://keyshortcut.com/macos/calendar"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/calendar.webp" width="36" height="36" alt="Calendar" /><br /><sub>Calendar</sub></a></td><td align="center"><a href="https://keyshortcut.com/macos/keynote"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/keynote.webp" width="36" height="36" alt="Keynote" /><br /><sub>Keynote</sub></a></td><td align="center"><a href="https://keyshortcut.com/macos/mail"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/mail.webp" width="36" height="36" alt="Mail" /><br /><sub>Mail</sub></a></td><td align="center"><a href="https://keyshortcut.com/macos/numbers"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/numbers.webp" width="36" height="36" alt="Numbers" /><br /><sub>Numbers</sub></a></td><td align="center"><a href="https://keyshortcut.com/macos/pages"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/pages.webp" width="36" height="36" alt="Pages" /><br /><sub>Pages</sub></a></td><td align="center"><a href="https://keyshortcut.com/macos/photos"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/photos.webp" width="36" height="36" alt="Photos" /><br /><sub>Photos</sub></a></td><td align="center"><a href="https://keyshortcut.com/macos/preview"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/preview.webp" width="36" height="36" alt="Preview" /><br /><sub>Preview</sub></a></td><td align="center"><a href="https://keyshortcut.com/macos/reminders"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/reminders.webp" width="36" height="36" alt="Reminders" /><br /><sub>Reminders</sub></a></td>
+</tr>
+</table>
 
-**Browsers**
+<h4>Browsers</h4>
 
-<a href="https://keyshortcut.com/macos/arc"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/arc.webp" width="16" height="16" alt="Arc" /></a> Arc &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/macos/brave"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/brave.webp" width="16" height="16" alt="Brave" /></a> Brave &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/macos/chrome"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/chrome.webp" width="16" height="16" alt="Chrome" /></a> Chrome &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/macos/chrome-devtools"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/chrome-devtools.webp" width="16" height="16" alt="Chrome DevTools" /></a> Chrome DevTools &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/macos/edge"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/edge.webp" width="16" height="16" alt="Edge" /></a> Edge &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/macos/firefox"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/firefox.webp" width="16" height="16" alt="Firefox" /></a> Firefox &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/macos/opera"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/opera.webp" width="16" height="16" alt="Opera" /></a> Opera &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/macos/safari"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/safari.webp" width="16" height="16" alt="Safari" /></a> Safari &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/macos/tor-browser"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/tor-browser.webp" width="16" height="16" alt="Tor Browser" /></a> Tor Browser &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/macos/vivaldi"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/vivaldi.webp" width="16" height="16" alt="Vivaldi" /></a> Vivaldi
+<table>
+<tr>
+<td align="center"><a href="https://keyshortcut.com/macos/arc"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/arc.webp" width="36" height="36" alt="Arc" /><br /><sub>Arc</sub></a></td><td align="center"><a href="https://keyshortcut.com/macos/brave"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/brave.webp" width="36" height="36" alt="Brave" /><br /><sub>Brave</sub></a></td><td align="center"><a href="https://keyshortcut.com/macos/chrome"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/chrome.webp" width="36" height="36" alt="Chrome" /><br /><sub>Chrome</sub></a></td><td align="center"><a href="https://keyshortcut.com/macos/chrome-devtools"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/chrome-devtools.webp" width="36" height="36" alt="Chrome DevTools" /><br /><sub>Chrome DevTools</sub></a></td><td align="center"><a href="https://keyshortcut.com/macos/edge"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/edge.webp" width="36" height="36" alt="Edge" /><br /><sub>Edge</sub></a></td><td align="center"><a href="https://keyshortcut.com/macos/firefox"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/firefox.webp" width="36" height="36" alt="Firefox" /><br /><sub>Firefox</sub></a></td><td align="center"><a href="https://keyshortcut.com/macos/opera"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/opera.webp" width="36" height="36" alt="Opera" /><br /><sub>Opera</sub></a></td><td align="center"><a href="https://keyshortcut.com/macos/safari"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/safari.webp" width="36" height="36" alt="Safari" /><br /><sub>Safari</sub></a></td>
+</tr>
+<tr>
+<td align="center"><a href="https://keyshortcut.com/macos/tor-browser"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/tor-browser.webp" width="36" height="36" alt="Tor Browser" /><br /><sub>Tor Browser</sub></a></td><td align="center"><a href="https://keyshortcut.com/macos/vivaldi"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/vivaldi.webp" width="36" height="36" alt="Vivaldi" /><br /><sub>Vivaldi</sub></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</table>
 
-**Development**
+<h4>Development</h4>
 
-<a href="https://keyshortcut.com/macos/android-studio"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/android-studio.webp" width="16" height="16" alt="Android Studio" /></a> Android Studio &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/macos/clion"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/clion.webp" width="16" height="16" alt="CLion" /></a> CLion &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/macos/cursor"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/cursor.webp" width="16" height="16" alt="Cursor" /></a> Cursor &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/macos/datagrip"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/datagrip.webp" width="16" height="16" alt="DataGrip" /></a> DataGrip &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/macos/dataspell"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/dataspell.webp" width="16" height="16" alt="DataSpell" /></a> DataSpell &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/macos/dbeaver"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/dbeaver.webp" width="16" height="16" alt="DBeaver" /></a> DBeaver &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/macos/eclipse"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/eclipse.webp" width="16" height="16" alt="Eclipse" /></a> Eclipse &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/macos/emacs"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/emacs.webp" width="16" height="16" alt="GNU Emacs" /></a> GNU Emacs &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/macos/godot"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/godot.webp" width="16" height="16" alt="Godot Engine" /></a> Godot Engine &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/macos/goland"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/goland.webp" width="16" height="16" alt="GoLand" /></a> GoLand &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/macos/insomnia"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/insomnia.webp" width="16" height="16" alt="Insomnia" /></a> Insomnia &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/macos/intellij"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/intellij.webp" width="16" height="16" alt="IntelliJ IDEA" /></a> IntelliJ IDEA &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/macos/iterm"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/iterm.webp" width="16" height="16" alt="iTerm2" /></a> iTerm2 &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/macos/jupyter"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/jupyter.webp" width="16" height="16" alt="Jupyter Notebook" /></a> Jupyter Notebook &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/macos/matlab"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/matlab.webp" width="16" height="16" alt="MATLAB" /></a> MATLAB &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/macos/sql-developer"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/sql-developer.webp" width="16" height="16" alt="Oracle SQL Developer" /></a> Oracle SQL Developer &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/macos/phpstorm"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/phpstorm.webp" width="16" height="16" alt="PHPStorm" /></a> PHPStorm &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/macos/postman"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/postman.webp" width="16" height="16" alt="Postman" /></a> Postman &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/macos/pycharm"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/pycharm.webp" width="16" height="16" alt="PyCharm" /></a> PyCharm &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/macos/rider"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/rider.webp" width="16" height="16" alt="Rider" /></a> Rider &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/macos/rstudio"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/rstudio.webp" width="16" height="16" alt="RStudio" /></a> RStudio &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/macos/rubymine"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/rubymine.webp" width="16" height="16" alt="RubyMine" /></a> RubyMine &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/macos/sublime-text"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/sublime-text.webp" width="16" height="16" alt="Sublime Text" /></a> Sublime Text &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/macos/terminal"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/terminal.webp" width="16" height="16" alt="Terminal" /></a> Terminal &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/macos/tower"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/tower.webp" width="16" height="16" alt="Tower" /></a> Tower &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/macos/unity"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/unity.webp" width="16" height="16" alt="Unity" /></a> Unity &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/macos/unreal-engine"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/unreal-engine.webp" width="16" height="16" alt="Unreal Engine" /></a> Unreal Engine &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/macos/vim"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/vim.webp" width="16" height="16" alt="Vim" /></a> Vim &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/macos/visual-studio"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/visual-studio.webp" width="16" height="16" alt="Visual Studio" /></a> Visual Studio &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/macos/vscode"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/vscode.webp" width="16" height="16" alt="VS Code" /></a> VS Code &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/macos/warp"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/warp.webp" width="16" height="16" alt="Warp" /></a> Warp &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/macos/webstorm"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/webstorm.webp" width="16" height="16" alt="WebStorm" /></a> WebStorm &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/macos/xcode"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/xcode.webp" width="16" height="16" alt="Xcode" /></a> Xcode
+<table>
+<tr>
+<td align="center"><a href="https://keyshortcut.com/macos/android-studio"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/android-studio.webp" width="36" height="36" alt="Android Studio" /><br /><sub>Android Studio</sub></a></td><td align="center"><a href="https://keyshortcut.com/macos/clion"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/clion.webp" width="36" height="36" alt="CLion" /><br /><sub>CLion</sub></a></td><td align="center"><a href="https://keyshortcut.com/macos/cursor"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/cursor.webp" width="36" height="36" alt="Cursor" /><br /><sub>Cursor</sub></a></td><td align="center"><a href="https://keyshortcut.com/macos/datagrip"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/datagrip.webp" width="36" height="36" alt="DataGrip" /><br /><sub>DataGrip</sub></a></td><td align="center"><a href="https://keyshortcut.com/macos/dataspell"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/dataspell.webp" width="36" height="36" alt="DataSpell" /><br /><sub>DataSpell</sub></a></td><td align="center"><a href="https://keyshortcut.com/macos/dbeaver"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/dbeaver.webp" width="36" height="36" alt="DBeaver" /><br /><sub>DBeaver</sub></a></td><td align="center"><a href="https://keyshortcut.com/macos/eclipse"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/eclipse.webp" width="36" height="36" alt="Eclipse" /><br /><sub>Eclipse</sub></a></td><td align="center"><a href="https://keyshortcut.com/macos/emacs"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/emacs.webp" width="36" height="36" alt="GNU Emacs" /><br /><sub>GNU Emacs</sub></a></td>
+</tr>
+<tr>
+<td align="center"><a href="https://keyshortcut.com/macos/godot"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/godot.webp" width="36" height="36" alt="Godot Engine" /><br /><sub>Godot Engine</sub></a></td><td align="center"><a href="https://keyshortcut.com/macos/goland"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/goland.webp" width="36" height="36" alt="GoLand" /><br /><sub>GoLand</sub></a></td><td align="center"><a href="https://keyshortcut.com/macos/insomnia"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/insomnia.webp" width="36" height="36" alt="Insomnia" /><br /><sub>Insomnia</sub></a></td><td align="center"><a href="https://keyshortcut.com/macos/intellij"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/intellij.webp" width="36" height="36" alt="IntelliJ IDEA" /><br /><sub>IntelliJ IDEA</sub></a></td><td align="center"><a href="https://keyshortcut.com/macos/iterm"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/iterm.webp" width="36" height="36" alt="iTerm2" /><br /><sub>iTerm2</sub></a></td><td align="center"><a href="https://keyshortcut.com/macos/jupyter"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/jupyter.webp" width="36" height="36" alt="Jupyter Notebook" /><br /><sub>Jupyter Notebook</sub></a></td><td align="center"><a href="https://keyshortcut.com/macos/matlab"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/matlab.webp" width="36" height="36" alt="MATLAB" /><br /><sub>MATLAB</sub></a></td><td align="center"><a href="https://keyshortcut.com/macos/sql-developer"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/sql-developer.webp" width="36" height="36" alt="Oracle SQL Developer" /><br /><sub>Oracle SQL Developer</sub></a></td>
+</tr>
+<tr>
+<td align="center"><a href="https://keyshortcut.com/macos/phpstorm"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/phpstorm.webp" width="36" height="36" alt="PHPStorm" /><br /><sub>PHPStorm</sub></a></td><td align="center"><a href="https://keyshortcut.com/macos/postman"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/postman.webp" width="36" height="36" alt="Postman" /><br /><sub>Postman</sub></a></td><td align="center"><a href="https://keyshortcut.com/macos/pycharm"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/pycharm.webp" width="36" height="36" alt="PyCharm" /><br /><sub>PyCharm</sub></a></td><td align="center"><a href="https://keyshortcut.com/macos/rider"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/rider.webp" width="36" height="36" alt="Rider" /><br /><sub>Rider</sub></a></td><td align="center"><a href="https://keyshortcut.com/macos/rstudio"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/rstudio.webp" width="36" height="36" alt="RStudio" /><br /><sub>RStudio</sub></a></td><td align="center"><a href="https://keyshortcut.com/macos/rubymine"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/rubymine.webp" width="36" height="36" alt="RubyMine" /><br /><sub>RubyMine</sub></a></td><td align="center"><a href="https://keyshortcut.com/macos/sublime-text"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/sublime-text.webp" width="36" height="36" alt="Sublime Text" /><br /><sub>Sublime Text</sub></a></td><td align="center"><a href="https://keyshortcut.com/macos/terminal"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/terminal.webp" width="36" height="36" alt="Terminal" /><br /><sub>Terminal</sub></a></td>
+</tr>
+<tr>
+<td align="center"><a href="https://keyshortcut.com/macos/tower"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/tower.webp" width="36" height="36" alt="Tower" /><br /><sub>Tower</sub></a></td><td align="center"><a href="https://keyshortcut.com/macos/unity"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/unity.webp" width="36" height="36" alt="Unity" /><br /><sub>Unity</sub></a></td><td align="center"><a href="https://keyshortcut.com/macos/unreal-engine"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/unreal-engine.webp" width="36" height="36" alt="Unreal Engine" /><br /><sub>Unreal Engine</sub></a></td><td align="center"><a href="https://keyshortcut.com/macos/vim"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/vim.webp" width="36" height="36" alt="Vim" /><br /><sub>Vim</sub></a></td><td align="center"><a href="https://keyshortcut.com/macos/visual-studio"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/visual-studio.webp" width="36" height="36" alt="Visual Studio" /><br /><sub>Visual Studio</sub></a></td><td align="center"><a href="https://keyshortcut.com/macos/vscode"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/vscode.webp" width="36" height="36" alt="VS Code" /><br /><sub>VS Code</sub></a></td><td align="center"><a href="https://keyshortcut.com/macos/warp"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/warp.webp" width="36" height="36" alt="Warp" /><br /><sub>Warp</sub></a></td><td align="center"><a href="https://keyshortcut.com/macos/webstorm"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/webstorm.webp" width="36" height="36" alt="WebStorm" /><br /><sub>WebStorm</sub></a></td>
+</tr>
+<tr>
+<td align="center"><a href="https://keyshortcut.com/macos/xcode"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/xcode.webp" width="36" height="36" alt="Xcode" /><br /><sub>Xcode</sub></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</table>
 
-**Communication**
+<h4>Communication</h4>
 
-<a href="https://keyshortcut.com/macos/discord"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/discord.webp" width="16" height="16" alt="Discord" /></a> Discord &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/macos/gmail"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/gmail.webp" width="16" height="16" alt="Gmail" /></a> Gmail &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/macos/messages"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/messages.webp" width="16" height="16" alt="Messages" /></a> Messages &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/macos/slack"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/slack.webp" width="16" height="16" alt="Slack" /></a> Slack &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/macos/teams"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/teams.webp" width="16" height="16" alt="Teams" /></a> Teams &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/macos/telegram"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/telegram.webp" width="16" height="16" alt="Telegram" /></a> Telegram &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/macos/zoom"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/zoom.webp" width="16" height="16" alt="Zoom" /></a> Zoom
+<table>
+<tr>
+<td align="center"><a href="https://keyshortcut.com/macos/discord"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/discord.webp" width="36" height="36" alt="Discord" /><br /><sub>Discord</sub></a></td><td align="center"><a href="https://keyshortcut.com/macos/gmail"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/gmail.webp" width="36" height="36" alt="Gmail" /><br /><sub>Gmail</sub></a></td><td align="center"><a href="https://keyshortcut.com/macos/messages"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/messages.webp" width="36" height="36" alt="Messages" /><br /><sub>Messages</sub></a></td><td align="center"><a href="https://keyshortcut.com/macos/slack"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/slack.webp" width="36" height="36" alt="Slack" /><br /><sub>Slack</sub></a></td><td align="center"><a href="https://keyshortcut.com/macos/teams"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/teams.webp" width="36" height="36" alt="Teams" /><br /><sub>Teams</sub></a></td><td align="center"><a href="https://keyshortcut.com/macos/telegram"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/telegram.webp" width="36" height="36" alt="Telegram" /><br /><sub>Telegram</sub></a></td><td align="center"><a href="https://keyshortcut.com/macos/zoom"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/zoom.webp" width="36" height="36" alt="Zoom" /><br /><sub>Zoom</sub></a></td>
+<td></td>
+</tr>
+</table>
 
-**Productivity**
+<h4>Productivity</h4>
 
-<a href="https://keyshortcut.com/macos/1password"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/1password.webp" width="16" height="16" alt="1Password" /></a> 1Password &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/macos/asana"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/asana.webp" width="16" height="16" alt="Asana" /></a> Asana &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/macos/bear"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/bear.webp" width="16" height="16" alt="Bear" /></a> Bear &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/macos/clickup"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/clickup.webp" width="16" height="16" alt="ClickUp" /></a> ClickUp &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/macos/confluence"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/confluence.webp" width="16" height="16" alt="Confluence" /></a> Confluence &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/macos/github"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/github.webp" width="16" height="16" alt="GitHub" /></a> GitHub &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/macos/gitlab"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/gitlab.webp" width="16" height="16" alt="GitLab" /></a> GitLab &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/macos/google-docs"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/google-docs.webp" width="16" height="16" alt="Google Docs" /></a> Google Docs &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/macos/google-drive"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/google-drive.webp" width="16" height="16" alt="Google Drive" /></a> Google Drive &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/macos/google-sheets"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/google-sheets.webp" width="16" height="16" alt="Google Sheets" /></a> Google Sheets &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/macos/jira"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/jira.webp" width="16" height="16" alt="Jira" /></a> Jira &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/macos/jira-align"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/jira-align.webp" width="16" height="16" alt="Jira Align" /></a> Jira Align &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/macos/notes"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/notes.webp" width="16" height="16" alt="Notes" /></a> Notes &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/macos/notion"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/notion.webp" width="16" height="16" alt="Notion" /></a> Notion &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/macos/obsidian"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/obsidian.webp" width="16" height="16" alt="Obsidian" /></a> Obsidian &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/macos/raycast"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/raycast.webp" width="16" height="16" alt="Raycast" /></a> Raycast &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/macos/stata"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/stata.webp" width="16" height="16" alt="Stata" /></a> Stata &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/macos/things"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/things.webp" width="16" height="16" alt="Things" /></a> Things &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/macos/todoist"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/todoist.webp" width="16" height="16" alt="Todoist" /></a> Todoist &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/macos/trello"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/trello.webp" width="16" height="16" alt="Trello" /></a> Trello &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/macos/wordpress"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/wordpress.webp" width="16" height="16" alt="WordPress" /></a> WordPress
+<table>
+<tr>
+<td align="center"><a href="https://keyshortcut.com/macos/1password"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/1password.webp" width="36" height="36" alt="1Password" /><br /><sub>1Password</sub></a></td><td align="center"><a href="https://keyshortcut.com/macos/asana"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/asana.webp" width="36" height="36" alt="Asana" /><br /><sub>Asana</sub></a></td><td align="center"><a href="https://keyshortcut.com/macos/bear"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/bear.webp" width="36" height="36" alt="Bear" /><br /><sub>Bear</sub></a></td><td align="center"><a href="https://keyshortcut.com/macos/clickup"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/clickup.webp" width="36" height="36" alt="ClickUp" /><br /><sub>ClickUp</sub></a></td><td align="center"><a href="https://keyshortcut.com/macos/confluence"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/confluence.webp" width="36" height="36" alt="Confluence" /><br /><sub>Confluence</sub></a></td><td align="center"><a href="https://keyshortcut.com/macos/github"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/github.webp" width="36" height="36" alt="GitHub" /><br /><sub>GitHub</sub></a></td><td align="center"><a href="https://keyshortcut.com/macos/gitlab"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/gitlab.webp" width="36" height="36" alt="GitLab" /><br /><sub>GitLab</sub></a></td><td align="center"><a href="https://keyshortcut.com/macos/google-docs"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/google-docs.webp" width="36" height="36" alt="Google Docs" /><br /><sub>Google Docs</sub></a></td>
+</tr>
+<tr>
+<td align="center"><a href="https://keyshortcut.com/macos/google-drive"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/google-drive.webp" width="36" height="36" alt="Google Drive" /><br /><sub>Google Drive</sub></a></td><td align="center"><a href="https://keyshortcut.com/macos/google-sheets"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/google-sheets.webp" width="36" height="36" alt="Google Sheets" /><br /><sub>Google Sheets</sub></a></td><td align="center"><a href="https://keyshortcut.com/macos/jira"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/jira.webp" width="36" height="36" alt="Jira" /><br /><sub>Jira</sub></a></td><td align="center"><a href="https://keyshortcut.com/macos/jira-align"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/jira-align.webp" width="36" height="36" alt="Jira Align" /><br /><sub>Jira Align</sub></a></td><td align="center"><a href="https://keyshortcut.com/macos/notes"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/notes.webp" width="36" height="36" alt="Notes" /><br /><sub>Notes</sub></a></td><td align="center"><a href="https://keyshortcut.com/macos/notion"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/notion.webp" width="36" height="36" alt="Notion" /><br /><sub>Notion</sub></a></td><td align="center"><a href="https://keyshortcut.com/macos/obsidian"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/obsidian.webp" width="36" height="36" alt="Obsidian" /><br /><sub>Obsidian</sub></a></td><td align="center"><a href="https://keyshortcut.com/macos/raycast"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/raycast.webp" width="36" height="36" alt="Raycast" /><br /><sub>Raycast</sub></a></td>
+</tr>
+<tr>
+<td align="center"><a href="https://keyshortcut.com/macos/stata"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/stata.webp" width="36" height="36" alt="Stata" /><br /><sub>Stata</sub></a></td><td align="center"><a href="https://keyshortcut.com/macos/things"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/things.webp" width="36" height="36" alt="Things" /><br /><sub>Things</sub></a></td><td align="center"><a href="https://keyshortcut.com/macos/todoist"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/todoist.webp" width="36" height="36" alt="Todoist" /><br /><sub>Todoist</sub></a></td><td align="center"><a href="https://keyshortcut.com/macos/trello"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/trello.webp" width="36" height="36" alt="Trello" /><br /><sub>Trello</sub></a></td><td align="center"><a href="https://keyshortcut.com/macos/wordpress"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/wordpress.webp" width="36" height="36" alt="WordPress" /><br /><sub>WordPress</sub></a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</table>
 
-**Design**
+<h4>Design</h4>
 
-<a href="https://keyshortcut.com/macos/acrobat"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/acrobat.webp" width="16" height="16" alt="Acrobat" /></a> Acrobat &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/macos/adobe-xd"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/adobe-xd.webp" width="16" height="16" alt="Adobe XD" /></a> Adobe XD &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/macos/after-effects"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/after-effects.webp" width="16" height="16" alt="After Effects" /></a> After Effects &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/macos/blender"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/blender.webp" width="16" height="16" alt="Blender" /></a> Blender &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/macos/canva"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/canva.webp" width="16" height="16" alt="Canva" /></a> Canva &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/macos/figma"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/figma.webp" width="16" height="16" alt="Figma" /></a> Figma &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/macos/gimp"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/gimp.webp" width="16" height="16" alt="GIMP" /></a> GIMP &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/macos/illustrator"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/illustrator.webp" width="16" height="16" alt="Illustrator" /></a> Illustrator &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/macos/inkscape"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/inkscape.webp" width="16" height="16" alt="Inkscape" /></a> Inkscape &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/macos/maya"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/maya.webp" width="16" height="16" alt="Maya" /></a> Maya &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/macos/photoshop"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/photoshop.webp" width="16" height="16" alt="Photoshop" /></a> Photoshop &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/macos/sketch"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/sketch.webp" width="16" height="16" alt="Sketch" /></a> Sketch &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/macos/webflow"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/webflow.webp" width="16" height="16" alt="Webflow" /></a> Webflow
+<table>
+<tr>
+<td align="center"><a href="https://keyshortcut.com/macos/acrobat"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/acrobat.webp" width="36" height="36" alt="Acrobat" /><br /><sub>Acrobat</sub></a></td><td align="center"><a href="https://keyshortcut.com/macos/adobe-xd"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/adobe-xd.webp" width="36" height="36" alt="Adobe XD" /><br /><sub>Adobe XD</sub></a></td><td align="center"><a href="https://keyshortcut.com/macos/after-effects"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/after-effects.webp" width="36" height="36" alt="After Effects" /><br /><sub>After Effects</sub></a></td><td align="center"><a href="https://keyshortcut.com/macos/blender"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/blender.webp" width="36" height="36" alt="Blender" /><br /><sub>Blender</sub></a></td><td align="center"><a href="https://keyshortcut.com/macos/canva"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/canva.webp" width="36" height="36" alt="Canva" /><br /><sub>Canva</sub></a></td><td align="center"><a href="https://keyshortcut.com/macos/figma"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/figma.webp" width="36" height="36" alt="Figma" /><br /><sub>Figma</sub></a></td><td align="center"><a href="https://keyshortcut.com/macos/gimp"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/gimp.webp" width="36" height="36" alt="GIMP" /><br /><sub>GIMP</sub></a></td><td align="center"><a href="https://keyshortcut.com/macos/illustrator"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/illustrator.webp" width="36" height="36" alt="Illustrator" /><br /><sub>Illustrator</sub></a></td>
+</tr>
+<tr>
+<td align="center"><a href="https://keyshortcut.com/macos/inkscape"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/inkscape.webp" width="36" height="36" alt="Inkscape" /><br /><sub>Inkscape</sub></a></td><td align="center"><a href="https://keyshortcut.com/macos/maya"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/maya.webp" width="36" height="36" alt="Maya" /><br /><sub>Maya</sub></a></td><td align="center"><a href="https://keyshortcut.com/macos/photoshop"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/photoshop.webp" width="36" height="36" alt="Photoshop" /><br /><sub>Photoshop</sub></a></td><td align="center"><a href="https://keyshortcut.com/macos/sketch"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/sketch.webp" width="36" height="36" alt="Sketch" /><br /><sub>Sketch</sub></a></td><td align="center"><a href="https://keyshortcut.com/macos/webflow"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/webflow.webp" width="36" height="36" alt="Webflow" /><br /><sub>Webflow</sub></a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</table>
 
-**Microsoft Office**
+<h4>Microsoft Office</h4>
 
-<a href="https://keyshortcut.com/macos/excel"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/excel.webp" width="16" height="16" alt="Excel" /></a> Excel &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/macos/powerpoint"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/powerpoint.webp" width="16" height="16" alt="PowerPoint" /></a> PowerPoint &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/macos/word"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/word.webp" width="16" height="16" alt="Word" /></a> Word
+<table>
+<tr>
+<td align="center"><a href="https://keyshortcut.com/macos/excel"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/excel.webp" width="36" height="36" alt="Excel" /><br /><sub>Excel</sub></a></td><td align="center"><a href="https://keyshortcut.com/macos/powerpoint"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/powerpoint.webp" width="36" height="36" alt="PowerPoint" /><br /><sub>PowerPoint</sub></a></td><td align="center"><a href="https://keyshortcut.com/macos/word"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/word.webp" width="36" height="36" alt="Word" /><br /><sub>Word</sub></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</table>
 
-**Media**
+<h4>Media</h4>
 
-<a href="https://keyshortcut.com/macos/davinci-resolve"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/davinci-resolve.webp" width="16" height="16" alt="DaVinci Resolve" /></a> DaVinci Resolve &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/macos/final-cut-pro"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/final-cut-pro.webp" width="16" height="16" alt="Final Cut Pro" /></a> Final Cut Pro &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/macos/music"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/music.webp" width="16" height="16" alt="Music" /></a> Music &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/macos/premiere-pro"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/premiere-pro.webp" width="16" height="16" alt="Premiere Pro" /></a> Premiere Pro &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/macos/spotify"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/spotify.webp" width="16" height="16" alt="Spotify" /></a> Spotify &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/macos/vlc"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/vlc.webp" width="16" height="16" alt="VLC" /></a> VLC
+<table>
+<tr>
+<td align="center"><a href="https://keyshortcut.com/macos/davinci-resolve"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/davinci-resolve.webp" width="36" height="36" alt="DaVinci Resolve" /><br /><sub>DaVinci Resolve</sub></a></td><td align="center"><a href="https://keyshortcut.com/macos/final-cut-pro"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/final-cut-pro.webp" width="36" height="36" alt="Final Cut Pro" /><br /><sub>Final Cut Pro</sub></a></td><td align="center"><a href="https://keyshortcut.com/macos/music"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/music.webp" width="36" height="36" alt="Music" /><br /><sub>Music</sub></a></td><td align="center"><a href="https://keyshortcut.com/macos/premiere-pro"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/premiere-pro.webp" width="36" height="36" alt="Premiere Pro" /><br /><sub>Premiere Pro</sub></a></td><td align="center"><a href="https://keyshortcut.com/macos/spotify"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/spotify.webp" width="36" height="36" alt="Spotify" /><br /><sub>Spotify</sub></a></td><td align="center"><a href="https://keyshortcut.com/macos/vlc"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/vlc.webp" width="36" height="36" alt="VLC" /><br /><sub>VLC</sub></a></td>
+<td></td>
+<td></td>
+</tr>
+</table>
 
 </details>
 
 <details>
 <summary><strong>Windows</strong> — 48 apps</summary>
 
-**Browsers**
+<h4>Browsers</h4>
 
-<a href="https://keyshortcut.com/windows/chrome"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/chrome.webp" width="16" height="16" alt="Chrome" /></a> Chrome &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/windows/firefox"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/firefox.webp" width="16" height="16" alt="Firefox" /></a> Firefox &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/windows/opera"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/opera.webp" width="16" height="16" alt="Opera" /></a> Opera &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/windows/tor-browser"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/tor-browser.webp" width="16" height="16" alt="Tor Browser" /></a> Tor Browser
+<table>
+<tr>
+<td align="center"><a href="https://keyshortcut.com/windows/chrome"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/chrome.webp" width="36" height="36" alt="Chrome" /><br /><sub>Chrome</sub></a></td><td align="center"><a href="https://keyshortcut.com/windows/firefox"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/firefox.webp" width="36" height="36" alt="Firefox" /><br /><sub>Firefox</sub></a></td><td align="center"><a href="https://keyshortcut.com/windows/opera"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/opera.webp" width="36" height="36" alt="Opera" /><br /><sub>Opera</sub></a></td><td align="center"><a href="https://keyshortcut.com/windows/tor-browser"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/tor-browser.webp" width="36" height="36" alt="Tor Browser" /><br /><sub>Tor Browser</sub></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</table>
 
-**Development**
+<h4>Development</h4>
 
-<a href="https://keyshortcut.com/windows/datagrip"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/datagrip.webp" width="16" height="16" alt="DataGrip" /></a> DataGrip &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/windows/dataspell"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/dataspell.webp" width="16" height="16" alt="DataSpell" /></a> DataSpell &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/windows/dbeaver"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/dbeaver.webp" width="16" height="16" alt="DBeaver" /></a> DBeaver &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/windows/godot"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/godot.webp" width="16" height="16" alt="Godot Engine" /></a> Godot Engine &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/windows/insomnia"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/insomnia.webp" width="16" height="16" alt="Insomnia" /></a> Insomnia &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/windows/jupyter"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/jupyter.webp" width="16" height="16" alt="Jupyter Notebook" /></a> Jupyter Notebook &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/windows/labview"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/labview.webp" width="16" height="16" alt="LabVIEW" /></a> LabVIEW &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/windows/matlab"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/matlab.webp" width="16" height="16" alt="MATLAB" /></a> MATLAB &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/windows/sql-developer"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/sql-developer.webp" width="16" height="16" alt="Oracle SQL Developer" /></a> Oracle SQL Developer &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/windows/postman"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/postman.webp" width="16" height="16" alt="Postman" /></a> Postman &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/windows/rider"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/rider.webp" width="16" height="16" alt="Rider" /></a> Rider &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/windows/rstudio"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/rstudio.webp" width="16" height="16" alt="RStudio" /></a> RStudio &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/windows/tortoisegit"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/tortoisegit.webp" width="16" height="16" alt="TortoiseGit" /></a> TortoiseGit &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/windows/unity"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/unity.webp" width="16" height="16" alt="Unity" /></a> Unity &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/windows/unreal-engine"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/unreal-engine.webp" width="16" height="16" alt="Unreal Engine" /></a> Unreal Engine &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/windows/visual-studio"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/visual-studio.webp" width="16" height="16" alt="Visual Studio" /></a> Visual Studio &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/windows/vscode"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/vscode.webp" width="16" height="16" alt="VS Code" /></a> VS Code &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/windows/webstorm"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/webstorm.webp" width="16" height="16" alt="WebStorm" /></a> WebStorm
+<table>
+<tr>
+<td align="center"><a href="https://keyshortcut.com/windows/datagrip"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/datagrip.webp" width="36" height="36" alt="DataGrip" /><br /><sub>DataGrip</sub></a></td><td align="center"><a href="https://keyshortcut.com/windows/dataspell"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/dataspell.webp" width="36" height="36" alt="DataSpell" /><br /><sub>DataSpell</sub></a></td><td align="center"><a href="https://keyshortcut.com/windows/dbeaver"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/dbeaver.webp" width="36" height="36" alt="DBeaver" /><br /><sub>DBeaver</sub></a></td><td align="center"><a href="https://keyshortcut.com/windows/godot"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/godot.webp" width="36" height="36" alt="Godot Engine" /><br /><sub>Godot Engine</sub></a></td><td align="center"><a href="https://keyshortcut.com/windows/insomnia"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/insomnia.webp" width="36" height="36" alt="Insomnia" /><br /><sub>Insomnia</sub></a></td><td align="center"><a href="https://keyshortcut.com/windows/jupyter"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/jupyter.webp" width="36" height="36" alt="Jupyter Notebook" /><br /><sub>Jupyter Notebook</sub></a></td><td align="center"><a href="https://keyshortcut.com/windows/labview"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/labview.webp" width="36" height="36" alt="LabVIEW" /><br /><sub>LabVIEW</sub></a></td><td align="center"><a href="https://keyshortcut.com/windows/matlab"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/matlab.webp" width="36" height="36" alt="MATLAB" /><br /><sub>MATLAB</sub></a></td>
+</tr>
+<tr>
+<td align="center"><a href="https://keyshortcut.com/windows/sql-developer"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/sql-developer.webp" width="36" height="36" alt="Oracle SQL Developer" /><br /><sub>Oracle SQL Developer</sub></a></td><td align="center"><a href="https://keyshortcut.com/windows/postman"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/postman.webp" width="36" height="36" alt="Postman" /><br /><sub>Postman</sub></a></td><td align="center"><a href="https://keyshortcut.com/windows/rider"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/rider.webp" width="36" height="36" alt="Rider" /><br /><sub>Rider</sub></a></td><td align="center"><a href="https://keyshortcut.com/windows/rstudio"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/rstudio.webp" width="36" height="36" alt="RStudio" /><br /><sub>RStudio</sub></a></td><td align="center"><a href="https://keyshortcut.com/windows/tortoisegit"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/tortoisegit.webp" width="36" height="36" alt="TortoiseGit" /><br /><sub>TortoiseGit</sub></a></td><td align="center"><a href="https://keyshortcut.com/windows/unity"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/unity.webp" width="36" height="36" alt="Unity" /><br /><sub>Unity</sub></a></td><td align="center"><a href="https://keyshortcut.com/windows/unreal-engine"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/unreal-engine.webp" width="36" height="36" alt="Unreal Engine" /><br /><sub>Unreal Engine</sub></a></td><td align="center"><a href="https://keyshortcut.com/windows/visual-studio"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/visual-studio.webp" width="36" height="36" alt="Visual Studio" /><br /><sub>Visual Studio</sub></a></td>
+</tr>
+<tr>
+<td align="center"><a href="https://keyshortcut.com/windows/vscode"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/vscode.webp" width="36" height="36" alt="VS Code" /><br /><sub>VS Code</sub></a></td><td align="center"><a href="https://keyshortcut.com/windows/webstorm"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/webstorm.webp" width="36" height="36" alt="WebStorm" /><br /><sub>WebStorm</sub></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</table>
 
-**Communication**
+<h4>Communication</h4>
 
-<a href="https://keyshortcut.com/windows/discord"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/discord.webp" width="16" height="16" alt="Discord" /></a> Discord &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/windows/slack"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/slack.webp" width="16" height="16" alt="Slack" /></a> Slack &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/windows/teams"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/teams.webp" width="16" height="16" alt="Teams" /></a> Teams
+<table>
+<tr>
+<td align="center"><a href="https://keyshortcut.com/windows/discord"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/discord.webp" width="36" height="36" alt="Discord" /><br /><sub>Discord</sub></a></td><td align="center"><a href="https://keyshortcut.com/windows/slack"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/slack.webp" width="36" height="36" alt="Slack" /><br /><sub>Slack</sub></a></td><td align="center"><a href="https://keyshortcut.com/windows/teams"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/teams.webp" width="36" height="36" alt="Teams" /><br /><sub>Teams</sub></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</table>
 
-**Productivity**
+<h4>Productivity</h4>
 
-<a href="https://keyshortcut.com/windows/clickup"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/clickup.webp" width="16" height="16" alt="ClickUp" /></a> ClickUp &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/windows/confluence"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/confluence.webp" width="16" height="16" alt="Confluence" /></a> Confluence &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/windows/gitlab"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/gitlab.webp" width="16" height="16" alt="GitLab" /></a> GitLab &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/windows/spss"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/spss.webp" width="16" height="16" alt="IBM SPSS Statistics" /></a> IBM SPSS Statistics &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/windows/jira-align"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/jira-align.webp" width="16" height="16" alt="Jira Align" /></a> Jira Align &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/windows/minitab"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/minitab.webp" width="16" height="16" alt="Minitab" /></a> Minitab &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/windows/notion"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/notion.webp" width="16" height="16" alt="Notion" /></a> Notion &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/windows/stata"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/stata.webp" width="16" height="16" alt="Stata" /></a> Stata &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/windows/wordpress"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/wordpress.webp" width="16" height="16" alt="WordPress" /></a> WordPress
+<table>
+<tr>
+<td align="center"><a href="https://keyshortcut.com/windows/clickup"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/clickup.webp" width="36" height="36" alt="ClickUp" /><br /><sub>ClickUp</sub></a></td><td align="center"><a href="https://keyshortcut.com/windows/confluence"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/confluence.webp" width="36" height="36" alt="Confluence" /><br /><sub>Confluence</sub></a></td><td align="center"><a href="https://keyshortcut.com/windows/gitlab"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/gitlab.webp" width="36" height="36" alt="GitLab" /><br /><sub>GitLab</sub></a></td><td align="center"><a href="https://keyshortcut.com/windows/spss"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/spss.webp" width="36" height="36" alt="IBM SPSS Statistics" /><br /><sub>IBM SPSS Statistics</sub></a></td><td align="center"><a href="https://keyshortcut.com/windows/jira-align"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/jira-align.webp" width="36" height="36" alt="Jira Align" /><br /><sub>Jira Align</sub></a></td><td align="center"><a href="https://keyshortcut.com/windows/minitab"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/minitab.webp" width="36" height="36" alt="Minitab" /><br /><sub>Minitab</sub></a></td><td align="center"><a href="https://keyshortcut.com/windows/notion"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/notion.webp" width="36" height="36" alt="Notion" /><br /><sub>Notion</sub></a></td><td align="center"><a href="https://keyshortcut.com/windows/stata"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/stata.webp" width="36" height="36" alt="Stata" /><br /><sub>Stata</sub></a></td>
+</tr>
+<tr>
+<td align="center"><a href="https://keyshortcut.com/windows/wordpress"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/wordpress.webp" width="36" height="36" alt="WordPress" /><br /><sub>WordPress</sub></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</table>
 
-**Design**
+<h4>Design</h4>
 
-<a href="https://keyshortcut.com/windows/acrobat"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/acrobat.webp" width="16" height="16" alt="Acrobat" /></a> Acrobat &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/windows/adobe-xd"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/adobe-xd.webp" width="16" height="16" alt="Adobe XD" /></a> Adobe XD &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/windows/canva"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/canva.webp" width="16" height="16" alt="Canva" /></a> Canva &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/windows/figma"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/figma.webp" width="16" height="16" alt="Figma" /></a> Figma &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/windows/gimp"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/gimp.webp" width="16" height="16" alt="GIMP" /></a> GIMP &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/windows/inkscape"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/inkscape.webp" width="16" height="16" alt="Inkscape" /></a> Inkscape &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/windows/maya"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/maya.webp" width="16" height="16" alt="Maya" /></a> Maya &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/windows/photoshop"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/photoshop.webp" width="16" height="16" alt="Photoshop" /></a> Photoshop &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/windows/webflow"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/webflow.webp" width="16" height="16" alt="Webflow" /></a> Webflow
+<table>
+<tr>
+<td align="center"><a href="https://keyshortcut.com/windows/acrobat"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/acrobat.webp" width="36" height="36" alt="Acrobat" /><br /><sub>Acrobat</sub></a></td><td align="center"><a href="https://keyshortcut.com/windows/adobe-xd"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/adobe-xd.webp" width="36" height="36" alt="Adobe XD" /><br /><sub>Adobe XD</sub></a></td><td align="center"><a href="https://keyshortcut.com/windows/canva"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/canva.webp" width="36" height="36" alt="Canva" /><br /><sub>Canva</sub></a></td><td align="center"><a href="https://keyshortcut.com/windows/figma"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/figma.webp" width="36" height="36" alt="Figma" /><br /><sub>Figma</sub></a></td><td align="center"><a href="https://keyshortcut.com/windows/gimp"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/gimp.webp" width="36" height="36" alt="GIMP" /><br /><sub>GIMP</sub></a></td><td align="center"><a href="https://keyshortcut.com/windows/inkscape"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/inkscape.webp" width="36" height="36" alt="Inkscape" /><br /><sub>Inkscape</sub></a></td><td align="center"><a href="https://keyshortcut.com/windows/maya"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/maya.webp" width="36" height="36" alt="Maya" /><br /><sub>Maya</sub></a></td><td align="center"><a href="https://keyshortcut.com/windows/photoshop"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/photoshop.webp" width="36" height="36" alt="Photoshop" /><br /><sub>Photoshop</sub></a></td>
+</tr>
+<tr>
+<td align="center"><a href="https://keyshortcut.com/windows/webflow"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/webflow.webp" width="36" height="36" alt="Webflow" /><br /><sub>Webflow</sub></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</table>
 
-**Microsoft Office**
+<h4>Microsoft Office</h4>
 
-<a href="https://keyshortcut.com/windows/excel"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/excel.webp" width="16" height="16" alt="Excel" /></a> Excel &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/windows/powerpoint"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/powerpoint.webp" width="16" height="16" alt="PowerPoint" /></a> PowerPoint &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/windows/word"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/word.webp" width="16" height="16" alt="Word" /></a> Word
+<table>
+<tr>
+<td align="center"><a href="https://keyshortcut.com/windows/excel"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/excel.webp" width="36" height="36" alt="Excel" /><br /><sub>Excel</sub></a></td><td align="center"><a href="https://keyshortcut.com/windows/powerpoint"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/powerpoint.webp" width="36" height="36" alt="PowerPoint" /><br /><sub>PowerPoint</sub></a></td><td align="center"><a href="https://keyshortcut.com/windows/word"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/word.webp" width="36" height="36" alt="Word" /><br /><sub>Word</sub></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</table>
 
-**Media**
+<h4>Media</h4>
 
-<a href="https://keyshortcut.com/windows/premiere-pro"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/premiere-pro.webp" width="16" height="16" alt="Premiere Pro" /></a> Premiere Pro
+<table>
+<tr>
+<td align="center"><a href="https://keyshortcut.com/windows/premiere-pro"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/premiere-pro.webp" width="36" height="36" alt="Premiere Pro" /><br /><sub>Premiere Pro</sub></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</table>
 
-**Windows System**
+<h4>Windows System</h4>
 
-<a href="https://keyshortcut.com/windows/windows"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/windows.webp" width="16" height="16" alt="Windows" /></a> Windows
+<table>
+<tr>
+<td align="center"><a href="https://keyshortcut.com/windows/windows"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/windows.webp" width="36" height="36" alt="Windows" /><br /><sub>Windows</sub></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</table>
 
 </details>
 
 <details>
 <summary><strong>Linux</strong> — 10 apps</summary>
 
-**Browsers**
+<h4>Browsers</h4>
 
-<a href="https://keyshortcut.com/linux/chrome"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/chrome.webp" width="16" height="16" alt="Chrome" /></a> Chrome &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/linux/firefox"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/firefox.webp" width="16" height="16" alt="Firefox" /></a> Firefox
+<table>
+<tr>
+<td align="center"><a href="https://keyshortcut.com/linux/chrome"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/chrome.webp" width="36" height="36" alt="Chrome" /><br /><sub>Chrome</sub></a></td><td align="center"><a href="https://keyshortcut.com/linux/firefox"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/firefox.webp" width="36" height="36" alt="Firefox" /><br /><sub>Firefox</sub></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</table>
 
-**Development**
+<h4>Development</h4>
 
-<a href="https://keyshortcut.com/linux/vim"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/vim.webp" width="16" height="16" alt="Vim" /></a> Vim &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/linux/vscode"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/vscode.webp" width="16" height="16" alt="VS Code" /></a> VS Code
+<table>
+<tr>
+<td align="center"><a href="https://keyshortcut.com/linux/vim"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/vim.webp" width="36" height="36" alt="Vim" /><br /><sub>Vim</sub></a></td><td align="center"><a href="https://keyshortcut.com/linux/vscode"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/vscode.webp" width="36" height="36" alt="VS Code" /><br /><sub>VS Code</sub></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</table>
 
-**Communication**
+<h4>Communication</h4>
 
-<a href="https://keyshortcut.com/linux/discord"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/discord.webp" width="16" height="16" alt="Discord" /></a> Discord &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/linux/slack"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/slack.webp" width="16" height="16" alt="Slack" /></a> Slack
+<table>
+<tr>
+<td align="center"><a href="https://keyshortcut.com/linux/discord"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/discord.webp" width="36" height="36" alt="Discord" /><br /><sub>Discord</sub></a></td><td align="center"><a href="https://keyshortcut.com/linux/slack"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/slack.webp" width="36" height="36" alt="Slack" /><br /><sub>Slack</sub></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</table>
 
-**Productivity**
+<h4>Productivity</h4>
 
-<a href="https://keyshortcut.com/linux/notion"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/notion.webp" width="16" height="16" alt="Notion" /></a> Notion
+<table>
+<tr>
+<td align="center"><a href="https://keyshortcut.com/linux/notion"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/notion.webp" width="36" height="36" alt="Notion" /><br /><sub>Notion</sub></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</table>
 
-**Design**
+<h4>Design</h4>
 
-<a href="https://keyshortcut.com/linux/blender"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/blender.webp" width="16" height="16" alt="Blender" /></a> Blender &nbsp;&middot;&nbsp; <a href="https://keyshortcut.com/linux/figma"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/figma.webp" width="16" height="16" alt="Figma" /></a> Figma
+<table>
+<tr>
+<td align="center"><a href="https://keyshortcut.com/linux/blender"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/blender.webp" width="36" height="36" alt="Blender" /><br /><sub>Blender</sub></a></td><td align="center"><a href="https://keyshortcut.com/linux/figma"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/figma.webp" width="36" height="36" alt="Figma" /><br /><sub>Figma</sub></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</table>
 
-**System Utils**
+<h4>System Utils</h4>
 
-<a href="https://keyshortcut.com/linux/linux"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/linux.webp" width="16" height="16" alt="Linux Desktop" /></a> Linux Desktop
+<table>
+<tr>
+<td align="center"><a href="https://keyshortcut.com/linux/linux"><img src="https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/app-icons/linux.webp" width="36" height="36" alt="Linux Desktop" /><br /><sub>Linux Desktop</sub></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</table>
 
 </details>
 
