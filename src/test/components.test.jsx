@@ -68,8 +68,15 @@ describe('MacAppStoreButton', () => {
 })
 
 describe('AdSlot', () => {
-  it('renders nothing when AdSense ID contains placeholder', () => {
+  it('renders nothing when AdSense ID is not configured', () => {
+    // AdSlot renders nothing when VITE_ADSENSE_ID env var is empty
+    // When env var is set, it renders the ad unit
     const { container } = render(<AdSlot adSlot="1234567890" />)
-    expect(container.innerHTML).toBe('')
+    const hasAdSenseId = !!import.meta.env.VITE_ADSENSE_ID
+    if (hasAdSenseId) {
+      expect(container.innerHTML).toContain('adsbygoogle')
+    } else {
+      expect(container.innerHTML).toBe('')
+    }
   })
 })
