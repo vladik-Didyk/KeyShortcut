@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 
 export function useInView({ threshold = 0.15, rootMargin = '0px' } = {}) {
   const ref = useRef(null)
+  const visibleRef = useRef(true)
   // Start visible to avoid flash of invisible SSR content
   const [isVisible, setIsVisible] = useState(true)
 
@@ -14,11 +15,13 @@ export function useInView({ threshold = 0.15, rootMargin = '0px' } = {}) {
     if (rect.top < window.innerHeight && rect.bottom > 0) return
 
     // Below the fold — hide and animate in on scroll
-    setIsVisible(false)
+    visibleRef.current = false
+    setIsVisible(false) // eslint-disable-line react-hooks/set-state-in-effect -- intentional: must hide before observer starts
 
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
+        if (entry.isIntersecting && !visibleRef.current) {
+          visibleRef.current = true
           setIsVisible(true)
           observer.unobserve(element)
         }

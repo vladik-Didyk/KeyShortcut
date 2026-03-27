@@ -48,7 +48,7 @@ export function buildSearchIndex(apps) {
 export function tokenize(query) {
   return query
     .toLowerCase()
-    .split(/[\s:;,\-]+/)
+    .split(/[\s:;,-]+/)
     .filter(t => t.length > 0 && !STOP_WORDS.has(t))
 }
 

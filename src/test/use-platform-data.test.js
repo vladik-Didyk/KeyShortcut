@@ -5,7 +5,6 @@ import { renderHook, waitFor } from '@testing-library/react'
 const mockSelect = vi.fn()
 const mockEq = vi.fn()
 const mockIn = vi.fn()
-const mockOrder = vi.fn()
 const mockFrom = vi.fn()
 
 vi.mock('@supabase/supabase-js', () => ({
