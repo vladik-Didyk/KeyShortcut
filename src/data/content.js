@@ -601,6 +601,8 @@ export const CONTENT = {
   // ─── About page (/about) ─────────────────────────────────────────
   about: {
     title: 'About KeyShortcut',
+    published: '2025-06-01',
+    lastUpdated: '2026-03-30',
     sections: [
       {
         paragraphs: [
@@ -619,12 +621,25 @@ export const CONTENT = {
         buttonLabel: 'Suggest an app',
         buttonHref: `mailto:${SUPPORT_EMAIL}?subject=App%20suggestion%20for%20KeyShortcut`,
       },
+      openSource: {
+        label: 'Open source',
+        title: 'Built in the open',
+        text: 'KeyShortcut is open source. Browse the code, report issues, or contribute on GitHub.',
+        buttonLabel: 'View on GitHub',
+        buttonHref: 'https://github.com/vladik-Didyk/KeyShortcut',
+      },
       creator: {
         label: 'Created by',
         name: 'Vladik Didyk',
         url: 'https://vladik-didyk.netlify.app',
         avatar: '/images/avatar.webp',
-        bio: 'Full Stack Developer and Systems Engineer. Building tools that make people more productive at the keyboard.',
+        title: 'Full-Stack Developer & Systems Engineer',
+        location: 'Toronto, Canada',
+        bio: 'Like what you see? The Mac app takes it further \u2014 it detects your active app and shows its shortcuts instantly. Support the project and have every shortcut at your fingertips.',
+        links: {
+          linkedin: 'https://linkedin.com/in/vladislav-didyk',
+          github: 'https://github.com/vladik-Didyk',
+        },
         buttonLabel: 'Get the Mac App',
       },
     },
