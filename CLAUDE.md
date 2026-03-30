@@ -19,6 +19,7 @@ pnpm lint         # ESLint (flat config, React hooks + refresh plugins)
 pnpm test         # Vitest test suite (single run)
 pnpm test:watch   # Vitest in watch mode
 pnpm test:perf    # Run performance benchmarks
+pnpm test:perf:browser  # Run Playwright E2E performance tests
 pnpm run deploy   # Build + deploy to Cloudflare Pages (production)
 pnpm sync         # Run shortcut sync pipeline (scrape → diff → write to Supabase)
 pnpm sync:dry     # Dry run (no writes to Supabase)
@@ -53,11 +54,12 @@ Route modules live in `src/routes/` and export `loader`, `meta`, and a default c
 - `shortcut-page.jsx` — `/:platformId/:slug` Per-app shortcut page (server `loader`, validates app)
 - `product-page.jsx` — `/mac-hud` Mac HUD product page (Hero, Problem, Features, etc.)
 - `privacy.jsx` — `/privacy` Privacy policy
+- `about.jsx` — `/about` About page
 - `redirect-directory.jsx` — `/directory` → `/` redirect (301)
 - `redirect-legacy.jsx` — `/shortcuts/*` legacy redirects (301)
 - `catch-all.jsx` — `*` 404 catch-all
 
-**Layout**: `src/layouts/directory-layout.jsx` wraps directory routes (home, platform-index, shortcut-page, privacy) with `<Navbar />` + `<Footer />`. The product page has its own Navbar/Footer.
+**Layout**: `src/layouts/directory-layout.jsx` wraps directory routes (home, platform-index, shortcut-page, privacy, about) with `<Navbar />` + `<Footer />`. The product page has its own Navbar/Footer.
 
 **SEO**: Route modules export `meta()` functions that return title, description, OG tags, Twitter Card tags, and canonical links (via `{ tagName: "link", rel: "canonical", ... }`). All meta is rendered server-side into pre-rendered HTML.
 
@@ -98,16 +100,16 @@ Product page sections use anchor links (`#features`, `#faq`, `#policies`, `#down
 
 **Pre-rendering config**: `react-router.config.ts` queries Supabase directly (via `loadEnv` from Vite) to generate the list of ~175 paths to pre-render.
 
-**Centralized config** — marketing constants and copy:
+**Supabase caching** (dev only): `supabase.server.js` uses a two-layer cache — in-memory (5-min TTL) + disk (`node_modules/.cache/supabase/`). Disk cache survives HMR restarts. If data seems stale during development, clear the cache: `rm -rf node_modules/.cache/supabase`.
+
+**Centralized copy**: `content.js` — single source of truth for all UI/marketing text. Imports computed values from `siteConfig.js`. Use `content.js` for all new copy; `copy.js` is legacy.
+
+**Other data files** in `src/data/`:
 - `siteConfig.js` — computed constants from `platformIndex.generated.js`: `APP_COUNT`, `SHORTCUT_COUNT`, `PRICE`, etc.
-- `copy.js` — all UI/marketing text organized by section, including default meta title/description.
 - `categoryConfig.js` — unified category metadata (icon + color per category) for all platforms.
 - `keyboardLayout.js` — keyboard row definitions and shortcut databases for Hero and InteractiveKeyboard.
 - `details.js` — detail card items for the Details section.
-
-**Hand-maintained content**: `features.js`, `faq.js`, `policies.js`, `shortcuts.js`, `appCategories.js`, `heroDemoData.js`
-
-**Centralized copy**: `content.js` — single source of truth for all UI/marketing text. Imports computed values from `siteConfig.js`.
+- Hand-maintained: `features.js`, `faq.js`, `policies.js`, `shortcuts.js`, `appCategories.js`, `heroDemoData.js`
 
 **Adding a new platform**: Create `public/data/platforms/{platform}.json`, add entry to `manifest.json`, run `pnpm build`. No code changes needed — pre-rendering config auto-discovers platforms.
 
@@ -151,7 +153,7 @@ Hero uses an HTML/CSS animated keyboard mockup with `AppPanelMockup` — no 3D/c
 
 ### Testing
 
-Vitest with jsdom environment, globals enabled, setup in `src/test/setup.js` (imports `@testing-library/jest-dom`). Separate `vitest.config.js` uses `@vitejs/plugin-react` (not the React Router plugin) to avoid framework conflicts. Test files live in `src/test/`. Key test suites:
+Vitest with jsdom environment, globals enabled, setup in `src/test/setup.js` (imports `@testing-library/jest-dom`). **Important**: Tests use a separate `vitest.config.js` with `@vitejs/plugin-react` instead of the React Router plugin — this avoids framework conflicts. Test files live in `src/test/`. E2E tests use Playwright in `e2e/`. Key test suites:
 - `data-integrity.test.js` — validates platform JSON structure across all platforms
 - `directory-helpers.test.js` — tests platformHelpers utility functions
 - `search-helpers.test.js` — tests search/filtering utilities
