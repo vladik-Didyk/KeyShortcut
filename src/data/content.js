@@ -418,18 +418,19 @@ export const CONTENT = {
     policy: {
       title: 'Privacy Policy',
       effectiveDate: 'Effective date: March 14, 2026',
-      intro: 'KeyShortcut is built with privacy as a core principle. The app operates entirely offline and collects zero user data. This site displays advertisements served by Google AdSense. This policy covers both the KeyShortcut macOS app and the keyshortcut.com website.',
+      intro: 'KeyShortcut is built with privacy as a core principle. This policy covers both the KeyShortcut macOS app and the keyshortcut.com website. The app does not collect personal data. This site displays advertisements served by Google AdSense.',
       sections: [
         {
           heading: 'App Data Collection',
           content: [
-            { type: 'paragraph', text: 'The KeyShortcut macOS app does not collect, store, or transmit any personal data. There are no analytics frameworks, no tracking pixels, and no third-party SDKs in the app.' },
+            { type: 'paragraph', text: 'The KeyShortcut macOS app does not collect, store, or transmit any personal data. There are no analytics frameworks, no tracking pixels, and no advertising SDKs in the app.' },
           ],
         },
         {
           heading: 'Network Access',
           content: [
-            { type: 'paragraph', text: 'The KeyShortcut macOS app makes zero network requests. The app contains no networking code and does not communicate with any server. It works entirely offline.' },
+            { type: 'paragraph', text: 'The KeyShortcut macOS app connects to Supabase (our database provider) to sync shortcut data. These requests are read-only and used solely to keep your shortcut library up to date. No personal data, device identifiers, or usage information is sent in these requests.' },
+            { type: 'paragraph', text: 'The app also uses Apple\u2019s MetricKit framework for anonymized crash reporting (see Apple Diagnostics below). Apart from these two services, the app makes no other network requests.' },
           ],
         },
         {
