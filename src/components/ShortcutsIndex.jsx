@@ -1,4 +1,4 @@
-import { useState, useMemo, useRef, useEffect } from 'react'
+import React, { useState, useMemo, useRef, useEffect } from 'react'
 import { Link, useLoaderData, useNavigate } from 'react-router'
 import { Search, X } from '../utils/icons'
 import { groupByCategories } from '../utils/platformHelpers'
@@ -7,6 +7,7 @@ import { categoryConfig } from '../data/categoryConfig'
 import { CONTENT } from '../data/content'
 import AppCard from './directory/AppCard'
 import SearchDropdown from './SearchDropdown'
+import AdSlot from './AdSlot'
 
 export default function ShortcutsIndex() {
   const { platformId: platform, platformName, apps, categories } = useLoaderData()
@@ -91,9 +92,25 @@ export default function ShortcutsIndex() {
           <p className="text-theme-muted text-[15px] leading-relaxed max-w-[720px] mb-3">
             {CONTENT.directory.intro(platformName, apps.length, totalShortcuts)}
           </p>
-          <p className="text-theme-muted text-[15px] leading-relaxed max-w-[720px] mb-8">
+          <p className="text-theme-muted text-[15px] leading-relaxed max-w-[720px] mb-6">
             {CONTENT.directory.learnMore(platformName)}
           </p>
+
+          {/* ─── Modifier Keys Reference ─── */}
+          <div className="max-w-[720px] mb-8 rounded-2xl bg-theme-base-alt border border-theme-border p-5">
+            <h2 className="text-sm font-semibold tracking-tight mb-3">{CONTENT.directory.modifierTitle}</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              {CONTENT.directory.modifierExplainer(platformName).map(mod => (
+                <div key={mod.name} className="flex gap-3 items-start">
+                  <kbd className="keycap-mini shrink-0 mt-0.5">{mod.symbol}</kbd>
+                  <div>
+                    <span className="text-sm font-medium text-theme-text">{mod.name}</span>
+                    <p className="text-xs text-theme-muted leading-relaxed mt-0.5">{mod.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
 
           <div ref={searchContainerRef} className="relative">
             <Search
@@ -149,37 +166,42 @@ export default function ShortcutsIndex() {
       </header>
 
       <div className="mx-auto max-w-[1080px] px-5 md:px-6 pb-20">
-        {grouped.map(group => {
+        {grouped.map((group, index) => {
           const config = categoryConfig[group.name]
           const Icon = config?.icon
 
           return (
-            <section key={group.name} className="mb-20">
-              <div className="flex flex-col md:flex-row gap-8 md:gap-10">
-                {/* Left: Category label */}
-                <div className="md:w-44 shrink-0 flex flex-row md:flex-col items-center md:items-start gap-4 md:gap-0 md:pt-4">
-                  <div
-                    className="w-12 h-12 md:w-14 md:h-14 rounded-2xl flex items-center justify-center md:mb-4"
-                    style={{ backgroundColor: config?.color || 'var(--theme-accent)' }}
-                  >
-                    {Icon && <Icon size={24} className="text-white" />}
+            <React.Fragment key={group.name}>
+              <section className="mb-20">
+                <div className="flex flex-col md:flex-row gap-8 md:gap-10">
+                  {/* Left: Category label */}
+                  <div className="md:w-44 shrink-0 flex flex-row md:flex-col items-center md:items-start gap-4 md:gap-0 md:pt-4">
+                    <div
+                      className="w-12 h-12 md:w-14 md:h-14 rounded-2xl flex items-center justify-center md:mb-4"
+                      style={{ backgroundColor: config?.color || 'var(--theme-accent)' }}
+                    >
+                      {Icon && <Icon size={24} className="text-white" />}
+                    </div>
+                    <div>
+                      <h2 className="text-xl md:text-2xl font-semibold text-theme-text leading-tight">
+                        {group.name}
+                      </h2>
+                      <p className="text-theme-muted text-sm mt-0.5">{CONTENT.directory.categorySubLabel}</p>
+                    </div>
                   </div>
-                  <div>
-                    <h2 className="text-xl md:text-2xl font-semibold text-theme-text leading-tight">
-                      {group.name}
-                    </h2>
-                    <p className="text-theme-muted text-sm mt-0.5">{CONTENT.directory.categorySubLabel}</p>
-                  </div>
-                </div>
 
-                {/* Right: App grid */}
-                <div className="flex-1 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
-                  {group.apps.map(app => (
-                    <AppCard key={app.slug} app={app} platform={platform} />
-                  ))}
+                  {/* Right: App grid */}
+                  <div className="flex-1 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+                    {group.apps.map(app => (
+                      <AppCard key={app.slug} app={app} platform={platform} />
+                    ))}
+                  </div>
                 </div>
-              </div>
-            </section>
+              </section>
+              {index === 2 && grouped.length > 4 && (
+                <AdSlot adSlot="platform_mid" variant="in-article" />
+              )}
+            </React.Fragment>
           )
         })}
 

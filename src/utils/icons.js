@@ -16,6 +16,7 @@ export {
   Github,
   Globe,
   Keyboard,
+  Lightbulb,
   Menu,
   MessageCircle,
   Monitor,

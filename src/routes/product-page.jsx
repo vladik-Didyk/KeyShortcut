@@ -13,7 +13,6 @@ import AppGrid from "../components/AppGrid";
 import FAQ from "../components/FAQ";
 import Policies from "../components/Policies";
 import CTABanner from "../components/CTABanner";
-import AdSlot from "../components/AdSlot";
 import Footer from "../components/Footer";
 
 export function meta() {
@@ -43,15 +42,12 @@ export default function ProductPageRoute() {
       <main>
         <Hero />
         <Problem />
-        <AdSlot adSlot="1234567890" />
         <Features />
         <Details />
         <ShortcutPreview />
         <AppCoverage />
         <AppGrid appCategories={appCategories} />
-        <AdSlot adSlot="1234567891" />
         <FAQ />
-        <AdSlot adSlot="1234567892" />
         <Policies />
         <CTABanner />
       </main>

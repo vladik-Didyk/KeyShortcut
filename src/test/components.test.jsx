@@ -68,15 +68,16 @@ describe('MacAppStoreButton', () => {
 })
 
 describe('AdSlot', () => {
-  it('renders nothing when AdSense ID is not configured', () => {
-    // AdSlot renders nothing when VITE_ADSENSE_ID env var is empty
-    // When env var is set, it renders the ad unit
+  it('renders nothing in non-production environment', () => {
+    // AdSense ad units only render in production to avoid empty "Sponsored" placeholders
     const { container } = render(<AdSlot adSlot="1234567890" />)
-    const hasAdSenseId = !!import.meta.env.VITE_ADSENSE_ID
-    if (hasAdSenseId) {
-      expect(container.innerHTML).toContain('adsbygoogle')
-    } else {
-      expect(container.innerHTML).toBe('')
-    }
+    expect(container.innerHTML).toBe('')
+  })
+
+  it('renders sponsor content when sponsor prop is provided', () => {
+    const sponsor = { url: 'https://example.com', image: '/sponsor.png', alt: 'Test Sponsor' }
+    const { container } = render(<AdSlot adSlot="1234567890" sponsor={sponsor} />)
+    expect(container.innerHTML).toContain('example.com')
+    expect(container.innerHTML).toContain('Sponsored')
   })
 })

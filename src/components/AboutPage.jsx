@@ -23,8 +23,8 @@ export default function AboutPage() {
 
         {about.sections.map((section, si) => (
           <div key={si} className="mb-8">
-            {section.heading && (
-              <h2 className="text-xl font-semibold mb-3">{section.heading}</h2>
+            {(section.heading || section.title) && (
+              <h2 className="text-xl font-semibold mb-3">{section.heading || section.title}</h2>
             )}
             {section.paragraphs.map((p, i) => (
               <p key={i} className="text-theme-muted mb-4 leading-relaxed">{p}</p>

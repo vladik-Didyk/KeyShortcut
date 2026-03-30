@@ -375,6 +375,25 @@ export const CONTENT = {
         'The directory is searchable by app name and by shortcut action. You can look up a specific key combination, browse all shortcuts for an app, or explore apps by category — from browsers and code editors to design tools and productivity apps.',
         'All shortcuts are displayed with visual keycap badges that match the modifier key style of each platform: Command, Option, Control, and Shift on macOS, or Ctrl, Alt, Shift, and Win on Windows and Linux. This makes it easy to scan the page and identify the combination you need at a glance.',
       ],
+      whyTitle: 'Why Keyboard Shortcuts Matter',
+      whyParagraphs: [
+        'Research consistently shows that keyboard shortcuts save significant time over mouse-driven workflows. A study by Brainscape found that the average user can save up to 8 working days per year by using shortcuts instead of navigating menus. Every second you spend reaching for the mouse, finding the right menu, and clicking adds up.',
+        'Beyond speed, shortcuts reduce cognitive load. When a key combination becomes muscle memory, it no longer requires conscious thought — your hands execute the action while your mind stays focused on the task. This is why professional designers, developers, and writers all rely heavily on shortcut-driven workflows.',
+      ],
+      popularTitle: 'Universal Shortcuts',
+      popularSubtitle: 'These shortcuts work in almost every application, across all platforms.',
+      popularShortcuts: [
+        { action: 'Copy', mac: '⌘ C', win: 'Ctrl C' },
+        { action: 'Paste', mac: '⌘ V', win: 'Ctrl V' },
+        { action: 'Cut', mac: '⌘ X', win: 'Ctrl X' },
+        { action: 'Undo', mac: '⌘ Z', win: 'Ctrl Z' },
+        { action: 'Redo', mac: '⇧ ⌘ Z', win: 'Ctrl Y' },
+        { action: 'Save', mac: '⌘ S', win: 'Ctrl S' },
+        { action: 'Select All', mac: '⌘ A', win: 'Ctrl A' },
+        { action: 'Find', mac: '⌘ F', win: 'Ctrl F' },
+        { action: 'New Tab', mac: '⌘ T', win: 'Ctrl T' },
+        { action: 'Close Tab', mac: '⌘ W', win: 'Ctrl W' },
+      ],
     },
   },
 
@@ -390,6 +409,28 @@ export const CONTENT = {
       `Browse keyboard shortcuts for ${appCount} ${platformName} applications, totaling ${shortcutCount.toLocaleString()}+ shortcuts. Every shortcut is sourced from official documentation and organized by category. Click on any app to see its full shortcut reference, filter by action, or download a PDF cheat sheet.`,
     learnMore: (platformName) =>
       `Keyboard shortcuts are essential for working efficiently on ${platformName}. Whether you're switching between apps, editing documents, or managing files, knowing the right key combination saves you time and keeps you in flow. This directory is updated regularly as apps add new features and shortcuts.`,
+    modifierTitle: 'Modifier Keys Reference',
+    modifierExplainer: (platformName) => {
+      if (platformName === 'macOS') return [
+        { symbol: '⌘', name: 'Command', description: 'The primary modifier key on Mac. Used for most common shortcuts like Copy (⌘C), Paste (⌘V), and Save (⌘S).' },
+        { symbol: '⌥', name: 'Option', description: 'Also labeled Alt on some keyboards. Used for alternate actions and special characters.' },
+        { symbol: '⌃', name: 'Control', description: 'Less common in macOS than on other platforms. Used in terminal, Emacs-style text navigation, and some app-specific shortcuts.' },
+        { symbol: '⇧', name: 'Shift', description: 'Extends selections, reverses actions, or accesses alternate functions. Shift+⌘+Z is Redo in most apps.' },
+        { symbol: 'Fn', name: 'Function', description: 'Activates function keys (F1–F12) and system features like Emoji picker (Fn alone) and Dictation (Fn twice).' },
+      ]
+      if (platformName === 'Windows') return [
+        { symbol: 'Ctrl', name: 'Control', description: 'The primary modifier key on Windows. Used for most shortcuts like Copy (Ctrl+C), Paste (Ctrl+V), and Save (Ctrl+S).' },
+        { symbol: 'Alt', name: 'Alternate', description: 'Accesses menu bar shortcuts, switches windows (Alt+Tab), and provides alternate actions in many apps.' },
+        { symbol: 'Shift', name: 'Shift', description: 'Extends selections, reverses actions, or accesses alternate functions. Ctrl+Shift+Z is Redo in many apps.' },
+        { symbol: '⊞ Win', name: 'Windows', description: 'Opens the Start menu, and is combined with other keys for system-level shortcuts like Win+D (show desktop).' },
+      ]
+      return [
+        { symbol: 'Ctrl', name: 'Control', description: 'The primary modifier key. Used for most shortcuts like Copy (Ctrl+C), Paste (Ctrl+V), and Save (Ctrl+S).' },
+        { symbol: 'Alt', name: 'Alternate', description: 'Accesses menu bar shortcuts and provides alternate actions. Alt+Tab switches windows.' },
+        { symbol: 'Shift', name: 'Shift', description: 'Extends selections, reverses actions, or accesses alternate functions.' },
+        { symbol: 'Super', name: 'Super/Meta', description: 'Often the Windows key on standard keyboards. Opens the activities overview in GNOME or application launcher in KDE.' },
+      ]
+    },
   },
 
   // ─── Per-app shortcut page (/:platformId/:slug) ───────────────────
@@ -405,6 +446,33 @@ export const CONTENT = {
       `This page lists all ${shortcutCount} keyboard shortcuts for ${appName} on ${platformName}, organized into ${sectionCount} sections. Each shortcut is displayed with its modifier keys and action so you can quickly find the key combination you need. Use the search bar above to filter shortcuts by name, or browse the sections in the sidebar.`,
     learnMore: (appName) =>
       `Learning keyboard shortcuts is one of the most effective ways to speed up your workflow in ${appName}. Instead of navigating through menus, you can perform common actions instantly with a quick key combination. Bookmark this page for easy reference, or download the shortcuts as a PDF cheat sheet using the download button above.`,
+    tips: (appName, platformName) => [
+      `Practice one new ${appName} shortcut each day. Muscle memory builds faster when you focus on a single combination at a time rather than trying to learn them all at once.`,
+      `Print or bookmark this page for quick reference while working in ${appName}. Having shortcuts visible nearby helps bridge the gap between looking them up and recalling them from memory.`,
+      `Start with the shortcuts you use most. In ${appName}, common actions like copy, paste, undo, and save are worth learning first since they apply across nearly every workflow.`,
+      `On ${platformName}, modifier keys are the foundation of every shortcut. Familiarize yourself with them so you can read shortcut combinations at a glance without pausing to decode each symbol.`,
+      `Customize your workspace in ${appName} to reduce mouse usage. The fewer times you reach for the mouse, the more time you save — and shortcuts become second nature faster.`,
+    ],
+    tipsTitle: 'Tips for Learning Shortcuts',
+    faqItems: (appName, platformName) => [
+      {
+        question: `How do I find a specific shortcut in ${appName}?`,
+        answer: `Use the search bar at the top of this page to filter shortcuts by action name. Type a keyword like "copy" or "save" to instantly narrow down the list. You can also browse by section using the sidebar on the left.`,
+      },
+      {
+        question: `Can I customize keyboard shortcuts in ${appName}?`,
+        answer: `Many applications allow you to customize their keyboard shortcuts through their preferences or settings menu. On ${platformName}, you can also create system-level shortcut overrides. Check ${appName}'s official documentation for details on remapping keys.`,
+      },
+      {
+        question: `What do the modifier key symbols mean on ${platformName}?`,
+        answer: platformName === 'macOS'
+          ? 'On macOS, ⌘ is Command, ⌥ is Option (Alt), ⌃ is Control, ⇧ is Shift, and Fn is the Function key. These modifier keys are combined with other keys to form shortcuts.'
+          : platformName === 'Windows'
+            ? 'On Windows, Ctrl is Control, Alt is Alternate, Shift is Shift, and Win (⊞) is the Windows key. These modifier keys are combined with other keys to form shortcuts.'
+            : 'On Linux, Ctrl is Control, Alt is Alternate, Shift is Shift, and Super is the Super/Meta key. These modifier keys are combined with other keys to form shortcuts.',
+      },
+    ],
+    faqTitle: 'Frequently Asked Questions',
     ctaTitle: (appName) => `Access ${appName} shortcuts from your menu bar`,
     ctaSubtitle: 'KeyShortcut detects the active app and shows its shortcuts instantly. No memorization needed.',
     ctaButton: 'Download KeyShortcut',
@@ -606,11 +674,28 @@ export const CONTENT = {
     lastUpdated: '2026-03-30',
     sections: [
       {
+        title: 'The Story',
         paragraphs: [
           'I spend 12+ hours a day at a computer. Keyboard shortcuts are how I get things done: copying, pasting, switching apps, navigating code. I use them constantly, across dozens of different programs.',
           'The problem? Every time I needed a shortcut I didn\u2019t know, I\u2019d open a browser, go to that app\u2019s website, dig through their docs, find the key combination, switch back, and sometimes forget it before I could even use it. Over and over, for every app.',
           'So I started building my own shortcuts database. One place to look up any shortcut, for any app, organized the way my brain actually works. That became KeyShortcut.',
           `Today it covers ${APP_COUNT} apps across macOS, Windows, and Linux, with ${formatShortcutCount()} shortcuts, all sourced from official documentation. The companion Mac app goes further: it detects your active app and shows its shortcuts in a floating panel, instantly.`,
+        ],
+      },
+      {
+        title: 'How We Verify Shortcuts',
+        paragraphs: [
+          'Every shortcut in this directory is sourced from official application documentation — not user-submitted tips or third-party blogs. When an app publishes a keyboard shortcuts reference page, that\u2019s our primary source.',
+          'Our sync pipeline regularly checks official docs pages for changes. When an app updates its shortcuts (adding new ones, deprecating old ones, or changing key combinations), we detect the diff and update the directory accordingly. Each change is reviewed before it goes live.',
+          'If you spot an incorrect shortcut or a missing app, you can report it directly by emailing us. Community feedback helps us maintain accuracy across hundreds of apps and thousands of shortcuts.',
+        ],
+      },
+      {
+        title: 'How the Directory Is Organized',
+        paragraphs: [
+          'The directory is structured around three levels: platforms, categories, and apps. At the top level, you choose your operating system — macOS, Windows, or Linux. Each platform has its own set of apps and platform-specific key combinations.',
+          'Within each platform, apps are grouped into categories like Browsers, Code Editors, Design, Productivity, and Communication. Categories make it easy to discover apps similar to the ones you already use.',
+          'Each app page lists all available shortcuts organized into logical sections (e.g., "File Management," "Navigation," "Editing"). You can search within a page, browse the sidebar table of contents, or download the full list as a printable PDF.',
         ],
       },
     ],

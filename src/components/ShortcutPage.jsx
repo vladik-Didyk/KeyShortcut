@@ -1,9 +1,10 @@
 import { Link, useLoaderData } from 'react-router'
-import { useState, useEffect, useMemo, useRef } from 'react'
-import { Search, X, Download, ExternalLink } from '../utils/icons'
+import React, { useState, useEffect, useMemo, useRef } from 'react'
+import { Search, X, Download, ExternalLink, Lightbulb, ChevronDown } from '../utils/icons'
 import AppIcon from './directory/AppIcon'
 import { useScrollspy } from '../hooks/useScrollspy'
 import { CONTENT } from '../data/content'
+import AdSlot from './AdSlot'
 import { tokenize } from '../utils/searchHelpers'
 import { parseKeyParts } from '../utils/platformHelpers'
 
@@ -200,6 +201,21 @@ export default function ShortcutPage() {
         <p className="text-theme-muted text-[15px] leading-relaxed max-w-[720px] mt-3">
           {sp.learnMore(app.displayName)}
         </p>
+
+        {/* ─── Quick Tips ─── */}
+        <div className="mt-8 max-w-[720px] rounded-2xl bg-theme-base-alt border border-theme-border p-6">
+          <h2 className="text-base font-semibold tracking-tight flex items-center gap-2 mb-4">
+            <Lightbulb size={16} className="text-theme-muted" />
+            {sp.tipsTitle}
+          </h2>
+          <ul className="space-y-3">
+            {sp.tips(app.displayName, platformName).slice(0, 3).map((tip, i) => (
+              <li key={i} className="text-theme-muted text-[14px] leading-relaxed pl-4 border-l-2 border-theme-border">
+                {tip}
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
 
       {/* ─── Sidebar + Main ─── */}
@@ -250,33 +266,38 @@ export default function ShortcutPage() {
 
           {/* Main content */}
           <div className="flex-1 min-w-0">
-            {filteredSections.map((section) => (
-              <div key={section.id} id={section.id} className="mb-14">
-                <h2 className="text-lg font-semibold tracking-tight pt-3 pb-3 flex items-center gap-2 sticky z-10 bg-theme-base border-b border-theme-border" style={{ top: stickyTop }}>
-                  {section.name}
-                  <span className="text-xs font-normal text-theme-muted px-1.5 py-0.5 rounded-full bg-theme-base-alt">
-                    {section.shortcuts.length}
-                  </span>
-                </h2>
-                <table className="shortcut-table">
-                  <tbody>
-                    {section.shortcuts.map((s, j) => (
-                      <tr key={j} className={j % 2 === 1 ? 'shortcut-row-alt' : ''}>
-                        <td className="py-3 pr-4 text-theme-text text-[15px]">
-                          {s.action}
-                        </td>
-                        <td className="py-3 pl-4 text-right whitespace-nowrap">
-                          <span className="inline-flex items-center gap-1.5">
-                            {parseKeyParts(s.modifiers, s.key).map((part, k) => (
-                              <Keycap key={k}>{part}</Keycap>
-                            ))}
-                          </span>
-                        </td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
+            {filteredSections.map((section, idx) => (
+              <React.Fragment key={section.id}>
+                <div id={section.id} className="mb-14">
+                  <h2 className="text-lg font-semibold tracking-tight pt-3 pb-3 flex items-center gap-2 sticky z-10 bg-theme-base border-b border-theme-border" style={{ top: stickyTop }}>
+                    {section.name}
+                    <span className="text-xs font-normal text-theme-muted px-1.5 py-0.5 rounded-full bg-theme-base-alt">
+                      {section.shortcuts.length}
+                    </span>
+                  </h2>
+                  <table className="shortcut-table">
+                    <tbody>
+                      {section.shortcuts.map((s, j) => (
+                        <tr key={j} className={j % 2 === 1 ? 'shortcut-row-alt' : ''}>
+                          <td className="py-3 pr-4 text-theme-text text-[15px]">
+                            {s.action}
+                          </td>
+                          <td className="py-3 pl-4 text-right whitespace-nowrap">
+                            <span className="inline-flex items-center gap-1.5">
+                              {parseKeyParts(s.modifiers, s.key).map((part, k) => (
+                                <Keycap key={k}>{part}</Keycap>
+                              ))}
+                            </span>
+                          </td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+                {idx === 1 && filteredSections.length >= 4 && !search && (
+                  <AdSlot adSlot="shortcut_mid" variant="in-article" />
+                )}
+              </React.Fragment>
             ))}
 
             {search && filteredSections.length === 0 && (
@@ -287,6 +308,63 @@ export default function ShortcutPage() {
           </div>
         </div>
       </div>
+
+      {/* ─── FAQ Section ─── */}
+      <div className="border-t border-theme-border">
+        <div className="mx-auto max-w-[980px] px-5 md:px-6 py-14">
+          <h2 className="text-xl font-semibold tracking-tight mb-6">{sp.faqTitle}</h2>
+          <div className="space-y-2 max-w-[720px]">
+            {sp.faqItems(app.displayName, platformName).map((item, i) => (
+              <FaqAccordion key={i} question={item.question} answer={item.answer} />
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* ─── CTA Card ─── */}
+      <div className="border-t border-theme-border">
+        <div className="mx-auto max-w-[980px] px-5 md:px-6 py-14">
+          <div className="rounded-2xl bg-theme-accent text-theme-accent-text p-8 md:p-10 text-center">
+            <h2 className="text-xl md:text-2xl font-bold tracking-tight mb-3">
+              {sp.ctaTitle(app.displayName)}
+            </h2>
+            <p className="text-theme-accent-text/80 text-[15px] leading-relaxed mb-6 max-w-md mx-auto">
+              {sp.ctaSubtitle}
+            </p>
+            <Link
+              to="/mac-hud"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-theme-base text-theme-accent font-semibold text-[15px] no-underline hover:opacity-90 transition-opacity"
+            >
+              {sp.ctaButton}
+            </Link>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+/* ─── FAQ Accordion ─── */
+function FaqAccordion({ question, answer }) {
+  const [open, setOpen] = useState(false)
+
+  return (
+    <div className="rounded-xl border border-theme-border overflow-hidden">
+      <button
+        onClick={() => setOpen(!open)}
+        className="w-full flex items-center justify-between px-5 py-4 text-left bg-transparent border-none cursor-pointer text-theme-text hover:bg-theme-base-alt transition-colors"
+      >
+        <span className="text-[15px] font-medium pr-4">{question}</span>
+        <ChevronDown
+          size={16}
+          className={`shrink-0 text-theme-muted transition-transform ${open ? 'rotate-180' : ''}`}
+        />
+      </button>
+      {open && (
+        <div className="px-5 pb-4">
+          <p className="text-theme-muted text-[14px] leading-relaxed">{answer}</p>
+        </div>
+      )}
     </div>
   )
 }

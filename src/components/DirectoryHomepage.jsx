@@ -1,4 +1,4 @@
-import { useState, useMemo, useRef, useEffect, useCallback } from 'react'
+import React, { useState, useMemo, useRef, useEffect, useCallback } from 'react'
 import { useLoaderData, useNavigate, Link } from 'react-router'
 import { Search, X, ArrowRight } from '../utils/icons'
 import { usePlatformData, prefetchPlatform } from '../hooks/usePlatformData'
@@ -9,6 +9,7 @@ import AppCard from './directory/AppCard'
 import { categoryConfig } from '../data/categoryConfig'
 import { useInView } from '../hooks/useInView'
 import { CONTENT } from '../data/content'
+import AdSlot from './AdSlot'
 
 export default function DirectoryHomepage() {
   const loaderData = useLoaderData()
@@ -331,8 +332,13 @@ export default function DirectoryHomepage() {
         )}
 
         {/* ─── Category Sections (when not searching) ─── */}
-        {!error && !loading && !search && grouped.map((group) => (
-          <CategorySection key={group.name} group={group} platform={selectedPlatform} />
+        {!error && !loading && !search && grouped.map((group, index) => (
+          <React.Fragment key={group.name}>
+            <CategorySection group={group} platform={selectedPlatform} />
+            {index === 2 && grouped.length > 4 && (
+              <AdSlot adSlot="home_mid" variant="in-article" />
+            )}
+          </React.Fragment>
         ))}
 
         {!error && !loading && grouped.length === 0 && !search && (
@@ -342,16 +348,72 @@ export default function DirectoryHomepage() {
 
       {/* ─── About Section ─── */}
       {!search && (
-        <section className="border-t border-theme-border px-5 md:px-6 py-14">
-          <div className="mx-auto max-w-[680px]">
-            <h2 className="text-2xl font-bold tracking-tight mb-4">
-              {CONTENT.home.aboutSection.title}
-            </h2>
-            {CONTENT.home.aboutSection.paragraphs.map((p, i) => (
-              <p key={i} className="text-theme-muted text-[15px] leading-relaxed mb-4">{p}</p>
-            ))}
-          </div>
-        </section>
+        <>
+          <section className="border-t border-theme-border px-5 md:px-6 py-14">
+            <div className="mx-auto max-w-[680px]">
+              <h2 className="text-2xl font-bold tracking-tight mb-4">
+                {CONTENT.home.aboutSection.title}
+              </h2>
+              {CONTENT.home.aboutSection.paragraphs.map((p, i) => (
+                <p key={i} className="text-theme-muted text-[15px] leading-relaxed mb-4">{p}</p>
+              ))}
+            </div>
+          </section>
+
+          {/* ─── Why Shortcuts Matter ─── */}
+          <section className="border-t border-theme-border px-5 md:px-6 py-14 bg-theme-base-alt">
+            <div className="mx-auto max-w-[680px]">
+              <h2 className="text-2xl font-bold tracking-tight mb-4">
+                {CONTENT.home.aboutSection.whyTitle}
+              </h2>
+              {CONTENT.home.aboutSection.whyParagraphs.map((p, i) => (
+                <p key={i} className="text-theme-muted text-[15px] leading-relaxed mb-4">{p}</p>
+              ))}
+            </div>
+          </section>
+
+          {/* ─── Popular Universal Shortcuts ─── */}
+          <section className="border-t border-theme-border px-5 md:px-6 py-14">
+            <div className="mx-auto max-w-[680px]">
+              <h2 className="text-xl font-bold tracking-tight mb-2">
+                {CONTENT.home.aboutSection.popularTitle}
+              </h2>
+              <p className="text-theme-muted text-[15px] mb-6">
+                {CONTENT.home.aboutSection.popularSubtitle}
+              </p>
+              <table className="shortcut-table w-full">
+                <thead>
+                  <tr className="text-left text-xs text-theme-muted uppercase tracking-wider">
+                    <th className="pb-3 font-medium">Action</th>
+                    <th className="pb-3 font-medium text-right">macOS</th>
+                    <th className="pb-3 font-medium text-right">Windows / Linux</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {CONTENT.home.aboutSection.popularShortcuts.map((s, i) => (
+                    <tr key={i} className={i % 2 === 1 ? 'shortcut-row-alt' : ''}>
+                      <td className="py-2.5 text-theme-text text-[15px]">{s.action}</td>
+                      <td className="py-2.5 text-right">
+                        <span className="inline-flex items-center gap-1">
+                          {s.mac.split(' ').map((k, j) => (
+                            <kbd key={j} className="keycap-mini">{k}</kbd>
+                          ))}
+                        </span>
+                      </td>
+                      <td className="py-2.5 text-right">
+                        <span className="inline-flex items-center gap-1">
+                          {s.win.split(' ').map((k, j) => (
+                            <kbd key={j} className="keycap-mini">{k}</kbd>
+                          ))}
+                        </span>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </section>
+        </>
       )}
 
     </div>
