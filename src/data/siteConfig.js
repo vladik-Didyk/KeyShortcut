@@ -5,7 +5,7 @@ export const MIN_MACOS = 'macOS 13.0+'
 export const APP_STORE_URL = import.meta.env.VITE_APP_STORE_ID
   ? `https://apps.apple.com/app/keyshortcut/id${import.meta.env.VITE_APP_STORE_ID}`
   : 'https://apps.apple.com/app/keyshortcut/id000000000'
-export const SUPPORT_EMAIL = 'support@keyshortcut.com'
+export const SUPPORT_EMAIL = 'vladik.didyk@gmail.com'
 export const SITE_NAME = 'KeyShortcut'
 
 export function formatShortcutCount() {

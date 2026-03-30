@@ -28,6 +28,7 @@ async function query(path) {
 const staticPages = [
   { loc: '/', priority: '1.0', changefreq: 'weekly' },
   { loc: '/mac-hud', priority: '0.8', changefreq: 'weekly' },
+  { loc: '/about', priority: '0.5', changefreq: 'monthly' },
   { loc: '/privacy', priority: '0.3', changefreq: 'yearly' },
 ]
 

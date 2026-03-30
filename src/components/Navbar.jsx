@@ -25,10 +25,29 @@ export default function Navbar() {
       }`}
     >
       <div className="mx-auto max-w-[980px] px-5 md:px-6 flex items-center justify-between h-12">
-        <Link to="/" className="flex items-center gap-2.5 no-underline">
-          <img src="/images/app-icon.svg" alt="KeyShortcut icon" width={28} height={28} className="rounded-lg" />
-          <span className="text-base font-semibold text-theme-text">KeyShortcut</span>
-        </Link>
+        <div className="flex items-center gap-6">
+          <Link to="/" className="flex items-center gap-2.5 no-underline">
+            <img src="/images/app-icon.svg" alt="KeyShortcut icon" width={28} height={28} className="rounded-lg" />
+            <span className="text-base font-semibold text-theme-text">KeyShortcut</span>
+          </Link>
+          <div className="hidden md:flex items-center gap-4">
+            {navbar.platformLinks.map((link) => (
+              <Link
+                key={link.to}
+                to={link.to}
+                className="text-[13px] text-theme-muted hover:text-theme-text transition-colors no-underline"
+              >
+                {link.label}
+              </Link>
+            ))}
+            <Link
+              to="/about"
+              className="text-[13px] text-theme-muted hover:text-theme-text transition-colors no-underline"
+            >
+              About
+            </Link>
+          </div>
+        </div>
 
         <a
           href={isProductPage ? '#download' : '/mac-hud#download'}

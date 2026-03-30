@@ -12,7 +12,7 @@ function Keycap({ children }) {
 }
 
 export default function ShortcutPage() {
-  const { platformId: platform, app, otherPlatforms } = useLoaderData()
+  const { platformId: platform, platformName, app, otherPlatforms } = useLoaderData()
   const slug = app.slug
   const [search, setSearch] = useState('')
   const searchInputRef = useRef(null)
@@ -191,6 +191,16 @@ export default function ShortcutPage() {
           )}
         </div>
       </header>
+
+      {/* ─── Intro text ─── */}
+      <div className="mx-auto max-w-[980px] px-5 md:px-6 pt-8 pb-2">
+        <p className="text-theme-muted text-[15px] leading-relaxed max-w-[720px]">
+          {sp.intro(app.displayName, platformName, app.shortcutCount, app.sections.length)}
+        </p>
+        <p className="text-theme-muted text-[15px] leading-relaxed max-w-[720px] mt-3">
+          {sp.learnMore(app.displayName)}
+        </p>
+      </div>
 
       {/* ─── Sidebar + Main ─── */}
       <div className="mx-auto max-w-[980px] px-5 md:px-6 py-10 md:py-14">

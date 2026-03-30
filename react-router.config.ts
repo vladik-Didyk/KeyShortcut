@@ -12,7 +12,7 @@ export default {
     const base = `${supabaseUrl}/rest/v1`;
     const headers = { apikey: supabaseKey, Authorization: `Bearer ${supabaseKey}` };
 
-    const paths = ["/", "/mac-hud", "/privacy"];
+    const paths = ["/", "/mac-hud", "/privacy", "/about"];
 
     // Get platforms
     const platforms = await fetch(`${base}/platforms?select=id&order=sort_order`, { headers }).then((r) => r.json());

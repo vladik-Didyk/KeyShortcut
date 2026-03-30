@@ -1,6 +1,7 @@
 import { Links, Meta, Outlet, Scripts, ScrollRestoration, useNavigation } from "react-router";
 import { ThemeProvider } from "./hooks/useTheme";
 import ErrorBoundary from "./components/ErrorBoundary";
+import CookieConsent from "./components/CookieConsent";
 import { CONTENT } from "./data/content";
 import "./index.css";
 
@@ -126,6 +127,7 @@ export default function Root() {
         <ErrorBoundary>
           <Outlet />
         </ErrorBoundary>
+        <CookieConsent />
       </div>
     </ThemeProvider>
   );

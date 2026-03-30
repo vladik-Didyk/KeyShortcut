@@ -340,6 +340,20 @@ export default function DirectoryHomepage() {
         )}
       </div>
 
+      {/* ─── About Section ─── */}
+      {!search && (
+        <section className="border-t border-theme-border px-5 md:px-6 py-14">
+          <div className="mx-auto max-w-[680px]">
+            <h2 className="text-2xl font-bold tracking-tight mb-4">
+              {CONTENT.home.aboutSection.title}
+            </h2>
+            {CONTENT.home.aboutSection.paragraphs.map((p, i) => (
+              <p key={i} className="text-theme-muted text-[15px] leading-relaxed mb-4">{p}</p>
+            ))}
+          </div>
+        </section>
+      )}
+
     </div>
   )
 }

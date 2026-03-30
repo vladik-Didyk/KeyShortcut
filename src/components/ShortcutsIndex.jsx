@@ -85,8 +85,14 @@ export default function ShortcutsIndex() {
           <h1 className="text-3xl md:text-4xl font-bold tracking-tight mb-3">
             {platformName} Shortcuts
           </h1>
-          <p className="text-theme-muted text-sm mb-8">
+          <p className="text-theme-muted text-sm mb-4">
             {`${apps.length} apps · ${totalShortcuts.toLocaleString()} keyboard shortcuts`}
+          </p>
+          <p className="text-theme-muted text-[15px] leading-relaxed max-w-[720px] mb-3">
+            {CONTENT.directory.intro(platformName, apps.length, totalShortcuts)}
+          </p>
+          <p className="text-theme-muted text-[15px] leading-relaxed max-w-[720px] mb-8">
+            {CONTENT.directory.learnMore(platformName)}
           </p>
 
           <div ref={searchContainerRef} className="relative">

@@ -1,4 +1,4 @@
-import { APP_COUNT, PRICE, MIN_MACOS, formatShortcutCount, SITE_NAME } from './siteConfig'
+import { APP_COUNT, PRICE, MIN_MACOS, formatShortcutCount, SITE_NAME, SUPPORT_EMAIL } from './siteConfig'
 
 /**
  * Single source of truth for all website content.
@@ -49,10 +49,11 @@ export const CONTENT = {
           ],
         },
         {
-          heading: 'Legal',
+          heading: 'Company',
           links: [
+            { label: 'About', to: '/about' },
             { label: 'Privacy Policy', to: '/privacy' },
-            { label: 'Terms of Use', to: '/mac-hud#policies' },
+            { label: 'Terms of Use', to: '/privacy#terms' },
           ],
         },
       ],
@@ -367,6 +368,14 @@ export const CONTENT = {
       subtitle: 'See shortcuts for the active app in your menu bar.',
       button: 'Download',
     },
+    aboutSection: {
+      title: 'About This Directory',
+      paragraphs: [
+        'KeyShortcut is a free, open keyboard shortcuts directory covering macOS, Windows, and Linux. Every shortcut listed here is sourced from official application documentation, verified for accuracy, and organized into logical categories so you can find what you need quickly.',
+        'The directory is searchable by app name and by shortcut action. You can look up a specific key combination, browse all shortcuts for an app, or explore apps by category — from browsers and code editors to design tools and productivity apps.',
+        'All shortcuts are displayed with visual keycap badges that match the modifier key style of each platform: Command, Option, Control, and Shift on macOS, or Ctrl, Alt, Shift, and Win on Windows and Linux. This makes it easy to scan the page and identify the combination you need at a glance.',
+      ],
+    },
   },
 
   // ─── Platform index (/:platformId) ────────────────────────────────
@@ -377,6 +386,10 @@ export const CONTENT = {
     clearAriaLabel: 'Clear search',
     categorySubLabel: 'shortcuts',
     shortcutsLabel: 'shortcuts',
+    intro: (platformName, appCount, shortcutCount) =>
+      `Browse keyboard shortcuts for ${appCount} ${platformName} applications, totaling ${shortcutCount.toLocaleString()}+ shortcuts. Every shortcut is sourced from official documentation and organized by category. Click on any app to see its full shortcut reference, filter by action, or download a PDF cheat sheet.`,
+    learnMore: (platformName) =>
+      `Keyboard shortcuts are essential for working efficiently on ${platformName}. Whether you're switching between apps, editing documents, or managing files, knowing the right key combination saves you time and keeps you in flow. This directory is updated regularly as apps add new features and shortcuts.`,
   },
 
   // ─── Per-app shortcut page (/:platformId/:slug) ───────────────────
@@ -388,6 +401,10 @@ export const CONTENT = {
     clearAriaLabel: 'Clear filter',
     downloadTitle: 'Download shortcuts as PDF',
     alsoOnLabel: 'Also on:',
+    intro: (appName, platformName, shortcutCount, sectionCount) =>
+      `This page lists all ${shortcutCount} keyboard shortcuts for ${appName} on ${platformName}, organized into ${sectionCount} sections. Each shortcut is displayed with its modifier keys and action so you can quickly find the key combination you need. Use the search bar above to filter shortcuts by name, or browse the sections in the sidebar.`,
+    learnMore: (appName) =>
+      `Learning keyboard shortcuts is one of the most effective ways to speed up your workflow in ${appName}. Instead of navigating through menus, you can perform common actions instantly with a quick key combination. Bookmark this page for easy reference, or download the shortcuts as a PDF cheat sheet using the download button above.`,
     ctaTitle: (appName) => `Access ${appName} shortcuts from your menu bar`,
     ctaSubtitle: 'KeyShortcut detects the active app and shows its shortcuts instantly. No memorization needed.',
     ctaButton: 'Download KeyShortcut',
@@ -581,6 +598,38 @@ export const CONTENT = {
     },
   },
 
+  // ─── About page (/about) ─────────────────────────────────────────
+  about: {
+    title: 'About KeyShortcut',
+    sections: [
+      {
+        paragraphs: [
+          'I spend 12+ hours a day at a computer. Keyboard shortcuts are how I get things done: copying, pasting, switching apps, navigating code. I use them constantly, across dozens of different programs.',
+          'The problem? Every time I needed a shortcut I didn\u2019t know, I\u2019d open a browser, go to that app\u2019s website, dig through their docs, find the key combination, switch back, and sometimes forget it before I could even use it. Over and over, for every app.',
+          'So I started building my own shortcuts database. One place to look up any shortcut, for any app, organized the way my brain actually works. That became KeyShortcut.',
+          `Today it covers ${APP_COUNT} apps across macOS, Windows, and Linux, with ${formatShortcutCount()} shortcuts, all sourced from official documentation. The companion Mac app goes further: it detects your active app and shows its shortcuts in a floating panel, instantly.`,
+        ],
+      },
+    ],
+    cards: {
+      missing: {
+        label: 'Helping out',
+        title: 'Missing something?',
+        text: 'Can\u2019t find your favorite app or noticed a wrong shortcut? Let me know and I\u2019ll add it. Every suggestion makes this resource better for everyone.',
+        buttonLabel: 'Suggest an app',
+        buttonHref: `mailto:${SUPPORT_EMAIL}?subject=App%20suggestion%20for%20KeyShortcut`,
+      },
+      creator: {
+        label: 'Created by',
+        name: 'Vladik Didyk',
+        url: 'https://vladik-didyk.netlify.app',
+        avatar: '/images/avatar.webp',
+        bio: 'Full Stack Developer and Systems Engineer. Building tools that make people more productive at the keyboard.',
+        buttonLabel: 'Get the Mac App',
+      },
+    },
+  },
+
   // ─── Route meta (SEO) ─────────────────────────────────────────────
   meta: {
     home: {
@@ -597,6 +646,11 @@ export const CONTENT = {
       title: 'Privacy Policy & Terms \u2014 KeyShortcut',
       description: 'KeyShortcut privacy policy, terms of use, and website data practices.',
       url: 'https://keyshortcut.com/privacy',
+    },
+    about: {
+      title: 'About KeyShortcut \u2014 Keyboard Shortcuts Directory',
+      description: 'Learn about KeyShortcut, the free keyboard shortcuts directory for macOS, Windows, and Linux. Our mission, approach, and how to get in touch.',
+      url: 'https://keyshortcut.com/about',
     },
     catchAll: {
       title: 'Page Not Found \u2014 KeyShortcut',

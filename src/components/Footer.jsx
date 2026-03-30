@@ -1,9 +1,11 @@
+import { useState } from 'react'
 import { Link } from 'react-router'
 import { CONTENT } from '../data/content'
 
 export default function Footer() {
   const year = new Date().getFullYear()
   const { footer } = CONTENT.shared
+  const creator = CONTENT.about.cards.creator
 
   return (
     <footer className="border-t border-theme-border pt-14 pb-8 px-5 md:px-6">
@@ -46,12 +48,42 @@ export default function Footer() {
           <span className="text-[13px] text-theme-muted">
             &copy; {year} {footer.copyright}
           </span>
-          <span className="text-[13px] text-theme-muted">
-            {footer.bottomTagline}
-          </span>
+
+          {/* Created by badge */}
+          <a href={creator.url} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 no-underline group">
+            <FooterAvatar src={creator.avatar} name={creator.name} />
+            <span className="flex flex-col">
+              <span className="text-[11px] text-theme-muted leading-none">{creator.label}</span>
+              <span className="text-[13px] font-medium text-theme-text group-hover:text-accent transition-colors leading-tight">{creator.name}</span>
+            </span>
+          </a>
         </div>
       </div>
     </footer>
+  )
+}
+
+function FooterAvatar({ src, name }) {
+  const [failed, setFailed] = useState(false)
+  const initials = name.split(' ').map(w => w[0]).join('').slice(0, 2)
+
+  if (failed) {
+    return (
+      <span className="w-7 h-7 rounded-full bg-theme-accent text-theme-accent-text flex items-center justify-center text-[11px] font-semibold shrink-0">
+        {initials}
+      </span>
+    )
+  }
+
+  return (
+    <img
+      src={src}
+      alt={name}
+      width={28}
+      height={28}
+      className="w-7 h-7 rounded-full object-cover shrink-0"
+      onError={() => setFailed(true)}
+    />
   )
 }
 

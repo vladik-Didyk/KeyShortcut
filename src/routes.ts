@@ -4,6 +4,7 @@ export default [
   layout("./layouts/directory-layout.jsx", [
     index("./routes/home.jsx"),
     route("privacy", "./routes/privacy.jsx"),
+    route("about", "./routes/about.jsx"),
     route(":platformId", "./routes/platform-index.jsx"),
     route(":platformId/:slug", "./routes/shortcut-page.jsx"),
   ]),
