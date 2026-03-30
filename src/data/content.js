@@ -418,7 +418,7 @@ export const CONTENT = {
     policy: {
       title: 'Privacy Policy',
       effectiveDate: 'Effective date: March 14, 2026',
-      intro: 'KeyShortcut is built with privacy as a core principle. The app operates entirely offline and collects zero user data. This policy covers both the KeyShortcut macOS app and the keyshortcut.com website.',
+      intro: 'KeyShortcut is built with privacy as a core principle. The app operates entirely offline and collects zero user data. This site displays advertisements served by Google AdSense. This policy covers both the KeyShortcut macOS app and the keyshortcut.com website.',
       sections: [
         {
           heading: 'App Data Collection',
@@ -496,7 +496,7 @@ export const CONTENT = {
             {
               type: 'list',
               items: [
-                { bold: 'Google AdSense', text: ' — may set cookies to serve and measure ads. These are governed by Google\'s privacy policy.' },
+                { bold: 'Google AdSense', text: ' — may set cookies to serve and measure ads. These are governed by ', link: { text: 'Google\u2019s privacy policy', href: 'https://policies.google.com/privacy' }, textAfter: '.' },
                 { bold: 'Cloudflare', text: ' — may set a technical cookie (__cf_bm) for bot protection. This is not used for tracking.' },
               ],
             },
