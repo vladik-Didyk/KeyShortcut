@@ -30,8 +30,9 @@ export default function AdSlot({ adSlot, variant = 'banner', format = 'auto', sp
     )
   }
 
-  // Google AdSense — only render in production
+  // Google AdSense — only render in production and when consent not declined
   if (!IS_PROD) return null
+  if (typeof window !== 'undefined' && localStorage.getItem('cookie-consent') === 'declined') return null
 
   if (variant === 'in-article') {
     return (
