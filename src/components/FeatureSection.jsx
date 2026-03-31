@@ -15,9 +15,7 @@ export default function FeatureSection({ title, description, screenshot, alt, re
 
       <div className={`flex justify-center ${reverse ? 'md:order-1' : ''}`}>
         <img
-          src={`/images/screenshots/${screenshot}-1440x900.jpg`}
-          srcSet={`/images/screenshots/${screenshot}-1440x900.jpg 1440w, /images/screenshots/${screenshot}-2880x1800.jpg 2880w`}
-          sizes="(max-width: 768px) 100vw, 50vw"
+          src={`/images/screenshots/${screenshot}-dark.png`}
           alt={alt}
           className="w-full max-w-lg rounded-2xl screenshot-shadow"
           loading="lazy"
