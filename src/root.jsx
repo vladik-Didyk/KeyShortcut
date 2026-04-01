@@ -58,6 +58,7 @@ export function Layout({ children }) {
           />
         </noscript>
         <link rel="preload" href="/images/app-icon.svg" as="image" />
+        <link rel="alternate" type="application/rss+xml" title="KeyShortcut Guides" href="/rss.xml" />
 
         {/* Open Graph defaults */}
         <meta property="og:type" content="website" />

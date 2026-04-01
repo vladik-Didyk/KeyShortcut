@@ -51,6 +51,9 @@ export const CONTENT = {
         {
           heading: 'Company',
           links: [
+            { label: 'Guides', to: '/guides' },
+            { label: 'Cheat Sheets', to: '/cheat-sheets' },
+            { label: 'Compare Apps', to: '/compare' },
             { label: 'About', to: '/about' },
             { label: 'Privacy Policy', to: '/privacy' },
             { label: 'Terms of Use', to: '/privacy#terms' },
@@ -443,9 +446,11 @@ export const CONTENT = {
     downloadTitle: 'Download shortcuts as PDF',
     alsoOnLabel: 'Also on:',
     intro: (appName, platformName, shortcutCount, sectionCount) =>
-      `This page lists all ${shortcutCount} keyboard shortcuts for ${appName} on ${platformName}, organized into ${sectionCount} sections. Each shortcut is displayed with its modifier keys and action so you can quickly find the key combination you need. Use the search bar above to filter shortcuts by name, or browse the sections in the sidebar.`,
+      `This page is a complete keyboard shortcut reference for ${appName} on ${platformName}, covering all ${shortcutCount} shortcuts organized into ${sectionCount} sections. Whether you\u2019re new to ${appName} or looking to master advanced features, this cheat sheet has every key combination you need \u2014 from basic editing and navigation to app-specific power-user actions.`,
     learnMore: (appName) =>
-      `Learning keyboard shortcuts is one of the most effective ways to speed up your workflow in ${appName}. Instead of navigating through menus, you can perform common actions instantly with a quick key combination. Bookmark this page for easy reference, or download the shortcuts as a PDF cheat sheet using the download button above.`,
+      `Keyboard shortcuts are the fastest way to work in ${appName}. Every time you use a shortcut instead of reaching for the mouse, you save a few seconds \u2014 and those seconds compound into hours over weeks and months. Start with the shortcuts you use most (copy, paste, undo, save), then gradually add app-specific ones as they become relevant to your workflow. Bookmark this page or download the PDF cheat sheet for quick reference.`,
+    whyShortcuts: (appName, platformName) =>
+      `Using keyboard shortcuts in ${appName} reduces context switching between keyboard and mouse, helping you maintain focus and work more efficiently. Research shows that shortcut-driven workflows can save up to 8 working days per year compared to menu-driven navigation. On ${platformName}, most ${appName} shortcuts follow standard conventions \u2014 once you learn the modifier key patterns, new shortcuts become intuitive.`,
     tips: (appName, platformName) => [
       `Practice one new ${appName} shortcut each day. Muscle memory builds faster when you focus on a single combination at a time rather than trying to learn them all at once.`,
       `Print or bookmark this page for quick reference while working in ${appName}. Having shortcuts visible nearby helps bridge the gap between looking them up and recalling them from memory.`,
@@ -454,24 +459,91 @@ export const CONTENT = {
       `Customize your workspace in ${appName} to reduce mouse usage. The fewer times you reach for the mouse, the more time you save — and shortcuts become second nature faster.`,
     ],
     tipsTitle: 'Tips for Learning Shortcuts',
-    faqItems: (appName, platformName) => [
-      {
-        question: `How do I find a specific shortcut in ${appName}?`,
-        answer: `Use the search bar at the top of this page to filter shortcuts by action name. Type a keyword like "copy" or "save" to instantly narrow down the list. You can also browse by section using the sidebar on the left.`,
-      },
-      {
-        question: `Can I customize keyboard shortcuts in ${appName}?`,
-        answer: `Many applications allow you to customize their keyboard shortcuts through their preferences or settings menu. On ${platformName}, you can also create system-level shortcut overrides. Check ${appName}'s official documentation for details on remapping keys.`,
-      },
-      {
-        question: `What do the modifier key symbols mean on ${platformName}?`,
-        answer: platformName === 'macOS'
-          ? 'On macOS, ⌘ is Command, ⌥ is Option (Alt), ⌃ is Control, ⇧ is Shift, and Fn is the Function key. These modifier keys are combined with other keys to form shortcuts.'
-          : platformName === 'Windows'
-            ? 'On Windows, Ctrl is Control, Alt is Alternate, Shift is Shift, and Win (⊞) is the Windows key. These modifier keys are combined with other keys to form shortcuts.'
-            : 'On Linux, Ctrl is Control, Alt is Alternate, Shift is Shift, and Super is the Super/Meta key. These modifier keys are combined with other keys to form shortcuts.',
-      },
-    ],
+    faqItems: (app, platformName) => {
+      const name = typeof app === 'string' ? app : app.displayName
+      const count = typeof app === 'string' ? null : app.shortcutCount
+      const sections = typeof app === 'string' ? [] : (app.sections || [])
+      const category = typeof app === 'string' ? null : app.category
+      const sectionNames = sections.slice(0, 4).map(s => s.name)
+      const docsUrl = typeof app === 'string' ? null : app.docsUrl
+
+      const items = []
+
+      // 1. App-specific count question
+      if (count) {
+        items.push({
+          question: `How many keyboard shortcuts does ${name} have on ${platformName}?`,
+          answer: `${name} has ${count} keyboard shortcuts on ${platformName}, organized into ${sections.length} sections${sectionNames.length ? ': ' + sectionNames.join(', ') + ', and more' : ''}. This page lists all of them with searchable, organized shortcut tables.`,
+        })
+      }
+
+      // 2. Category-specific question
+      if (category === 'Browsers') {
+        items.push({
+          question: `What are the most useful ${name} shortcuts to learn first?`,
+          answer: `Start with tab management: new tab, close tab, reopen closed tab, and switching between tabs. Then learn navigation shortcuts like back, forward, and address bar focus. These cover the actions most people repeat dozens of times daily in ${name}.`,
+        })
+      } else if (category === 'Development') {
+        items.push({
+          question: `What are the most useful ${name} shortcuts for developers?`,
+          answer: `The highest-impact ${name} shortcuts are file navigation (Quick Open / Go to File), search across files, multi-cursor editing, and toggling the integrated terminal. These eliminate the most common mouse interactions during coding and have the biggest effect on editing speed.`,
+        })
+      } else if (category === 'Design') {
+        items.push({
+          question: `What are the most important ${name} shortcuts for designers?`,
+          answer: `Focus on tool selection shortcuts first (single-key shortcuts like V for Move, R for Rectangle, T for Text) since they\u2019re used constantly. Then learn grouping, alignment, and layer ordering shortcuts. In ${name}, combining keyboard tool selection with mouse positioning is the fastest way to work.`,
+        })
+      } else if (category === 'Communication') {
+        items.push({
+          question: `What are the most useful ${name} shortcuts?`,
+          answer: `The most impactful ${name} shortcuts are message navigation (jumping to conversations, marking as read), formatting shortcuts (bold, italic, code blocks), and quick switching between channels or conversations. These reduce the time spent clicking through the interface during conversations.`,
+        })
+      } else if (category === 'Productivity' || category === 'Microsoft Office') {
+        items.push({
+          question: `What are the essential ${name} shortcuts to learn?`,
+          answer: `Start with the shortcuts you\u2019d use in any document workflow: formatting (bold, italic, headings), navigation (jump to beginning/end, find/replace), and structure (create new items, indent/outdent, move items up/down). These transfer across most productivity apps and save the most time in ${name}.`,
+        })
+      } else {
+        items.push({
+          question: `What are the most useful ${name} shortcuts?`,
+          answer: `Start with the shortcuts for actions you perform most frequently in ${name}. Look through the sections on this page and identify the 3\u20135 actions you currently do with the mouse. Learning those shortcuts first gives you the biggest immediate time savings.`,
+        })
+      }
+
+      // 3. PDF / reference question
+      items.push({
+        question: `Can I download ${name} shortcuts as a PDF?`,
+        answer: `Yes. Click the download button at the top of this page to generate a printable PDF cheat sheet with all ${count || ''} ${name} shortcuts. The PDF includes organized sections, keycap-style key labels, and space for your own notes.`,
+      })
+
+      // 4. Official docs question (if URL available)
+      if (docsUrl) {
+        items.push({
+          question: `Where is the official ${name} keyboard shortcuts documentation?`,
+          answer: `The official ${name} keyboard shortcuts documentation is available on their website. Every shortcut on this page is sourced from and verified against the official documentation to ensure accuracy.`,
+        })
+      }
+
+      // 5. Platform-specific question
+      if (platformName === 'macOS') {
+        items.push({
+          question: `Do these ${name} shortcuts work on all Mac keyboards?`,
+          answer: `Yes. These shortcuts work on all Mac keyboards, including MacBook built-in keyboards and external Apple keyboards. The modifier keys are Command (\u2318), Option (\u2325), Control (\u2303), and Shift (\u21E7). On keyboards without a Function row, some F-key shortcuts may require holding the Fn key.`,
+        })
+      } else if (platformName === 'Windows') {
+        items.push({
+          question: `Do these ${name} shortcuts work on all Windows keyboards?`,
+          answer: 'Yes. These shortcuts work on standard Windows keyboards. The modifier keys are Ctrl, Alt, Shift, and the Windows key (\u229E). Some laptop keyboards may have compact layouts where certain keys require an Fn modifier to access.',
+        })
+      } else {
+        items.push({
+          question: `Do these ${name} shortcuts work across Linux distributions?`,
+          answer: `These shortcuts work in ${name} regardless of which Linux distribution or desktop environment you use. The modifier keys are Ctrl, Alt, Shift, and Super (usually the Windows key). Some desktop environments may override specific key combinations \u2014 check your system keyboard settings if a shortcut doesn\u2019t work as expected.`,
+        })
+      }
+
+      return items
+    },
     faqTitle: 'Frequently Asked Questions',
     ctaTitle: (appName) => `Access ${appName} shortcuts from your menu bar`,
     ctaSubtitle: 'KeyShortcut detects the active app and shows its shortcuts instantly. No memorization needed.',
@@ -739,8 +811,8 @@ export const CONTENT = {
       url: 'https://keyshortcut.com/',
     },
     productPage: {
-      title: 'Keyboard Shortcuts for macOS, Windows & Linux',
-      description: `Browse ${formatShortcutCount()} keyboard shortcuts for macOS, Windows, and Linux apps. Find shortcuts for any app, organized by category.`,
+      title: 'KeyShortcut for Mac \u2014 Floating Shortcut Panel',
+      description: `A floating keyboard shortcut panel for macOS that detects your active app and shows every shortcut at a glance. ${formatShortcutCount()} shortcuts across ${APP_COUNT} apps. One-time purchase.`,
       url: 'https://keyshortcut.com/mac-hud',
     },
     privacy: {
@@ -753,6 +825,32 @@ export const CONTENT = {
       description: 'Learn about KeyShortcut, the free keyboard shortcuts directory for macOS, Windows, and Linux. Our mission, approach, and how to get in touch.',
       url: 'https://keyshortcut.com/about',
     },
+    guidesIndex: {
+      title: 'Keyboard Shortcut Guides & Tips \u2014 KeyShortcut',
+      description: 'Practical guides on keyboard shortcuts, productivity workflows, and shortcut management for macOS, Windows, and Linux.',
+      url: 'https://keyshortcut.com/guides',
+    },
+    compareIndex: {
+      title: 'Keyboard Shortcut Comparisons \u2014 KeyShortcut',
+      description: 'Side-by-side keyboard shortcut comparisons between popular apps. See how shortcuts map across Figma vs Sketch, VS Code vs Cursor, Chrome vs Safari, and more.',
+      url: 'https://keyshortcut.com/compare',
+    },
+    compare: (nameA, nameB) => ({
+      title: `${nameA} vs ${nameB} Keyboard Shortcuts \u2014 KeyShortcut`,
+      description: `Compare keyboard shortcuts between ${nameA} and ${nameB}. Side-by-side view of shared and unique shortcuts to help you switch between apps faster.`,
+      url: `https://keyshortcut.com/compare/${nameA.toLowerCase().replace(/\s+/g, '-')}-vs-${nameB.toLowerCase().replace(/\s+/g, '-')}`,
+    }),
+    cheatSheets: {
+      title: 'Keyboard Shortcut Cheat Sheets \u2014 Free Printable PDFs \u2014 KeyShortcut',
+      description: `Download free printable keyboard shortcut cheat sheets for ${APP_COUNT}+ apps. PDF format with organized shortcuts and keycap-style key labels for macOS, Windows, and Linux.`,
+      url: 'https://keyshortcut.com/cheat-sheets',
+    },
+    guide: (guide) => ({
+      title: `${guide.title} \u2014 KeyShortcut`,
+      description: guide.description,
+      url: `https://keyshortcut.com/guides/${guide.slug}`,
+      image: `https://keyshortcut.com/images/og/${guide.slug}.png`,
+    }),
     catchAll: {
       title: 'Page Not Found \u2014 KeyShortcut',
       description: 'The page you\'re looking for doesn\'t exist.',
@@ -794,7 +892,7 @@ export const CONTENT = {
  * @param {{ title: string, description?: string, url?: string }} entry
  * @returns {Array<Object>}
  */
-export function buildMeta({ title, description, url }) {
+export function buildMeta({ title, description, url, image }) {
   const meta = [{ title }]
   if (description) {
     meta.push(
@@ -809,6 +907,12 @@ export function buildMeta({ title, description, url }) {
     meta.push(
       { property: 'og:url', content: url },
       { tagName: 'link', rel: 'canonical', href: url },
+    )
+  }
+  if (image) {
+    meta.push(
+      { property: 'og:image', content: image },
+      { name: 'twitter:image', content: image },
     )
   }
   return meta

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>KeyShortcut Guides</title>
+    <link>https://keyshortcut.com/guides</link>
+    <description>Practical guides on keyboard shortcuts, productivity workflows, and shortcut management for macOS, Windows, and Linux.</description>
+    <language>en</language>
+    <lastBuildDate>Wed, 01 Apr 2026 01:47:51 GMT</lastBuildDate>
+    <atom:link href="https://keyshortcut.com/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Top 10 Tools to Manage and Customize Your Keyboard Shortcuts</title>
+      <link>https://keyshortcut.com/guides/keyboard-shortcut-tools</link>
+      <guid isPermaLink="true">https://keyshortcut.com/guides/keyboard-shortcut-tools</guid>
+      <description>Discover the best tools for managing, customizing, and learning keyboard shortcuts on macOS, Windows, and Linux. From overlay apps to shortcut trainers.</description>
+      <pubDate>Tue, 31 Mar 2026 00:00:00 GMT</pubDate>
+      <category>Tools</category>
+    </item>
+    <item>
+      <title>A Complete List of Universal Shortcuts for All Platforms</title>
+      <link>https://keyshortcut.com/guides/universal-shortcuts-all-platforms</link>
+      <guid isPermaLink="true">https://keyshortcut.com/guides/universal-shortcuts-all-platforms</guid>
+      <description>The definitive reference for keyboard shortcuts that work across macOS, Windows, and Linux. Copy, paste, undo, navigation, and more — with platform-specific key equivalents.</description>
+      <pubDate>Tue, 31 Mar 2026 00:00:00 GMT</pubDate>
+      <category>Reference</category>
+    </item>
+    <item>
+      <title>Step-by-Step: Creating Your Personalized Shortcut Workflow</title>
+      <link>https://keyshortcut.com/guides/personalized-shortcut-workflow</link>
+      <guid isPermaLink="true">https://keyshortcut.com/guides/personalized-shortcut-workflow</guid>
+      <description>A practical guide to building a keyboard shortcut workflow that matches how you actually work. Audit your habits, identify high-impact shortcuts, and build muscle memory systematically.</description>
+      <pubDate>Tue, 31 Mar 2026 00:00:00 GMT</pubDate>
+      <category>Productivity</category>
+    </item>
+    <item>
+      <title>How Keyboard Shortcuts Improve Efficiency and Reduce Stress</title>
+      <link>https://keyshortcut.com/guides/keyboard-shortcuts-efficiency</link>
+      <guid isPermaLink="true">https://keyshortcut.com/guides/keyboard-shortcuts-efficiency</guid>
+      <description>Learn how keyboard shortcuts reduce context switching, lower cognitive load, and help you work faster with less mental fatigue. Backed by research and real-world examples.</description>
+      <pubDate>Tue, 31 Mar 2026 00:00:00 GMT</pubDate>
+      <category>Productivity</category>
+    </item>
+    <item>
+      <title>The Science Behind Keyboard Shortcuts and Increased Productivity</title>
+      <link>https://keyshortcut.com/guides/science-keyboard-shortcuts</link>
+      <guid isPermaLink="true">https://keyshortcut.com/guides/science-keyboard-shortcuts</guid>
+      <description>Explore the cognitive science, motor learning research, and ergonomics studies that explain why keyboard shortcuts make you faster and more productive.</description>
+      <pubDate>Tue, 31 Mar 2026 00:00:00 GMT</pubDate>
+      <category>Productivity</category>
+    </item>
+    <item>
+      <title>The Ultimate Guide to Keyboard Shortcuts for Productivity in 2026</title>
+      <link>https://keyshortcut.com/guides/keyboard-shortcuts-productivity-guide</link>
+      <guid isPermaLink="true">https://keyshortcut.com/guides/keyboard-shortcuts-productivity-guide</guid>
+      <description>Master keyboard shortcuts in 2026 with this comprehensive guide. Essential shortcuts for macOS, Windows, and Linux across browsers, code editors, design tools, and productivity apps.</description>
+      <pubDate>Tue, 31 Mar 2026 00:00:00 GMT</pubDate>
+      <category>Productivity</category>
+    </item>
+    <item>
+      <title>Top Features to Look for in a Keyboard Shortcut Application</title>
+      <link>https://keyshortcut.com/guides/keyboard-shortcut-app-features</link>
+      <guid isPermaLink="true">https://keyshortcut.com/guides/keyboard-shortcut-app-features</guid>
+      <description>A buyer's guide to keyboard shortcut apps. Learn which features matter most — from active app detection and search to customization, privacy, and platform support.</description>
+      <pubDate>Tue, 31 Mar 2026 00:00:00 GMT</pubDate>
+      <category>Tools</category>
+    </item>
+    <item>
+      <title>Upgrade Your Productivity Setup with KeyShortcut's Shortcut Collections</title>
+      <link>https://keyshortcut.com/guides/shortcut-collections</link>
+      <guid isPermaLink="true">https://keyshortcut.com/guides/shortcut-collections</guid>
+      <description>Learn how to use KeyShortcut's shortcut collections to organize, browse, and master keyboard shortcuts for your most-used apps on macOS.</description>
+      <pubDate>Tue, 31 Mar 2026 00:00:00 GMT</pubDate>
+      <category>Product</category>
+    </item>
+    <item>
+      <title>Enhance Your Digital Workflow with KeyShortcut's Custom Guides</title>
+      <link>https://keyshortcut.com/guides/custom-shortcut-guides</link>
+      <guid isPermaLink="true">https://keyshortcut.com/guides/custom-shortcut-guides</guid>
+      <description>Create custom keyboard shortcuts, build personal reference cards, and automate actions with KeyShortcut's custom shortcut system on macOS.</description>
+      <pubDate>Tue, 31 Mar 2026 00:00:00 GMT</pubDate>
+      <category>Product</category>
+    </item>
+    <item>
+      <title>Mastering Linux Keyboard Shortcuts: Tips and Tricks</title>
+      <link>https://keyshortcut.com/guides/linux-keyboard-shortcuts</link>
+      <guid isPermaLink="true">https://keyshortcut.com/guides/linux-keyboard-shortcuts</guid>
+      <description>A comprehensive guide to Linux keyboard shortcuts for GNOME, KDE, terminal, file management, and popular Linux applications. From beginner essentials to power user tricks.</description>
+      <pubDate>Tue, 31 Mar 2026 00:00:00 GMT</pubDate>
+      <category>Reference</category>
+    </item>
+  </channel>
+</rss>

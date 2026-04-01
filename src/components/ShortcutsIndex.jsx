@@ -209,6 +209,25 @@ export default function ShortcutsIndex() {
           <p className="text-center text-theme-muted py-20">No apps found for &ldquo;{search}&rdquo;</p>
         )}
       </div>
+
+      <BreadcrumbSchema platformName={platformName} platformId={platform} />
     </div>
   )
+}
+
+/**
+ * BreadcrumbList structured data for platform index pages.
+ * Safe: all values come from our own static route/platform data, not user input.
+ */
+function BreadcrumbSchema({ platformName, platformId }) {
+  const jsonLd = JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://keyshortcut.com/' },
+      { '@type': 'ListItem', position: 2, name: `${platformName} Shortcuts`, item: `https://keyshortcut.com/${platformId}` },
+    ],
+  })
+  // Safe: jsonLd is built from our own static platform data (not user input)
+  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd }} />
 }

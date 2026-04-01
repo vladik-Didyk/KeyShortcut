@@ -201,6 +201,9 @@ export default function ShortcutPage() {
         <p className="text-theme-muted text-[15px] leading-relaxed max-w-[720px] mt-3">
           {sp.learnMore(app.displayName)}
         </p>
+        <p className="text-theme-muted text-[15px] leading-relaxed max-w-[720px] mt-3">
+          {sp.whyShortcuts(app.displayName, platformName)}
+        </p>
 
         {/* ─── Quick Tips ─── */}
         <div className="mt-8 max-w-[720px] rounded-2xl bg-theme-base-alt border border-theme-border p-6">
@@ -314,7 +317,7 @@ export default function ShortcutPage() {
         <div className="mx-auto max-w-[980px] px-5 md:px-6 py-14">
           <h2 className="text-xl font-semibold tracking-tight mb-6">{sp.faqTitle}</h2>
           <div className="space-y-2 max-w-[720px]">
-            {sp.faqItems(app.displayName, platformName).map((item, i) => (
+            {sp.faqItems(app, platformName).map((item, i) => (
               <FaqAccordion key={i} question={item.question} answer={item.answer} />
             ))}
           </div>
@@ -340,8 +343,50 @@ export default function ShortcutPage() {
           </div>
         </div>
       </div>
+
+      <FaqSchema app={app} platformName={platformName} />
+      <BreadcrumbSchema appName={app.displayName} platformName={platformName} platformId={platform} slug={slug} />
     </div>
   )
+}
+
+/**
+ * FAQ structured data for Google rich results.
+ * All values come from our own static content data (CONTENT.shortcutPage.faqItems),
+ * not from user input, so the serialized JSON is safe to embed directly.
+ */
+function FaqSchema({ app, platformName }) {
+  const sp = CONTENT.shortcutPage
+  const jsonLd = JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: sp.faqItems(app, platformName).map(item => ({
+      '@type': 'Question',
+      name: item.question,
+      acceptedAnswer: { '@type': 'Answer', text: item.answer },
+    })),
+  })
+  return (
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd }} />
+  )
+}
+
+/**
+ * BreadcrumbList structured data for shortcut pages (Home > Platform > App).
+ * Safe: all values come from our own static route/app data, not user input.
+ */
+function BreadcrumbSchema({ appName, platformName, platformId, slug }) {
+  const jsonLd = JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://keyshortcut.com/' },
+      { '@type': 'ListItem', position: 2, name: `${platformName} Shortcuts`, item: `https://keyshortcut.com/${platformId}` },
+      { '@type': 'ListItem', position: 3, name: `${appName} Shortcuts`, item: `https://keyshortcut.com/${platformId}/${slug}` },
+    ],
+  })
+  // Safe: jsonLd is built from our own static app/platform data (not user input)
+  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd }} />
 }
 
 /* ─── FAQ Accordion ─── */
