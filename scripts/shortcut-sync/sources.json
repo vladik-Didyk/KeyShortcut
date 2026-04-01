@@ -70,7 +70,7 @@
       "displayName": "Bear",
       "tier": 3,
       "sources": {
-        "macos": { "url": "https://bear.app/faq/mac-keyboard-shortcuts/", "parser": "ai-extract" }
+        "macos": { "url": "https://bear.app/faq/mac-keyboard-shortcuts/", "parser": "auto" }
       }
     },
     "blender": {

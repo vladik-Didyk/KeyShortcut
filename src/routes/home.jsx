@@ -1,4 +1,4 @@
-import { getManifest, getPlatformApps } from "../utils/supabase.server";
+import { getManifest, getPlatformApps, getOtherPlatformsMap } from "../utils/supabase.server";
 import { CONTENT, buildMeta } from "../data/content";
 import DirectoryHomepage from "../components/DirectoryHomepage";
 
@@ -7,13 +7,14 @@ export function meta() {
 }
 
 export async function loader() {
-  const [manifest, macosApps] = await Promise.all([
+  const [manifest, macosApps, otherPlatformsMap] = await Promise.all([
     getManifest(),
     getPlatformApps("macos"),
+    getOtherPlatformsMap("macos"),
   ]);
   return {
     manifest,
-    platformData: { platform: "macos", apps: macosApps },
+    platformData: { platform: "macos", apps: macosApps, otherPlatformsMap },
     defaultPlatformId: "macos",
   };
 }

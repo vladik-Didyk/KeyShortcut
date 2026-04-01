@@ -1,8 +1,9 @@
 import { Link } from 'react-router'
 import AppIcon from './AppIcon'
 import { CONTENT } from '../../data/content'
+import PlatformIcons from '../PlatformIcons'
 
-export default function AppCard({ app, platform }) {
+export default function AppCard({ app, platform, otherPlatforms }) {
   return (
     <div className="app-card-perspective">
       <Link
@@ -20,6 +21,7 @@ export default function AppCard({ app, platform }) {
         <p className="text-theme-muted text-xs mt-1.5 text-center">
           {app.shortcutCount} {CONTENT.directory.shortcutsLabel}
         </p>
+        <PlatformIcons currentPlatform={platform} otherPlatforms={otherPlatforms} />
       </Link>
     </div>
   )

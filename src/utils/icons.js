@@ -24,6 +24,7 @@ export {
   Play,
   Search,
   ShieldCheck,
+  CircleCheck,
   Smartphone,
   Terminal,
   X,

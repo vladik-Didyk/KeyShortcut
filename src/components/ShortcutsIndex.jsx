@@ -10,7 +10,7 @@ import SearchDropdown from './SearchDropdown'
 import AdSlot from './AdSlot'
 
 export default function ShortcutsIndex() {
-  const { platformId: platform, platformName, apps, categories } = useLoaderData()
+  const { platformId: platform, platformName, apps, categories, otherPlatformsMap = {} } = useLoaderData()
   const [search, setSearch] = useState('')
   const [dropdownOpen, setDropdownOpen] = useState(true)
   const searchRef = useRef(null)
@@ -193,7 +193,7 @@ export default function ShortcutsIndex() {
                   {/* Right: App grid */}
                   <div className="flex-1 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
                     {group.apps.map(app => (
-                      <AppCard key={app.slug} app={app} platform={platform} />
+                      <AppCard key={app.slug} app={app} platform={platform} otherPlatforms={otherPlatformsMap[app.slug]} />
                     ))}
                   </div>
                 </div>

@@ -48,3 +48,12 @@ export async function getOtherPlatforms(slug, currentPlatformId) {
   );
   return data.otherPlatforms[slug] || [];
 }
+
+export function getOtherPlatformsMap(platformId) {
+  return Promise.resolve(
+    cached(`otherPlatformsMap:${platformId}`, () => {
+      const data = readJSON(`platforms/${platformId}.json`);
+      return data.otherPlatforms || {};
+    })
+  );
+}

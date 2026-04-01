@@ -7,7 +7,7 @@ async function fetchPlatformData(platformId) {
   const res = await fetch(`/data/platforms/${platformId}.json`)
   if (!res.ok) throw new Error(`Failed to load ${platformId} data`)
   const data = await res.json()
-  return { apps: data.apps }
+  return { apps: data.apps, otherPlatformsMap: data.otherPlatforms || {} }
 }
 
 /** Prefetch platform data in the background (call on hover) */
@@ -54,6 +54,7 @@ export function usePlatformData(platformId) {
   const cached = platformId ? cache.get(platformId) : null
   return {
     apps: cached?.apps ?? null,
+    otherPlatformsMap: cached?.otherPlatformsMap ?? {},
     loading: !!platformId && !cached,
     error: cached?.error ? `Failed to load ${platformId} data` : null,
   }

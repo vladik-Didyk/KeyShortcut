@@ -25,10 +25,11 @@ export default function DirectoryHomepage() {
 
   const platforms = loaderData?.manifest?.platforms ?? null
   const isInitialPlatform = selectedPlatform === (loaderData?.defaultPlatformId || 'macos')
-  const { apps: switchedApps, loading: switchedLoading, error } = usePlatformData(
+  const { apps: switchedApps, otherPlatformsMap: switchedOPMap, loading: switchedLoading, error } = usePlatformData(
     isInitialPlatform ? null : selectedPlatform
   )
   const apps = isInitialPlatform ? loaderData?.platformData?.apps : switchedApps
+  const otherPlatformsMap = isInitialPlatform ? (loaderData?.platformData?.otherPlatformsMap || {}) : switchedOPMap
   const loading = isInitialPlatform ? false : switchedLoading
 
   // Eagerly prefetch other platforms in the background when browser is idle
@@ -334,7 +335,7 @@ export default function DirectoryHomepage() {
         {/* ─── Category Sections (when not searching) ─── */}
         {!error && !loading && !search && grouped.map((group, index) => (
           <React.Fragment key={group.name}>
-            <CategorySection group={group} platform={selectedPlatform} />
+            <CategorySection group={group} platform={selectedPlatform} otherPlatformsMap={otherPlatformsMap} />
             {index === 2 && grouped.length > 4 && (
               <AdSlot adSlot="home_mid" variant="in-article" />
             )}
@@ -532,7 +533,7 @@ function SearchResultsInline({ results, platform }) {
 }
 
 /* ─── Category section — matches ShortcutsIndex layout ─── */
-function CategorySection({ group, platform }) {
+function CategorySection({ group, platform, otherPlatformsMap = {} }) {
   const [ref, visible] = useInView({ threshold: 0.05 })
   const config = categoryConfig[group.name]
   const CatIcon = config?.icon
@@ -559,7 +560,7 @@ function CategorySection({ group, platform }) {
         {/* Right: App grid */}
         <div className="flex-1 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
           {group.apps.map(app => (
-            <AppCard key={app.slug} app={app} platform={platform} />
+            <AppCard key={app.slug} app={app} platform={platform} otherPlatforms={otherPlatformsMap[app.slug]} />
           ))}
         </div>
       </div>

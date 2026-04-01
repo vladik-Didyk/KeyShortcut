@@ -1,5 +1,5 @@
 import { isRouteErrorResponse, useRouteError } from "react-router";
-import { getPlatformApps, getPlatforms } from "../utils/supabase.server";
+import { getPlatformApps, getPlatforms, getOtherPlatformsMap } from "../utils/supabase.server";
 import { CONTENT, buildMeta } from "../data/content";
 import NotFound from "../components/NotFound";
 import ShortcutsIndex from "../components/ShortcutsIndex";
@@ -12,12 +12,14 @@ export async function loader({ params }) {
 
   const apps = await getPlatformApps(platformId);
   const categories = [...new Set(apps.map((a) => a.category))];
+  const otherPlatformsMap = await getOtherPlatformsMap(platformId);
 
   return {
     platformId,
     platformName: valid.display_name,
     apps,
     categories,
+    otherPlatformsMap,
   };
 }
 

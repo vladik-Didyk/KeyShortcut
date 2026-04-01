@@ -1,0 +1,18 @@
+[
+  {
+    "slug": "bear",
+    "platformId": "macos",
+    "timestamp": "2026-04-01T04:24:51.521Z",
+    "sourceUrl": "https://bear.app/faq/mac-keyboard-shortcuts/",
+    "parser": "auto",
+    "result": {
+      "added": 70,
+      "modified": 5,
+      "removed": 0,
+      "scrapedTotal": 82,
+      "existingTotal": 12
+    },
+    "confidence": "low",
+    "action": "dry-run"
+  }
+]

@@ -19,6 +19,8 @@ import { diffShortcuts } from './diff/diff-engine.mjs'
 import { generateReport, generateSummary } from './diff/report.mjs'
 import { autoApprove } from './review/auto-approve.mjs'
 import { createPR, createIssue } from './review/create-pr.mjs'
+import { appendSyncLog } from './sync-log.mjs'
+import { updateLastVerified } from './update-verified.mjs'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const ROOT = join(__dirname, '../..')
@@ -149,6 +151,28 @@ async function processApp(slug, config, platformId) {
       action = await handleChanges(slug, platformId, diff, normalized, report)
     }
   }
+
+  // Log every sync run
+  const timestamp = new Date().toISOString()
+  appendSyncLog({
+    slug,
+    platformId,
+    timestamp,
+    sourceUrl: source.url,
+    parser: source.parser,
+    result: {
+      added: diff.added.length,
+      modified: diff.modified.length,
+      removed: diff.removed.length,
+      scrapedTotal: diff.scrapedTotal,
+      existingTotal: diff.existingTotal,
+    },
+    confidence: diff.confidence.level,
+    action: args.dryRun ? 'dry-run' : action,
+  })
+
+  // Update lastVerified on the app in platform JSON
+  updateLastVerified(slug, platformId, timestamp)
 
   return { slug, platformId, diff, summary, action }
 }

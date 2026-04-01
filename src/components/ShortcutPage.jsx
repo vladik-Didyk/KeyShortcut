@@ -1,6 +1,7 @@
 import { Link, useLoaderData } from 'react-router'
 import React, { useState, useEffect, useMemo, useRef } from 'react'
 import { Search, X, Download, ExternalLink, Lightbulb, ChevronDown } from '../utils/icons'
+import LastCheckedBadge from './LastCheckedBadge'
 import AppIcon from './directory/AppIcon'
 import { useScrollspy } from '../hooks/useScrollspy'
 import { CONTENT } from '../data/content'
@@ -113,6 +114,7 @@ export default function ShortcutPage() {
             )}
             <span className="hidden md:inline text-theme-muted text-xs shrink-0">
               {app.shortcutCount} shortcuts · {app.sections.length} sections
+              <LastCheckedBadge date={app.lastVerified} variant="inline" />
             </span>
             {otherPlatforms.length > 0 && (
               <span className="hidden lg:inline text-theme-muted text-xs shrink-0">
@@ -198,6 +200,7 @@ export default function ShortcutPage() {
         <p className="text-theme-muted text-[15px] leading-relaxed max-w-[720px]">
           {sp.intro(app.displayName, platformName, app.shortcutCount, app.sections.length)}
         </p>
+        <LastCheckedBadge date={app.lastVerified} docsUrl={app.docsUrl} variant="block" />
         <p className="text-theme-muted text-[15px] leading-relaxed max-w-[720px] mt-3">
           {sp.learnMore(app.displayName)}
         </p>
