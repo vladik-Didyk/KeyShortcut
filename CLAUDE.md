@@ -21,6 +21,7 @@ pnpm test:watch   # Vitest in watch mode
 pnpm test:perf    # Run performance benchmarks
 pnpm test:perf:browser  # Run Playwright E2E performance tests
 pnpm run deploy   # Build + deploy to Cloudflare Pages (production)
+pnpm export       # Export Supabase data to public/data/ JSON (maintainer only, needs .env)
 pnpm sync         # Run shortcut sync pipeline (scrape → diff → write to Supabase)
 pnpm sync:dry     # Dry run (no writes to Supabase)
 pnpm sync:health  # Health check for sync sources
@@ -77,30 +78,31 @@ Product page sections use anchor links (`#features`, `#faq`, `#policies`, `#down
 - `public/data/` — Runtime JSON data (manifest + per-platform shortcut files)
 - `scripts/` — Build scripts (download-icons, generate-sitemap, update-readme-apps) + shortcut-sync pipeline
 
-### Data architecture (Supabase → Platform → Category → App)
+### Data architecture (Static JSON + Supabase)
 
-**Data source**: All app/shortcut data lives in **Supabase** (PostgreSQL). The Supabase client is in `src/utils/supabase.server.js`. Credentials come from `.env` (`VITE_SUPABASE_URL`, `VITE_SUPABASE_ANON_KEY`). Never hardcode Supabase credentials in source files.
+**Data flow**: Supabase (PostgreSQL) is the source of truth, but the build reads from static JSON files committed to git. No Supabase credentials needed to build or contribute.
 
-**Supabase tables**:
-- `platforms` — platform definitions (macos, windows, linux)
-- `apps` — app metadata (slug, display_name, category_id, icon_url, docs_url)
-- `app_platforms` — many-to-many link between apps and platforms
-- `categories` — category definitions (Design, Browsers, Productivity, etc.)
-- `sections` — shortcut sections within an app (per platform)
-- `shortcuts` — individual shortcuts (modifiers, key, action_key)
-- `translations` — i18n strings for action labels
-- `modifier_symbols` — platform-specific modifier symbols (⌘⌥⌃⇧ for macOS, Ctrl/Alt/Shift for Windows)
-- `site_config` — key-value settings (SITE_URL, SUPPORT_EMAIL, PRICE, etc.)
-- `cms_pages` — CMS content for UI sections (navbar, footer, etc.)
-- `faqs`, `product_features`, `product_details`, `legal_policies` — product page content
+```
+Supabase DB  →  pnpm export  →  public/data/*.json  →  build reads local JSON
+                (maintainer)      (committed to git)     (no credentials needed)
+```
 
-**App icons**: Stored in Supabase Storage bucket `icons/app-icons/`, referenced via `icon_url` field (full URL).
+**Static data files** (`public/data/`):
+- `platforms.json` — platform list (id, display_name, icon_url)
+- `categories.json` — category definitions
+- `manifest.json` — platforms with modifier symbols and category lists
+- `platforms/macos.json` — all macOS apps with sections, shortcuts, and otherPlatforms map
+- `platforms/windows.json` — same for Windows
+- `platforms/linux.json` — same for Linux
 
-**Data loading**: Route `loader()` functions call `supabase.server.js` helpers at build time during pre-rendering. Data is serialized into HTML and `.data` files. `usePlatformData` hook handles client-side platform switching on the homepage.
+**Data loading**: Route `loader()` functions call `supabase.server.js` helpers which read from `public/data/` JSON files. At runtime, `usePlatformData` hook fetches `/data/platforms/{id}.json` for client-side platform switching.
 
-**Pre-rendering config**: `react-router.config.ts` queries Supabase directly (via `loadEnv` from Vite) to generate the list of ~175 paths to pre-render.
+**Updating data**: After changing data in Supabase (via `pnpm sync`, `pnpm add-app`, or manual edits), run `pnpm export` to regenerate the JSON files, then commit them.
 
-**Supabase caching** (dev only): `supabase.server.js` uses a two-layer cache — in-memory (5-min TTL) + disk (`node_modules/.cache/supabase/`). Disk cache survives HMR restarts. If data seems stale during development, clear the cache: `rm -rf node_modules/.cache/supabase`.
+**Supabase tables** (source of truth, queried by `pnpm export`):
+- `platforms`, `apps`, `app_platforms`, `categories`, `sections`, `shortcuts`, `translations`, `modifier_symbols`
+
+**App icons**: Stored in Supabase Storage bucket `icons/app-icons/` (public URLs, no auth needed). Downloaded at build time by `scripts/download-icons.mjs` using URLs from the exported JSON.
 
 **Centralized copy**: `content.js` — single source of truth for all UI/marketing text. Imports computed values from `siteConfig.js`. Use `content.js` for all new copy; `copy.js` is legacy.
 
@@ -226,6 +228,4 @@ The sync pipeline scrapes official documentation pages, extracts shortcuts via G
 3. **`src/utils/directoryHelpers.js`** — Add entry to `imageIcons` map (display name → slug) AND `slugToIconName` map (slug → display name). Without this, the icon shows a letter placeholder fallback even if the image file exists.
 4. **`src/data/appCategories.js`** — Add display name to the appropriate category array
 5. **`scripts/shortcut-sync/sources.json`** — Add entry for the sync automation pipeline (alphabetically sorted)
-6. **Clear build cache** before deploying: `rm -rf node_modules/.cache/supabase`
-
-**Supabase query limits**: The `batchIn` helper in `supabase.server.js` uses `.limit(10000)` to override Supabase's default 1000-row limit per query. Without this, shortcuts from apps that land in truncated batches silently disappear from pre-rendered pages.
+6. **Run `pnpm export`** to regenerate `public/data/` JSON files, then commit them

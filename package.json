@@ -6,8 +6,10 @@
   "scripts": {
     "icons": "node scripts/download-icons.mjs",
     "dev": "node scripts/download-icons.mjs && react-router dev",
-    "build": "node scripts/download-icons.mjs && node scripts/generate-sitemap.mjs && react-router build",
+    "build": "node scripts/download-icons.mjs && node scripts/generate-sitemap.mjs && node scripts/generate-rss.mjs && node scripts/generate-og-images.mjs && react-router build",
     "sitemap": "node scripts/generate-sitemap.mjs",
+    "rss": "node scripts/generate-rss.mjs",
+    "og-images": "node scripts/generate-og-images.mjs",
     "lint": "eslint .",
     "preview": "react-router-serve ./build/server/index.js",
     "start": "react-router-serve ./build/server/index.js",
@@ -21,12 +23,12 @@
     "sync:health": "node scripts/shortcut-sync/run.mjs --health-check",
     "readme": "node scripts/update-readme-apps.mjs",
     "add-app": "node scripts/add-app.mjs",
-    "add-app:dry": "node scripts/add-app.mjs --dry-run"
+    "add-app:dry": "node scripts/add-app.mjs --dry-run",
+    "export": "node scripts/export-data.mjs"
   },
   "dependencies": {
     "@react-router/node": "^7.13.1",
     "@react-router/serve": "^7.13.1",
-    "@supabase/supabase-js": "^2.100.0",
     "isbot": "^5",
     "jspdf": "^4.2.1",
     "react": "^19.2.0",
@@ -37,6 +39,7 @@
     "@eslint/js": "^9.39.1",
     "@google/genai": "^1.46.0",
     "@react-router/dev": "^7.13.1",
+    "@supabase/supabase-js": "^2.100.0",
     "@tailwindcss/vite": "^4.2.1",
     "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "^16.3.2",
@@ -52,6 +55,7 @@
     "jsdom": "^29.0.0",
     "lucide-react": "^0.577.0",
     "pdf-parse": "^2.4.5",
+    "sharp": "^0.34.5",
     "simple-icons": "^16.11.0",
     "tailwindcss": "^4.2.1",
     "vite": "^7.3.1",

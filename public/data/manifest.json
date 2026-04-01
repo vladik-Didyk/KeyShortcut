@@ -1,0 +1,67 @@
+{
+  "platforms": [
+    {
+      "id": "macos",
+      "displayName": "macOS",
+      "icon": "apple.png",
+      "modifierSymbols": [
+        "⌃",
+        "⌥",
+        "⇧",
+        "⌘"
+      ],
+      "categories": [
+        "Productivity",
+        "Design",
+        "Development",
+        "Browsers",
+        "Apple Apps",
+        "Media",
+        "Communication",
+        "Microsoft Office",
+        "macOS System",
+        "System Utils"
+      ]
+    },
+    {
+      "id": "windows",
+      "displayName": "Windows",
+      "icon": "windows.png",
+      "modifierSymbols": [
+        "Ctrl",
+        "Alt",
+        "Shift",
+        "Win"
+      ],
+      "categories": [
+        "Design",
+        "Browsers",
+        "Productivity",
+        "Communication",
+        "Microsoft Office",
+        "Development",
+        "Media",
+        "Windows System"
+      ]
+    },
+    {
+      "id": "linux",
+      "displayName": "Linux",
+      "icon": "linux.png",
+      "modifierSymbols": [
+        "Ctrl",
+        "Alt",
+        "Shift",
+        "Super"
+      ],
+      "categories": [
+        "Design",
+        "Browsers",
+        "Communication",
+        "Productivity",
+        "Development",
+        "System Utils"
+      ]
+    }
+  ]
+}

@@ -1,38 +1,51 @@
 #!/usr/bin/env node
-import { writeFileSync } from 'fs'
+import { readFileSync, writeFileSync } from 'fs'
 import { fileURLToPath } from 'url'
 import { dirname, join } from 'path'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const ROOT = join(__dirname, '..')
+const DATA_DIR = join(ROOT, 'public/data')
 
-try { process.loadEnvFile(join(ROOT, '.env')) } catch { /* env vars from CI secrets */ }
-
-const SUPABASE_URL = process.env.VITE_SUPABASE_URL
-const SUPABASE_KEY = process.env.VITE_SUPABASE_ANON_KEY
-
-if (!SUPABASE_URL || !SUPABASE_KEY) {
-  console.error('Missing VITE_SUPABASE_URL or VITE_SUPABASE_ANON_KEY in .env')
-  process.exit(1)
-}
-const BASE = `${SUPABASE_URL}/rest/v1`
-const HEADERS = { apikey: SUPABASE_KEY, Authorization: `Bearer ${SUPABASE_KEY}` }
 const DOMAIN = 'https://keyshortcut.com'
 const today = new Date().toISOString().split('T')[0]
 
-async function query(path) {
-  const res = await fetch(`${BASE}/${path}`, { headers: HEADERS })
-  return res.json()
+function readJSON(relativePath) {
+  return JSON.parse(readFileSync(join(DATA_DIR, relativePath), 'utf-8'))
 }
 
 const staticPages = [
   { loc: '/', priority: '1.0', changefreq: 'weekly' },
   { loc: '/mac-hud', priority: '0.8', changefreq: 'weekly' },
+  { loc: '/guides', priority: '0.7', changefreq: 'weekly' },
+  { loc: '/cheat-sheets', priority: '0.7', changefreq: 'weekly' },
   { loc: '/about', priority: '0.5', changefreq: 'monthly' },
   { loc: '/privacy', priority: '0.3', changefreq: 'yearly' },
 ]
 
-const platforms = await query('platforms?select=id&order=sort_order')
+// Guide pages
+const { GUIDES } = await import('../src/data/guides/index.js')
+const guidePages = GUIDES.map(g => ({
+  loc: `/guides/${g.slug}`,
+  lastmod: g.lastUpdated || today,
+  priority: '0.6',
+  changefreq: 'monthly',
+}))
+
+// Comparison pages
+const { COMPARISONS } = await import('../src/data/comparisons.js')
+const comparePages = [
+  { loc: '/compare', lastmod: today, priority: '0.6', changefreq: 'monthly' },
+  ...COMPARISONS.map(c => ({
+    loc: `/compare/${c.slugA}-vs-${c.slugB}`,
+    lastmod: today,
+    priority: '0.6',
+    changefreq: 'monthly',
+  })),
+]
+
+// Platform + app pages from exported JSON
+const platforms = readJSON('platforms.json')
 const platformPages = []
 const appPages = []
 
@@ -44,11 +57,7 @@ for (const platform of platforms) {
     changefreq: 'weekly',
   })
 
-  const links = await query(`app_platforms?select=app_id&platform_id=eq.${platform.id}`)
-  const appIds = links.map(l => l.app_id)
-  if (!appIds.length) continue
-
-  const apps = await query(`apps?select=slug&id=in.(${appIds.join(',')})&order=sort_order`)
+  const { apps } = readJSON(`platforms/${platform.id}.json`)
   for (const app of apps) {
     appPages.push({
       loc: `/${platform.id}/${app.slug}`,
@@ -59,7 +68,7 @@ for (const platform of platforms) {
   }
 }
 
-const allPages = [...staticPages, ...platformPages, ...appPages]
+const allPages = [...staticPages, ...guidePages, ...comparePages, ...platformPages, ...appPages]
 
 const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">

@@ -1,0 +1,79 @@
+[
+  {
+    "id": "macos-system",
+    "display_name": "macOS System",
+    "icon": "Monitor",
+    "color": "#1A1A1A",
+    "sort_order": 0
+  },
+  {
+    "id": "apple-apps",
+    "display_name": "Apple Apps",
+    "icon": "Smartphone",
+    "color": "#1A1A1A",
+    "sort_order": 1
+  },
+  {
+    "id": "browsers",
+    "display_name": "Browsers",
+    "icon": "Globe",
+    "color": "#1A1A1A",
+    "sort_order": 2
+  },
+  {
+    "id": "development",
+    "display_name": "Development",
+    "icon": "Code2",
+    "color": "#1A1A1A",
+    "sort_order": 3
+  },
+  {
+    "id": "communication",
+    "display_name": "Communication",
+    "icon": "MessageCircle",
+    "color": "#1A1A1A",
+    "sort_order": 4
+  },
+  {
+    "id": "productivity",
+    "display_name": "Productivity",
+    "icon": "Zap",
+    "color": "#1A1A1A",
+    "sort_order": 5
+  },
+  {
+    "id": "design",
+    "display_name": "Design",
+    "icon": "Palette",
+    "color": "#1A1A1A",
+    "sort_order": 6
+  },
+  {
+    "id": "microsoft-office",
+    "display_name": "Microsoft Office",
+    "icon": "FileSpreadsheet",
+    "color": "#1A1A1A",
+    "sort_order": 7
+  },
+  {
+    "id": "media",
+    "display_name": "Media",
+    "icon": "Play",
+    "color": "#1A1A1A",
+    "sort_order": 8
+  },
+  {
+    "id": "windows-system",
+    "display_name": "Windows System",
+    "icon": "Monitor",
+    "color": "#1A1A1A",
+    "sort_order": 9
+  },
+  {
+    "id": "system-utils",
+    "display_name": "System Utils",
+    "icon": "Terminal",
+    "color": "#1A1A1A",
+    "sort_order": 10
+  }
+]

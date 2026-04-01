@@ -1,0 +1,20 @@
+[
+  {
+    "id": "macos",
+    "display_name": "macOS",
+    "icon_url": "https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/platform-icons/apple.webp",
+    "sort_order": 0
+  },
+  {
+    "id": "windows",
+    "display_name": "Windows",
+    "icon_url": "https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/platform-icons/windows.webp",
+    "sort_order": 1
+  },
+  {
+    "id": "linux",
+    "display_name": "Linux",
+    "icon_url": "https://hgxtwlynuixwwyjykiqd.supabase.co/storage/v1/object/public/icons/platform-icons/linux.webp",
+    "sort_order": 2
+  }
+]
