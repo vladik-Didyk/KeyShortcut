@@ -60,10 +60,15 @@ describe('Footer', () => {
 })
 
 describe('MacAppStoreButton', () => {
-  it('renders with default href containing apps.apple.com', () => {
-    render(<MacAppStoreButton />)
+  it('renders with explicit href containing apps.apple.com', () => {
+    render(<MacAppStoreButton href="https://apps.apple.com/app/keyshortcut/id123" />)
     const link = screen.getByRole('link', { name: /mac app store/i })
     expect(link.getAttribute('href')).toContain('apps.apple.com')
+  })
+
+  it('renders nothing when href is null', () => {
+    const { container } = render(<MacAppStoreButton href={null} />)
+    expect(container.innerHTML).toBe('')
   })
 })
 

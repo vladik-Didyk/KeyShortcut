@@ -109,20 +109,22 @@ export default function CreatorBanner() {
         </p>
 
         <div className="flex flex-wrap items-center gap-3">
-          <a
-            href={APP_STORE_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center justify-center no-underline transition-opacity hover:opacity-80"
-          >
-            <img
-              src="/images/app-store-badge.png"
-              alt="Download on the App Store"
-              width={140}
-              height={47}
-              className="h-[40px] w-auto pointer-events-none"
-            />
-          </a>
+          {APP_STORE_URL && (
+            <a
+              href={APP_STORE_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center no-underline transition-opacity hover:opacity-80"
+            >
+              <img
+                src="/images/app-store-badge.png"
+                alt="Download on the App Store"
+                width={140}
+                height={47}
+                className="h-[40px] w-auto pointer-events-none"
+              />
+            </a>
+          )}
           {creator.links?.linkedin && (
             <a
               href={creator.links.linkedin}

@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router'
 import { CONTENT } from '../data/content'
+import { APP_STORE_URL } from '../data/siteConfig'
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
@@ -49,12 +50,14 @@ export default function Navbar() {
           </div>
         </div>
 
-        <a
-          href={isProductPage ? '#download' : '/mac-hud#download'}
-          className="text-xs font-medium px-4 py-1.5 rounded-full no-underline transition-colors border-[1.5px] border-theme-accent hover:bg-theme-accent hover:text-theme-accent-text bg-theme-accent text-theme-accent-text"
-        >
-          {navbar.downloadLabel}
-        </a>
+        {APP_STORE_URL && (
+          <a
+            href={isProductPage ? '#download' : '/mac-hud#download'}
+            className="text-xs font-medium px-4 py-1.5 rounded-full no-underline transition-colors border-[1.5px] border-theme-accent hover:bg-theme-accent hover:text-theme-accent-text bg-theme-accent text-theme-accent-text"
+          >
+            {navbar.downloadLabel}
+          </a>
+        )}
       </div>
     </nav>
   )

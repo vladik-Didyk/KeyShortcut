@@ -2,6 +2,8 @@ import { APP_STORE_URL } from '../data/siteConfig'
 import { CONTENT } from '../data/content'
 
 export default function MacAppStoreButton({ href = APP_STORE_URL, className = '' }) {
+  if (!href) return null
+
   return (
     <a
       href={href}
