@@ -15,6 +15,7 @@ import FAQ from "../components/FAQ";
 import Policies from "../components/Policies";
 import CTABanner from "../components/CTABanner";
 import Footer from "../components/Footer";
+import HotkeyShowcase from "../components/HotkeyShowcase";
 
 export function meta() {
   return buildMeta(CONTENT.meta.productPage);
@@ -66,6 +67,11 @@ export default function ProductPageRoute() {
         <Hero />
         <Problem />
         <Features />
+        {/* <section className="py-20 md:py-28 px-5 md:px-6">
+          <div className="mx-auto max-w-md">
+            <HotkeyShowcase />
+          </div>
+        </section> */}
         <Details />
         <ShortcutPreview />
         <AppCoverage />

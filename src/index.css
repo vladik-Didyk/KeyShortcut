@@ -249,6 +249,37 @@ body {
 }
 
 /* =========================================
+   SHOWCASE KEY — Large display keys
+   ========================================= */
+
+.showcase-key {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 56px;
+  min-width: 56px;
+  padding: 8px 12px;
+  border-radius: 10px;
+  font-family: var(--font-mono);
+  color: var(--theme-keycap-legend);
+  background: var(--theme-keycap);
+  border: 1.5px solid var(--theme-keycap-dish);
+  box-shadow:
+    0 2px 0 var(--theme-keycap-dish),
+    0 3px 6px var(--color-theme-shadow);
+  user-select: none;
+  transition: all 0.15s ease;
+}
+
+.showcase-key:hover {
+  transform: translateY(1px);
+  box-shadow:
+    0 1px 0 var(--theme-keycap-dish),
+    0 1px 3px var(--color-theme-shadow);
+}
+
+/* =========================================
    KEYCAP BADGES — Retro bordered keys
    ========================================= */
 
