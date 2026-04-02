@@ -7,7 +7,8 @@
  *   node scripts/shortcut-sync/run.mjs --app=chrome              # Check single app (all platforms)
  *   node scripts/shortcut-sync/run.mjs --app=chrome --platform=macos  # Check single app + platform
  *   node scripts/shortcut-sync/run.mjs --tier=1                  # Check all tier 1 apps
- *   node scripts/shortcut-sync/run.mjs --dry-run                 # Don't write to Supabase
+ *   node scripts/shortcut-sync/run.mjs --dry-run                 # Don't write to Supabase or JSON
+ *   node scripts/shortcut-sync/run.mjs --force                   # Write regardless of confidence (Supabase + JSON)
  *   node scripts/shortcut-sync/run.mjs --health-check             # Validate all source URLs
  */
 import { readFileSync } from 'fs'
@@ -148,7 +149,7 @@ async function processApp(slug, config, platformId) {
 
     if (!args.dryRun) {
       // Step 6: Apply changes based on confidence level
-      action = await handleChanges(slug, platformId, diff, normalized, report)
+      action = await handleChanges(slug, platformId, diff, normalized, report, source)
     }
   }
 
@@ -172,19 +173,24 @@ async function processApp(slug, config, platformId) {
   })
 
   // Update lastVerified on the app in platform JSON
-  updateLastVerified(slug, platformId, timestamp)
+  // Only set lastUpdated when changes were actually written
+  const dateStr = timestamp.split('T')[0]  // YYYY-MM-DD for display
+  const dataChanged = !args.dryRun && action === 'auto-approved'
+  updateLastVerified(slug, platformId, dateStr, dataChanged)
 
   return { slug, platformId, diff, summary, action }
 }
 
 // ── Handle changes based on confidence ────────────────────────
-async function handleChanges(slug, platformId, diff, normalized, report) {
+async function handleChanges(slug, platformId, diff, normalized, report, source = {}) {
   const { level } = diff.confidence
 
-  if (level === 'high') {
-    // Auto-approve: write directly to Supabase
-    console.log('  → Auto-approving (high confidence)...')
-    const result = await autoApprove(slug, platformId, diff, normalized)
+  if (level === 'high' || args.force) {
+    // Auto-approve: write to both Supabase + local JSON in parallel
+    console.log(`  → ${args.force ? 'Force-writing' : 'Auto-approving'} (${args.force ? 'forced' : 'high confidence'})...`)
+    // Override confidence for the writer when forced
+    if (args.force) diff.confidence.level = 'high'
+    const result = await autoApprove(slug, platformId, diff, normalized, source)
     return result.success ? 'auto-approved' : 'auto-approve-failed'
   }
 
@@ -300,10 +306,11 @@ function getAppsToCheck() {
 }
 
 function parseArgs(argv) {
-  const result = { dryRun: false, healthCheck: false }
+  const result = { dryRun: false, healthCheck: false, force: false }
   for (const arg of argv) {
     if (arg === '--dry-run') result.dryRun = true
     else if (arg === '--health-check') result.healthCheck = true
+    else if (arg === '--force') result.force = true
     else if (arg.startsWith('--app=')) result.app = arg.split('=')[1]
     else if (arg.startsWith('--platform=')) result.platform = arg.split('=')[1]
     else if (arg.startsWith('--tier=')) result.tier = arg.split('=')[1]

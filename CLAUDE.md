@@ -12,6 +12,8 @@ Keyboard shortcuts directory website — a React site that serves as a multi-pla
 pnpm dev          # Start React Router dev server (HMR)
 pnpm build        # Build icons + sitemap + React Router build (SSR + pre-render) → build/
 pnpm sitemap      # Regenerate sitemap.xml only
+pnpm rss          # Regenerate rss.xml only
+pnpm og-images    # Regenerate Open Graph images only
 pnpm icons        # Download app icons from Supabase Storage only
 pnpm preview      # Preview production build via react-router-serve
 pnpm start        # Serve production build
@@ -34,6 +36,17 @@ Add an app from JSON: `pnpm add-app -- --from-json path/to/app.json`
 
 Run a single test file: `pnpm test src/test/data-integrity.test.js`
 
+## Environment Variables
+
+See `.env.example`. **Build works without any env vars** — it reads from committed JSON in `public/data/`.
+
+- `VITE_SUPABASE_URL` / `VITE_SUPABASE_ANON_KEY` — only for `pnpm export`, `pnpm sync`, `pnpm add-app`
+- `SUPABASE_SERVICE_ROLE_KEY` — shortcut-sync write operations
+- `GEMINI_API_KEY` — AI-powered scraping in shortcut-sync
+- `VITE_APP_STORE_ID` — Mac App Store link; when unset, `APP_STORE_URL` is `null` and all download buttons are hidden
+- `VITE_CF_ANALYTICS_TOKEN` — Cloudflare Web Analytics (optional)
+- `VITE_ADSENSE_ID` — Google AdSense (optional)
+
 ## Architecture
 
 **Stack**: React 19 + React Router v7 (framework mode) + Vite 7 + Tailwind CSS 4 (via `@tailwindcss/vite`) + jspdf
@@ -54,6 +67,11 @@ Route modules live in `src/routes/` and export `loader`, `meta`, and a default c
 - `platform-index.jsx` — `/:platformId` Platform shortcuts index (server `loader`, validates platform)
 - `shortcut-page.jsx` — `/:platformId/:slug` Per-app shortcut page (server `loader`, validates app)
 - `product-page.jsx` — `/mac-hud` Mac HUD product page (Hero, Problem, Features, etc.)
+- `guides-index.jsx` — `/guides` Guides listing page
+- `guide-page.jsx` — `/guides/:slug` Individual guide (content from `src/data/guides/`)
+- `cheat-sheets.jsx` — `/cheat-sheets` PDF cheat sheet generator (uses jspdf)
+- `compare-index.jsx` — `/compare` App comparison listing
+- `compare-page.jsx` — `/compare/:pair` Side-by-side app shortcut comparison
 - `privacy.jsx` — `/privacy` Privacy policy
 - `about.jsx` — `/about` About page
 - `redirect-directory.jsx` — `/directory` → `/` redirect (301)
@@ -111,6 +129,8 @@ Supabase DB  →  pnpm export  →  public/data/*.json  →  build reads local J
 - `categoryConfig.js` — unified category metadata (icon + color per category) for all platforms.
 - `keyboardLayout.js` — keyboard row definitions and shortcut databases for Hero and InteractiveKeyboard.
 - `details.js` — detail card items for the Details section.
+- `guides/` — Guide articles (each exports `meta` + `content`); `guides/index.js` re-exports all for pre-render discovery
+- `comparisons.js` — App comparison pairs; auto-discovered by pre-render config
 - Hand-maintained: `features.js`, `faq.js`, `policies.js`, `shortcuts.js`, `appCategories.js`, `heroDemoData.js`
 
 **Adding a new platform**: Create `public/data/platforms/{platform}.json`, add entry to `manifest.json`, run `pnpm build`. No code changes needed — pre-rendering config auto-discovers platforms.
@@ -195,7 +215,11 @@ Cloudflare Pages config files in `public/`:
 During `pnpm build`, scripts run in order:
 1. `scripts/download-icons.mjs` — Fetches app icons from Supabase Storage into `public/images/app-icons/`
 2. `scripts/generate-sitemap.mjs` — Generates `public/sitemap.xml` from pre-rendered routes
-3. React Router build — SSR + pre-renders all ~175 pages to `build/client/`
+3. `scripts/generate-rss.mjs` — Generates `public/rss.xml`
+4. `scripts/generate-og-images.mjs` — Generates Open Graph images
+5. React Router build — SSR + pre-renders all ~175 pages to `build/client/`
+
+**Pre-render route discovery** (`react-router.config.ts`): Reads `public/data/platforms.json` and each platform's app list at build time to generate all `/:platformId` and `/:platformId/:slug` routes. Also imports guide slugs from `src/data/guides/index.js` and comparison pairs from `src/data/comparisons.js`. Adding a new platform JSON or guide/comparison entry automatically creates new pre-rendered pages.
 
 Standalone scripts:
 - `scripts/update-readme-apps.mjs` — Queries Supabase, regenerates the Supported Apps section in README.md between `APP-DIRECTORY:START/END` markers
@@ -208,7 +232,7 @@ Standalone scripts:
 The sync pipeline scrapes official documentation pages, extracts shortcuts via Gemini AI, diffs against Supabase, and creates PRs with changes.
 
 **Key files**:
-- `sources.json` — Registry of all apps with their docs URLs, parser type, and tier (1-3)
+- `sources.json` — Registry of all apps with their docs URLs, parser type, and tier (1=weekly, 2=bi-monthly, 3=on-demand)
 - `pipeline/supabase-writer.mjs` — Writes shortcut data to Supabase using service role key (REST API, bypasses RLS)
 - `pipeline/normalize.mjs` — Normalizes scraped data (modifiers, keys, actions)
 - `pipeline/modifier-map.mjs` — Canonical modifier names per platform (command/option/control/shift/fn for macOS)

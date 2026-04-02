@@ -28,7 +28,8 @@
       "displayName": "After Effects",
       "tier": 3,
       "sources": {
-        "macos": { "url": "https://helpx.adobe.com/after-effects/using/keyboard-shortcuts-reference.html", "parser": "ai-extract", "platformFilter": "mac" }
+        "macos": { "url": "https://helpx.adobe.com/after-effects/using/keyboard-shortcuts-reference.html", "parser": "auto", "platformFilter": "mac" },
+        "windows": { "url": "https://helpx.adobe.com/after-effects/using/keyboard-shortcuts-reference.html", "parser": "auto", "platformFilter": "windows" }
       }
     },
     "android-studio": {
@@ -318,7 +319,8 @@
       "displayName": "Google Drive",
       "tier": 3,
       "sources": {
-        "macos": { "url": "https://support.google.com/drive/answer/2563044?hl=en&co=GENIE.Platform%3DDesktop", "parser": "html-table" }
+        "macos": { "url": "https://support.google.com/drive/answer/2563044?hl=en&co=GENIE.Platform%3DDesktop", "parser": "auto", "platformFilter": "mac" },
+        "windows": { "url": "https://support.google.com/drive/answer/2563044?hl=en&co=GENIE.Platform%3DDesktop", "parser": "auto", "platformFilter": "windows" }
       }
     },
     "google-sheets": {

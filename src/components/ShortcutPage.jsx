@@ -200,7 +200,7 @@ export default function ShortcutPage() {
         <p className="text-theme-muted text-[15px] leading-relaxed max-w-[720px]">
           {sp.intro(app.displayName, platformName, app.shortcutCount, app.sections.length)}
         </p>
-        <LastCheckedBadge date={app.lastVerified} docsUrl={app.docsUrl} variant="block" />
+        <LastCheckedBadge date={app.lastVerified} updatedDate={app.lastUpdated} docsUrl={app.docsUrl} variant="block" />
         <p className="text-theme-muted text-[15px] leading-relaxed max-w-[720px] mt-3">
           {sp.learnMore(app.displayName)}
         </p>

@@ -1,19 +1,25 @@
 import { CircleCheck } from '../utils/icons'
 
+function formatDate(date, style = 'short') {
+  const d = new Date(date)
+  return style === 'long'
+    ? d.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })
+    : d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })
+}
+
 /**
- * Shows when shortcuts were last verified against official docs.
+ * Shows when shortcuts were last verified/updated.
  *
  * Variants:
  *   "inline"  — compact, for headers/metadata lines (default)
- *   "block"   — full line with docs link, for intro areas
+ *   "block"   — full line with docs link + updated date, for intro areas
  *   "mini"    — icon + relative date only, for app cards
  */
-export default function LastCheckedBadge({ date, docsUrl, variant = 'inline' }) {
+export default function LastCheckedBadge({ date, updatedDate, docsUrl, variant = 'inline' }) {
   if (!date) return null
 
-  const d = new Date(date)
-  const formatted = d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })
-  const long = d.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })
+  const formatted = formatDate(date)
+  const long = formatDate(date, 'long')
 
   if (variant === 'mini') {
     return (
@@ -28,17 +34,27 @@ export default function LastCheckedBadge({ date, docsUrl, variant = 'inline' }) 
   }
 
   if (variant === 'block') {
+    const updatedLong = updatedDate ? formatDate(updatedDate, 'long') : null
+    const showUpdated = updatedDate && updatedDate !== date
+
     return (
-      <p className="text-theme-muted text-xs mt-2 flex items-center gap-1.5">
-        <CircleCheck size={12} className="text-green-600 shrink-0" />
-        Last checked against{' '}
-        {docsUrl ? (
-          <a href={docsUrl} target="_blank" rel="noopener noreferrer" className="text-accent hover:underline no-underline">official docs</a>
-        ) : (
-          'official docs'
+      <div className="text-theme-muted text-xs mt-2 space-y-1">
+        <p className="flex items-center gap-1.5">
+          <CircleCheck size={12} className="text-green-600 shrink-0" />
+          Last checked against{' '}
+          {docsUrl ? (
+            <a href={docsUrl} target="_blank" rel="noopener noreferrer" className="text-accent hover:underline no-underline">official docs</a>
+          ) : (
+            'official docs'
+          )}
+          {' '}on {long}
+        </p>
+        {showUpdated && (
+          <p className="flex items-center gap-1.5 pl-[18px]">
+            Shortcuts last updated on {updatedLong}
+          </p>
         )}
-        {' '}on {long}
-      </p>
+      </div>
     )
   }
 
