@@ -15,7 +15,6 @@ import FAQ from "../components/FAQ";
 import Policies from "../components/Policies";
 import CTABanner from "../components/CTABanner";
 import Footer from "../components/Footer";
-import HotkeyShowcase from "../components/HotkeyShowcase";
 
 export function meta() {
   return buildMeta(CONTENT.meta.productPage);
@@ -61,17 +60,12 @@ const SOFTWARE_APP_JSONLD = JSON.stringify({
 export default function ProductPageRoute() {
   const { appCategories } = useLoaderData();
   return (
-    <>
+    <div className="product-dark min-h-screen">
       <Navbar />
       <main>
         <Hero />
         <Problem />
         <Features />
-        {/* <section className="py-20 md:py-28 px-5 md:px-6">
-          <div className="mx-auto max-w-md">
-            <HotkeyShowcase />
-          </div>
-        </section> */}
         <Details />
         <ShortcutPreview />
         <AppCoverage />
@@ -83,6 +77,6 @@ export default function ProductPageRoute() {
       <Footer />
       {/* Safe: built from our own static siteConfig constants, not user input */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: SOFTWARE_APP_JSONLD }} />
-    </>
+    </div>
   );
 }

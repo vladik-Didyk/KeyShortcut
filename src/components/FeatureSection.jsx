@@ -14,12 +14,18 @@ export default function FeatureSection({ title, description, screenshot, alt, re
       </div>
 
       <div className={`flex justify-center ${reverse ? 'md:order-1' : ''}`}>
-        <img
-          src={`/images/screenshots/${screenshot}-dark.png`}
-          alt={alt}
-          className="w-full max-w-lg rounded-2xl screenshot-shadow"
-          loading="lazy"
-        />
+        <div className="w-full max-w-lg macos-frame">
+          <div className="macos-frame-titlebar">
+            <span className="macos-frame-dot macos-frame-dot--close" />
+            <span className="macos-frame-dot macos-frame-dot--minimize" />
+            <span className="macos-frame-dot macos-frame-dot--maximize" />
+          </div>
+          <img
+            src={`/images/screenshots/${screenshot}-dark.png`}
+            alt={alt}
+            loading="lazy"
+          />
+        </div>
       </div>
     </div>
   )

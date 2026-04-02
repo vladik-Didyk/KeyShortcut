@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react'
 import MacAppStoreButton from './MacAppStoreButton'
 import AppPanelMockup from './AppPanelMockup'
+import HeroCanvas from './HeroCanvas'
 import { useInView } from '../hooks/useInView'
 import { DEMO_APPS, buildDemoTimeline } from '../data/heroDemoData'
 import { MAC_ROWS } from '../data/keyboardLayout'
@@ -67,7 +68,6 @@ export default function Hero() {
   }, [isVisible])
 
   const isActive = (key) => {
-    // Only light left-side modifiers (skip cmd-r, opt-r, shift-r)
     if (key.mod) return !key.id.endsWith('-r') && activeKeys.has(key.mod)
     return activeKeys.has(key.id)
   }
@@ -79,42 +79,68 @@ export default function Hero() {
     <section
       id="hero"
       ref={ref}
-      className={`pt-28 md:pt-36 lg:pt-16 pb-10 md:pb-16 lg:pb-8 px-5 md:px-6 fade-in-up ${isVisible ? 'visible' : ''}`}
+      className={`relative pt-32 md:pt-40 lg:pt-48 pb-16 md:pb-20 lg:pb-12 px-5 md:px-6 overflow-hidden fade-in-up ${isVisible ? 'visible' : ''}`}
     >
-      {/* ═══════ LARGE SCREENS (lg+): two-column hero ═══════ */}
-      <div className="hidden lg:block mx-auto max-w-[1100px]">
-        {/* Row 1: headline left + panel right */}
-        <div className="flex items-center gap-10">
-          {/* Left — copy */}
-          <div className="flex-1 min-w-0">
-            <h1 className="text-[44px] xl:text-[52px] font-bold leading-[1.08] tracking-[-0.015em] mb-3">
-              {hero.headline}{' '}
-              <br />
-              <span className="text-gradient">{hero.headlineAccent}</span>
-            </h1>
-            <p className="text-base text-theme-muted leading-relaxed max-w-md mb-5">
-              {hero.subheadline}
-            </p>
+      {/* ─── Animated canvas background ─── */}
+      <HeroCanvas isVisible={isVisible} />
 
-            <div className="flex items-center gap-4 mb-5">
-              <MacAppStoreButton />
+      {/* ═══════ Centered hero text (all screen sizes) ═══════ */}
+      <div className="relative z-10 mx-auto max-w-[980px] text-center hero-stagger">
+        <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-[84px] font-bold leading-[1.02] tracking-[-0.03em] mb-6">
+          {hero.headline}
+          <br />
+          <span className="text-gradient">{hero.headlineAccent}</span>
+        </h1>
+
+        <p
+          className="text-lg md:text-xl text-theme-muted leading-relaxed max-w-2xl mx-auto mb-10"
+          style={{ textWrap: 'balance' }}
+        >
+          {hero.subheadline}
+        </p>
+
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-5">
+          <MacAppStoreButton />
+        </div>
+
+        {/* Stats */}
+        <div className="flex justify-center gap-3 mb-3">
+          {hero.stats.map(stat => (
+            <div
+              key={stat.label}
+              className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-theme-base-alt/60 border border-theme-border backdrop-blur-sm"
+            >
+              <span className="text-lg font-bold text-theme-text leading-none">{stat.value}</span>
+              <span className="text-[11px] text-theme-muted leading-tight">{stat.label}</span>
             </div>
+          ))}
+        </div>
 
-            {/* Stat badges — horizontal, compact */}
-            <div className="flex gap-3">
-              {hero.stats.map(stat => (
-                <div
-                  key={stat.label}
-                  className="flex items-center gap-2 px-3 py-2 rounded-lg bg-theme-base-alt border border-theme-border"
-                >
-                  <span className="text-lg font-bold text-accent leading-none">{stat.value}</span>
-                  <span className="text-[11px] text-theme-muted leading-tight">{stat.label}</span>
-                </div>
-              ))}
+        <p className="text-sm text-theme-muted">
+          {hero.platformInfoMobile}
+        </p>
+      </div>
+
+      {/* ═══════ LARGE SCREENS (lg+): demo showcase ═══════ */}
+      <div className="hidden lg:block relative z-10 mx-auto max-w-[1100px] mt-16">
+        {/* Action label */}
+        <div className="h-8 flex items-center justify-center mb-3">
+          {action ? (
+            <div
+              key={animKey}
+              className="text-center animate-[hero-pop_0.4s_cubic-bezier(0.34,1.56,0.64,1)]"
+            >
+              <span className="text-xl font-bold text-gradient">{action}</span>
             </div>
-          </div>
+          ) : (
+            <span className="text-xs text-theme-muted">
+              {hero.keyboardHint}
+            </span>
+          )}
+        </div>
 
-          {/* Right — panel mockup */}
+        {/* Panel + Keyboard side by side */}
+        <div className="flex gap-5 items-start">
           <div className="shrink-0">
             <AppPanelMockup
               app={currentApp}
@@ -123,32 +149,8 @@ export default function Hero() {
               transitioning={panelTransitioning}
             />
           </div>
-        </div>
-
-        {/* Row 2: action label + full-width keyboard */}
-        <div className="mt-4">
-          <div className="h-8 flex items-center justify-center mb-2">
-            {action ? (
-              <div
-                key={animKey}
-                className="text-center animate-[hero-pop_0.4s_cubic-bezier(0.34,1.56,0.64,1)]"
-              >
-                <span className="text-xl font-bold text-gradient">{action}</span>
-              </div>
-            ) : (
-              <span className="text-xs text-theme-muted">
-                {hero.keyboardHint}
-              </span>
-            )}
-          </div>
-
-          <div className="retro-window">
-            <div className="retro-window-titlebar">
-              <span className="retro-window-dot" />
-              <span className="retro-window-dot" />
-              <span className="retro-window-dot" />
-            </div>
-            <div className="p-3">
+          <div className="flex-1 min-w-0">
+            <div className="p-2">
               {MAC_ROWS.map((row, ri) => (
                 <div key={ri} className="flex gap-[3px] mb-[3px] last:mb-0">
                   {row.map((key) => {
@@ -157,8 +159,8 @@ export default function Hero() {
                       <div
                         key={key.id}
                         className={`
-                          ${ri === 0 ? 'h-5 text-[8px]' : 'h-8 text-[11px]'}
-                          rounded-[4px] font-medium flex items-center justify-center
+                          ${ri === 0 ? 'h-6 text-[9px]' : 'h-9 text-[12px]'}
+                          rounded-[6px] font-medium flex items-center justify-center
                           select-none keycap-interactive keycap-hero
                         `}
                         data-active={lit}
@@ -175,57 +177,21 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* ═══════ MOBILE + TABLET (below lg): centered layout ═══════ */}
-      <div className="lg:hidden mx-auto max-w-[980px] text-center">
-        <h1 className="text-5xl md:text-7xl font-bold leading-[1.05] tracking-[-0.015em] mb-4">
-          {hero.headline}{' '}
-          <br className="hidden sm:block" />
-          <span className="text-gradient">{hero.headlineAccent}</span>
-        </h1>
-        <p className="text-xl md:text-2xl text-theme-muted leading-relaxed max-w-2xl mx-auto mb-8">
-          {hero.subheadlineMobile}
-        </p>
-
-        <div className="flex flex-col items-center gap-3 mb-10 md:mb-12">
-          <MacAppStoreButton />
-        </div>
-
-        <div className="flex justify-center gap-4 md:gap-6 flex-wrap">
-          {hero.statsMobile.map(stat => (
-            <div
-              key={stat.label}
-              className="flex flex-col items-center px-5 py-3 rounded-xl bg-theme-base-alt border border-theme-border min-w-[120px]"
-            >
-              <span className="text-2xl md:text-3xl font-bold text-accent leading-none">{stat.value}</span>
-              <span className="text-xs text-theme-muted mt-1">{stat.label}</span>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* ─── Mobile/tablet: static screenshot fallback ─── */}
-      <div className="lg:hidden mt-12">
+      {/* ═══════ MOBILE/TABLET: static screenshot ═══════ */}
+      <div className="lg:hidden relative z-10 mt-12">
         <div className="relative mx-auto max-w-[520px]">
           <img
             src="/images/keyflow-black.png"
-            alt="KeyShortcut showing shortcuts — dark mode"
+            alt="KeyShortcut floating shortcut panel"
             loading="eager"
             fetchPriority="high"
-            className="hero-app-screenshot hero-app-dark rounded-2xl screenshot-shadow"
-          />
-          <img
-            src="/images/keyflow-white.png"
-            alt="KeyShortcut showing shortcuts — light mode"
-            loading="eager"
-            fetchPriority="high"
-            className="hero-app-screenshot hero-app-light rounded-2xl screenshot-shadow"
+            className="hero-app-screenshot rounded-2xl screenshot-shadow"
           />
         </div>
         <p className="text-center text-sm text-theme-muted mt-5">
           {hero.mobileCta}
         </p>
       </div>
-
     </section>
   )
 }

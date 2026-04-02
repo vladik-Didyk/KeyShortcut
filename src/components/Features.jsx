@@ -15,7 +15,7 @@ export default function Features() {
         >
           <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-5">
             {title}{' '}
-            <span className="text-accent">{titleAccent}</span>
+            <span className="text-gradient">{titleAccent}</span>
           </h2>
           <p className="text-theme-muted text-xl max-w-2xl mx-auto">
             {subtitle}

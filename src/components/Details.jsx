@@ -16,9 +16,9 @@ export default function Details() {
           className={`text-center mb-16 md:mb-20 fade-in-up ${isVisible ? 'visible' : ''}`}
         >
           <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-5">
-            {details.title}{' '}
+            {details.title}
             <br className="hidden sm:block" />
-            <span className="text-accent">{details.titleAccent}</span>
+            <span className="text-gradient">{details.titleAccent}</span>
           </h2>
         </div>
 
@@ -39,7 +39,7 @@ function DetailCard({ icon, title, description }) {
   return (
     <div
       ref={ref}
-      className={`rounded-xl bg-theme-base-alt p-7 border-[1.5px] border-theme-accent fade-in-up ${isVisible ? 'visible' : ''}`}
+      className={`detail-card rounded-xl bg-theme-base-alt p-7 border-[1.5px] border-theme-border fade-in-up ${isVisible ? 'visible' : ''}`}
     >
       <IconComponent className="text-accent mb-4" size={28} strokeWidth={1.5} />
       <h3 className="text-lg font-semibold mb-2">{title}</h3>

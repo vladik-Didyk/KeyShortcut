@@ -89,10 +89,10 @@ export const CONTENT = {
   // ─── Product page (/mac-hud) ───────────────────────────────────────
   productPage: {
     hero: {
-      headline: 'Stop Googling shortcuts.',
-      headlineAccent: 'Start knowing them.',
-      subheadline: 'A floating shortcut panel on your Mac that detects your active app and shows every shortcut at a glance.',
-      subheadlineMobile: 'A floating shortcut panel on your Mac that detects your active app and shows every shortcut at a glance. You\'ll work faster from day one.',
+      headline: 'Every shortcut.',
+      headlineAccent: 'Always visible.',
+      subheadline: 'A floating shortcut panel for Mac that detects your active app and shows every keyboard shortcut at a glance. Fast, ergonomic, and always within reach.',
+      subheadlineMobile: 'A floating shortcut panel for Mac that detects your active app and shows every keyboard shortcut at a glance. Fast, ergonomic, and always within reach.',
       platformInfo: `${MIN_MACOS}\nOne-time ${PRICE}`,
       platformInfoMobile: `${MIN_MACOS} \u00B7 One-time ${PRICE}`,
       stats: [
@@ -108,19 +108,19 @@ export const CONTENT = {
     },
 
     problem: {
-      title: 'You already know the shortcut.',
+      title: 'You know the shortcut.',
       titleAccent: 'You just forgot it.',
       paragraphs: [
-        'You\'ve looked it up before. Command-something. Maybe Shift was involved. You open a new tab, type "Figma shortcuts," scroll past the ads, find the one you need, switch back to your app, and — wait, what was it again?',
-        'Or maybe you hold down a key and stare at a tiny overlay, trying to parse a wall of text before it vanishes.',
-        'This isn\'t how shortcuts should work. Shortcuts are supposed to save you time, not cost it. You need them visible, organized, and there the moment you glance over — not hidden behind a search bar or a long press.',
+        'You\'ve looked it up before. Command-something. Maybe Shift was involved. You open a new tab, search "Figma shortcuts," scroll past the ads, find the one you need, switch back... and it\'s gone.',
+        'Or maybe you hold a key and stare at a tiny overlay, trying to parse a wall of text before it vanishes.',
+        'Shortcuts are supposed to save you time, not cost it. They should be visible, organized, and there the moment you look — not hidden behind a search or a long press.',
       ],
     },
 
     features: {
-      title: 'What makes KeyShortcut',
-      titleAccent: 'different',
-      subtitle: 'Built to stay out of your way while keeping every shortcut within reach.',
+      title: 'Take shortcuts,',
+      titleAccent: 'not detours.',
+      subtitle: 'One interface, everything you need to know.',
       items: [
         {
           title: `${formatShortcutCount()} shortcuts across ${APP_COUNT} apps`,
@@ -150,8 +150,8 @@ export const CONTENT = {
     },
 
     details: {
-      title: 'Thoughtfully crafted,',
-      titleAccent: 'down to every pixel',
+      title: 'Crafted with care.',
+      titleAccent: 'Down to every pixel.',
       items: [
         {
           icon: 'Monitor',
@@ -339,10 +339,9 @@ export const CONTENT = {
     },
 
     ctaBanner: {
-      title: 'Learn every shortcut.',
-      titleMiddle: 'Keep every shortcut.',
-      titleAccent: `${PRICE}.`,
-      subtitle: `One-time purchase. No subscription. No tracking.\nJust ${formatShortcutCount()} shortcuts, always within reach.`,
+      title: 'Take the short way.',
+      titleAccent: `One-time ${PRICE}.`,
+      subtitle: `${formatShortcutCount()} shortcuts across ${APP_COUNT} apps.\nNo subscription. No tracking. Just shortcuts, always within reach.`,
       footnote: `${MIN_MACOS} \u00B7 No account required`,
     },
 

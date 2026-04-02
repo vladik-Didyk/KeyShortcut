@@ -11,9 +11,10 @@ export default function Problem() {
         ref={ref}
         className={`mx-auto max-w-[680px] fade-in-up ${isVisible ? 'visible' : ''}`}
       >
-        <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-center mb-8 leading-tight">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-center mb-10 leading-tight">
           {problem.title}{' '}
-          <span className="text-accent">{problem.titleAccent}</span>
+          <br className="hidden sm:block" />
+          <span className="text-gradient">{problem.titleAccent}</span>
         </h2>
         <div className="text-theme-muted text-lg leading-relaxed space-y-5">
           {problem.paragraphs.map((p, i) => (

@@ -16,7 +16,7 @@ export default function AppCoverage() {
         <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-5">
           {appCoverage.title}{' '}
           <br className="hidden sm:block" />
-          <span className="text-accent">{appCoverage.titleAccent}</span>
+          <span className="text-gradient">{appCoverage.titleAccent}</span>
         </h2>
         <p className="text-theme-muted text-lg max-w-xl mx-auto">
           {appCoverage.subtitle}

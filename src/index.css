@@ -605,3 +605,292 @@ body {
     animation: none;
   }
 }
+
+/* =========================================
+   DARK PRODUCT PAGE THEME
+   Scoped to .product-dark — overrides all
+   CSS variables so every component adapts.
+   ========================================= */
+
+.product-dark {
+  --theme-accent: #D4A853;
+  --theme-accent-hover: #E0B860;
+  --theme-accent-secondary: #C09840;
+
+  --color-theme-base: #09090B;
+  --color-theme-base-alt: #111113;
+  --color-theme-surface: #18181B;
+  --color-theme-border: rgba(255, 255, 255, 0.07);
+  --color-theme-border-hover: rgba(255, 255, 255, 0.14);
+  --color-theme-text: #EDEDEF;
+  --color-theme-muted: #71717A;
+  --color-theme-shadow: rgba(0, 0, 0, 0.5);
+  --color-theme-floating-key: rgba(255, 255, 255, 0.02);
+  --color-theme-accent-text: #09090B;
+  --color-theme-accent-glow: rgba(212, 168, 83, 0.12);
+
+  --theme-keycap: #18181B;
+  --theme-keycap-dish: rgba(255, 255, 255, 0.07);
+  --theme-keycap-legend: #EDEDEF;
+  --theme-keycap-sublabel: #52525B;
+  --theme-light-tint: #09090B;
+
+  --pattern-color: rgba(255, 255, 255, 0.015);
+  --theme-line-color: rgba(255, 255, 255, 0.06);
+  --theme-placeholder: #3F3F46;
+
+  color-scheme: dark;
+  background: #09090B;
+  color: #EDEDEF;
+}
+
+/* Gradient text accent — gold shimmer */
+.product-dark .text-gradient {
+  color: #D4A853;
+  background: linear-gradient(135deg, #D4A853 0%, #F2DC8A 50%, #D4A853 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-style: normal;
+}
+
+.product-dark .text-accent {
+  color: #D4A853;
+}
+
+.product-dark .section-alt {
+  background-color: #111113;
+}
+
+/* Dark retro window — deep, glassy */
+.product-dark .retro-window {
+  border-color: rgba(255, 255, 255, 0.07);
+  background: #111113;
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.03),
+    0 8px 40px rgba(0, 0, 0, 0.5);
+}
+
+.product-dark .retro-window-titlebar {
+  border-color: rgba(255, 255, 255, 0.05);
+  background: #0C0C0E;
+}
+
+.product-dark .retro-window-dot {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Dark interactive keys — Raycast-style flat, dimmed, borderless */
+.product-dark .keycap-interactive {
+  background: rgba(255, 255, 255, 0.04);
+  color: rgba(255, 255, 255, 0.22);
+  border: none;
+  box-shadow: none;
+  border-radius: 6px;
+  font-family: var(--font-mono);
+  transition: background 0.15s, color 0.15s, box-shadow 0.3s;
+}
+
+.product-dark .keycap-interactive[data-active="true"] {
+  background: #D4A853;
+  color: #09090B;
+  border: none;
+  box-shadow: 0 0 20px rgba(212, 168, 83, 0.4), 0 0 6px rgba(212, 168, 83, 0.25);
+}
+
+.product-dark .keycap-hero[data-active="true"] {
+  transform: none;
+}
+
+/* Dark keycap badges */
+.product-dark .keycap {
+  background: #18181B;
+  color: #EDEDEF;
+  border-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 2px 0 rgba(255, 255, 255, 0.03);
+}
+
+.product-dark .keycap-mini {
+  background: #18181B;
+  color: #EDEDEF;
+  border-color: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.03);
+}
+
+.product-dark .keycap-mini-active {
+  background: #D4A853;
+  color: #09090B;
+  border-color: #D4A853;
+  box-shadow: 0 0 10px rgba(212, 168, 83, 0.25);
+}
+
+.product-dark .keycap-tiny {
+  background: #18181B;
+  color: #EDEDEF;
+  border-color: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.02);
+}
+
+.product-dark .keycap-tiny-active {
+  background: #D4A853;
+  color: #09090B;
+  border-color: #D4A853;
+}
+
+/* Dark screenshot shadow */
+.product-dark .screenshot-shadow::after {
+  background: radial-gradient(circle, rgba(212, 168, 83, 0.35) 1px, transparent 1px);
+  background-size: 4px 4px;
+  opacity: 0.15;
+}
+
+/* Dark exact-match / mod-match rows */
+.product-dark .shortcut-row-exact-match {
+  background: #D4A853 !important;
+  color: #09090B;
+}
+
+.product-dark .shortcut-row-mod-match {
+  background: rgba(212, 168, 83, 0.08);
+}
+
+/* Hero background glow */
+.hero-glow {
+  position: absolute;
+  top: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 900px;
+  height: 550px;
+  border-radius: 50%;
+  background: radial-gradient(ellipse, rgba(212, 168, 83, 0.07) 0%, rgba(212, 168, 83, 0.02) 40%, transparent 65%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Dark app card */
+.product-dark .app-card {
+  background: #111113;
+  border-color: rgba(255, 255, 255, 0.06);
+}
+
+.product-dark .app-card:hover {
+  box-shadow: 4px 4px 0 rgba(212, 168, 83, 0.25);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Dark nav — glass blur + border on scroll */
+.product-dark nav {
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.3s, background-color 0.3s;
+}
+
+.product-dark nav[data-scrolled] {
+  --color-theme-base: rgba(9, 9, 11, 0.82);
+  border-bottom-color: rgba(255, 255, 255, 0.06);
+}
+
+/* Dark footer */
+.product-dark footer {
+  border-color: rgba(255, 255, 255, 0.06);
+}
+
+/* Section-alt glow divider — subtle gold line at top */
+.product-dark .section-alt {
+  position: relative;
+}
+
+.product-dark .section-alt::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(480px, 70%);
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(212, 168, 83, 0.2), transparent);
+  pointer-events: none;
+}
+
+/* macOS-style window frame for feature screenshots */
+.macos-frame {
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  box-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.2),
+    0 12px 40px rgba(0, 0, 0, 0.35);
+  background: #0C0C0E;
+}
+
+.macos-frame-titlebar {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 13px 16px;
+  background: #161618;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.macos-frame-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.macos-frame-dot--close { background: #FF5F57; }
+.macos-frame-dot--minimize { background: #FFBD2E; }
+.macos-frame-dot--maximize { background: #28C840; }
+
+.macos-frame img {
+  display: block;
+  width: 100%;
+}
+
+/* Detail card hover glow */
+.product-dark .detail-card {
+  transition: border-color 0.25s, box-shadow 0.25s;
+}
+
+.product-dark .detail-card:hover {
+  border-color: rgba(212, 168, 83, 0.15);
+  box-shadow: 0 0 24px rgba(212, 168, 83, 0.06);
+}
+
+/* CTA glow effect */
+.cta-glow {
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-glow::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 500px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(212, 168, 83, 0.4), transparent);
+  pointer-events: none;
+}
+
+/* Staggered fade-in for hero elements */
+@keyframes hero-fade-in {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.hero-stagger > * {
+  opacity: 0;
+  animation: hero-fade-in 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.hero-stagger > *:nth-child(1) { animation-delay: 0s; }
+.hero-stagger > *:nth-child(2) { animation-delay: 0.1s; }
+.hero-stagger > *:nth-child(3) { animation-delay: 0.2s; }
+.hero-stagger > *:nth-child(4) { animation-delay: 0.3s; }
+.hero-stagger > *:nth-child(5) { animation-delay: 0.4s; }
+.hero-stagger > *:nth-child(6) { animation-delay: 0.5s; }
