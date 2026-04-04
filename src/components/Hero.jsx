@@ -207,7 +207,7 @@ export default function Hero() {
       <div className="lg:hidden mt-12">
         <div className="relative mx-auto max-w-[520px]">
           <img
-            src="/images/keyflow-black.png"
+            src="/images/keyflow-black.webp"
             alt="KeyShortcut showing shortcuts — dark mode"
             width={1264}
             height={1708}
@@ -216,7 +216,7 @@ export default function Hero() {
             className="hero-app-screenshot hero-app-dark rounded-2xl screenshot-shadow"
           />
           <img
-            src="/images/keyflow-white.png"
+            src="/images/keyflow-white.webp"
             alt="KeyShortcut showing shortcuts — light mode"
             width={1264}
             height={1708}

@@ -38,26 +38,9 @@ export function Layout({ children }) {
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
         <link
-          rel="preload"
-          as="style"
-          href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Serif:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
-        />
-        <link
-          id="google-fonts"
           href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Serif:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
           rel="stylesheet"
-          media="print"
-          suppressHydrationWarning
         />
-        {/* Inline script to swap font media from print to all on load - content is a static string, not user input */}
-        <script dangerouslySetInnerHTML={{ __html: "var f=document.getElementById('google-fonts');if(f)f.onload=function(){f.media='all'}" }} />
-        <noscript>
-          <link
-            href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Serif:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
-            rel="stylesheet"
-          />
-        </noscript>
-        <link rel="preload" href="/images/app-icon.svg" as="image" />
         <link rel="alternate" type="application/rss+xml" title="KeyShortcut Guides" href="/rss.xml" />
 
         {/* Open Graph defaults */}

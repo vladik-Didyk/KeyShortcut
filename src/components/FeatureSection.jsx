@@ -18,7 +18,7 @@ export default function FeatureSection({ title, description, screenshot, alt, re
 
       <div className={`flex flex-col items-center gap-3 ${reverse ? 'md:order-1' : ''}`}>
         <img
-          src={`/images/screenshots/${screenshot}-${mode}.png`}
+          src={`/images/screenshots/${screenshot}-${mode}.webp`}
           alt={alt}
           width={1264}
           height={1708}
