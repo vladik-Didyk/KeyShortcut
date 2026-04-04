@@ -16,7 +16,7 @@
   --color-theme-border: #C8C0B4;
   --color-theme-border-hover: #8B8478;
   --color-theme-text: #1A1A1A;
-  --color-theme-muted: #6B6560;
+  --color-theme-muted: #605B56;
   --color-theme-shadow: rgba(0, 0, 0, 0.08);
   --color-theme-floating-key: rgba(0, 0, 0, 0.02);
   --color-theme-accent-text: #F5F0E8;
@@ -25,7 +25,7 @@
   --theme-keycap: #F5F0E8;
   --theme-keycap-dish: #C8C0B4;
   --theme-keycap-legend: #1A1A1A;
-  --theme-keycap-sublabel: #6B6560;
+  --theme-keycap-sublabel: #605B56;
   --theme-light-tint: #F5F0E8;
 
   --pattern-color: rgba(0, 0, 0, 0.03);
@@ -44,7 +44,7 @@
   --color-theme-border: var(--color-theme-border, #C8C0B4);
   --color-theme-border-hover: var(--color-theme-border-hover, #8B8478);
   --color-theme-text: var(--color-theme-text, #1A1A1A);
-  --color-theme-muted: var(--color-theme-muted, #6B6560);
+  --color-theme-muted: var(--color-theme-muted, #605B56);
   --color-theme-accent: var(--theme-accent, #1A1A1A);
   --color-theme-shadow: var(--color-theme-shadow, rgba(0, 0, 0, 0.08));
   --color-theme-floating-key: var(--color-theme-floating-key, rgba(0, 0, 0, 0.02));

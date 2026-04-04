@@ -2,6 +2,7 @@ import { useState, useMemo } from 'react'
 import { Link, useLoaderData } from 'react-router'
 import { Search, X, Download } from '../utils/icons'
 import AdSlot from './AdSlot'
+import GuideCtaBanner from './GuideCtaBanner'
 
 export default function CheatSheetsPage() {
   const { apps, platforms } = useLoaderData()
@@ -127,6 +128,8 @@ export default function CheatSheetsPage() {
             No cheat sheets found{search ? ` for "${search}"` : ''}.
           </p>
         )}
+
+        <GuideCtaBanner />
 
         {/* SEO content */}
         <div className="max-w-[720px] mt-12 mb-8">

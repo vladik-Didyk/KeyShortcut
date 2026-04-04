@@ -1,8 +1,8 @@
-import React, { useState, useMemo, useRef, useEffect, useCallback } from 'react'
+import React, { useState, useDeferredValue, useMemo, useRef, useEffect, useCallback } from 'react'
 import { useLoaderData, useNavigate, Link } from 'react-router'
 import { Search, X, ArrowRight } from '../utils/icons'
 import { usePlatformData, prefetchPlatform } from '../hooks/usePlatformData'
-import { groupByCategories, parseKeyParts } from '../utils/platformHelpers'
+import { groupByCategories, getPopularApps, parseKeyParts } from '../utils/platformHelpers'
 import { detectPlatform } from '../utils/detectPlatform'
 import { buildSearchIndex, searchIndex, parseAppQuery } from '../utils/searchHelpers'
 import AppCard from './directory/AppCard'
@@ -10,6 +10,7 @@ import { categoryConfig } from '../data/categoryConfig'
 import { useInView } from '../hooks/useInView'
 import { CONTENT } from '../data/content'
 import AdSlot from './AdSlot'
+import { APP_STORE_URL } from '../data/siteConfig'
 
 export default function DirectoryHomepage() {
   const loaderData = useLoaderData()
@@ -93,8 +94,9 @@ export default function DirectoryHomepage() {
   }, [categoryOrder])
 
   // Smart search index — built once per platform data change
+  const deferredSearch = useDeferredValue(search)
   const searchIdx = useMemo(() => buildSearchIndex(apps), [apps])
-  const smartResults = useMemo(() => searchIndex(searchIdx, search), [searchIdx, search])
+  const smartResults = useMemo(() => searchIndex(searchIdx, deferredSearch), [searchIdx, deferredSearch])
 
   const navigate = useNavigate()
   const hasSmartResults = smartResults.appMatches.length > 0 || smartResults.shortcutMatches.length > 0
@@ -148,6 +150,8 @@ export default function DirectoryHomepage() {
     }
     return groups
   }, [apps, search, activeCategory, categoryOrder])
+
+  const popularApps = useMemo(() => getPopularApps(apps, 8), [apps])
 
   const matchCount = search
     ? grouped.reduce((sum, g) => sum + g.apps.length, 0)
@@ -333,6 +337,18 @@ export default function DirectoryHomepage() {
         )}
 
         {/* ─── Category Sections (when not searching) ─── */}
+        {/* ─── Popular Apps ─── */}
+        {!error && !loading && !search && !activeCategory && popularApps.length > 0 && (
+          <section className="mb-8">
+            <h2 className="text-sm font-semibold uppercase tracking-wider text-theme-muted mb-4">Popular</h2>
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
+              {popularApps.map(app => (
+                <AppCard key={app.slug} app={app} platform={selectedPlatform} />
+              ))}
+            </div>
+          </section>
+        )}
+
         {!error && !loading && !search && grouped.map((group, index) => (
           <React.Fragment key={group.name}>
             <CategorySection group={group} platform={selectedPlatform} otherPlatformsMap={otherPlatformsMap} />
@@ -415,6 +431,27 @@ export default function DirectoryHomepage() {
             </div>
           </section>
         </>
+      )}
+
+      {/* ─── Mac HUD App Promo ─── */}
+      {APP_STORE_URL && (
+        <section className="mt-14">
+          <div className="rounded-2xl bg-theme-accent text-theme-accent-text p-8 md:p-10 text-center">
+            <h2 className="text-xl md:text-2xl font-bold tracking-tight mb-2">
+              {CONTENT.home.promo.title}
+            </h2>
+            <p className="text-theme-accent-text/80 text-[15px] leading-relaxed mb-5 max-w-md mx-auto">
+              {CONTENT.home.promo.subtitle}
+            </p>
+            <Link
+              to="/mac-hud"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-theme-base text-theme-accent font-semibold text-[15px] no-underline hover:opacity-90 transition-opacity"
+            >
+              {CONTENT.home.promo.button}
+              <ArrowRight size={16} />
+            </Link>
+          </div>
+        </section>
       )}
 
     </div>

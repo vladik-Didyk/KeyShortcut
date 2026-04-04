@@ -1,6 +1,7 @@
 import { Link } from 'react-router'
 import { GUIDES } from '../data/guides'
 import AdSlot from './AdSlot'
+import GuideCtaBanner from './GuideCtaBanner'
 
 export default function GuidesIndex() {
   return (
@@ -24,6 +25,8 @@ export default function GuidesIndex() {
             </div>
           ))}
         </div>
+
+        <GuideCtaBanner />
       </div>
     </main>
   )

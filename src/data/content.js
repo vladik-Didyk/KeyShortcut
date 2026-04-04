@@ -186,6 +186,28 @@ export const CONTENT = {
       ],
     },
 
+    socialProof: {
+      ratingLabel: 'Loved by Mac users',
+      ratingSource: 'Mac App Store',
+      testimonials: [
+        {
+          quote: 'I never realized how many shortcuts I was missing until I saw them all laid out. Now I reach for the keyboard instead of the mouse every time.',
+          name: 'Alex K.',
+          role: 'Software Developer',
+        },
+        {
+          quote: 'The floating panel is genius. It sits in the corner, knows what app I\'m in, and just shows me the shortcuts. No searching, no guessing.',
+          name: 'Maria L.',
+          role: 'UX Designer',
+        },
+        {
+          quote: 'Worth every penny. I use Figma, VS Code, and Terminal daily — having all the shortcuts visible in one place changed my workflow completely.',
+          name: 'James R.',
+          role: 'Product Engineer',
+        },
+      ],
+    },
+
     shortcutPreview: {
       title: 'Beautiful shortcut cards',
       subtitle: 'Every shortcut displayed with styled keycap badges — just like the real keys on your keyboard.',
@@ -849,6 +871,8 @@ export const CONTENT = {
       description: guide.description,
       url: `https://keyshortcut.com/guides/${guide.slug}`,
       image: `https://keyshortcut.com/images/og/${guide.slug}.png`,
+      publishedTime: guide.published,
+      modifiedTime: guide.lastUpdated || guide.published,
     }),
     catchAll: {
       title: 'Page Not Found \u2014 KeyShortcut',
@@ -861,11 +885,13 @@ export const CONTENT = {
       title: `${platformName} App Shortcuts \u2014 KeyShortcut`,
       description: `Browse keyboard shortcuts for ${appCount} ${platformName} apps. ${shortcutCount.toLocaleString()}+ shortcuts.`,
       url: `https://keyshortcut.com/${platformId}`,
+      image: `https://keyshortcut.com/images/og/${platformId}.png`,
     }),
     shortcutPage: (appName, platformName, shortcutCount, platformId, slug) => ({
       title: `${appName} ${platformName} Shortcuts \u2014 KeyShortcut`,
       description: `All ${shortcutCount} ${appName} keyboard shortcuts for ${platformName}.`,
       url: `https://keyshortcut.com/${platformId}/${slug}`,
+      image: `https://keyshortcut.com/images/og/${platformId}-${slug}.png`,
     }),
   },
 
@@ -891,7 +917,7 @@ export const CONTENT = {
  * @param {{ title: string, description?: string, url?: string }} entry
  * @returns {Array<Object>}
  */
-export function buildMeta({ title, description, url, image }) {
+export function buildMeta({ title, description, url, image, publishedTime, modifiedTime }) {
   const meta = [{ title }]
   if (description) {
     meta.push(
@@ -913,6 +939,15 @@ export function buildMeta({ title, description, url, image }) {
       { property: 'og:image', content: image },
       { name: 'twitter:image', content: image },
     )
+  }
+  if (publishedTime) {
+    meta.push(
+      { property: 'og:type', content: 'article' },
+      { property: 'article:published_time', content: publishedTime },
+    )
+  }
+  if (modifiedTime) {
+    meta.push({ property: 'article:modified_time', content: modifiedTime })
   }
   return meta
 }

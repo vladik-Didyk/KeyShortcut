@@ -209,6 +209,8 @@ export default function Hero() {
           <img
             src="/images/keyflow-black.png"
             alt="KeyShortcut showing shortcuts — dark mode"
+            width={1264}
+            height={1708}
             loading="eager"
             fetchPriority="high"
             className="hero-app-screenshot hero-app-dark rounded-2xl screenshot-shadow"
@@ -216,6 +218,8 @@ export default function Hero() {
           <img
             src="/images/keyflow-white.png"
             alt="KeyShortcut showing shortcuts — light mode"
+            width={1264}
+            height={1708}
             loading="eager"
             fetchPriority="high"
             className="hero-app-screenshot hero-app-light rounded-2xl screenshot-shadow"

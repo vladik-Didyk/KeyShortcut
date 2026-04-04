@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useRef, useEffect } from 'react'
+import React, { useState, useDeferredValue, useMemo, useRef, useEffect } from 'react'
 import { Link, useLoaderData, useNavigate } from 'react-router'
 import { Search, X } from '../utils/icons'
 import { groupByCategories } from '../utils/platformHelpers'
@@ -22,8 +22,9 @@ export default function ShortcutsIndex() {
   }, [apps])
 
   // Smart search index
+  const deferredSearch = useDeferredValue(search)
   const searchIdx = useMemo(() => buildSearchIndex(apps), [apps])
-  const smartResults = useMemo(() => searchIndex(searchIdx, search), [searchIdx, search])
+  const smartResults = useMemo(() => searchIndex(searchIdx, deferredSearch), [searchIdx, deferredSearch])
   const hasSmartResults = smartResults.appMatches.length > 0 || smartResults.shortcutMatches.length > 0
 
   const grouped = useMemo(() => {
@@ -154,11 +155,12 @@ export default function ShortcutsIndex() {
             )}
 
             {/* Smart search dropdown */}
-            {search && dropdownOpen && hasSmartResults && (
+            {search && dropdownOpen && (
               <SearchDropdown
                 results={smartResults}
                 platform={platform}
                 onClose={() => setSearch('')}
+                query={search}
               />
             )}
           </div>

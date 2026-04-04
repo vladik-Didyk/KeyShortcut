@@ -72,10 +72,13 @@ export function Layout({ children }) {
 
         {/* Twitter Card defaults */}
         <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@keyshortcut" />
+        <meta name="twitter:creator" content="@vladikdidyk" />
         <meta
           name="twitter:image"
           content="https://keyshortcut.com/images/og-image.png"
         />
+        <meta property="og:locale" content="en_US" />
 
         {/* JSON-LD WebSite — static content, safe to inline */}
         <script type="application/ld+json">{JSON_LD}</script>
@@ -84,6 +87,9 @@ export function Layout({ children }) {
         <Links />
       </head>
       <body suppressHydrationWarning>
+        <a href="#main-content" className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[9999] focus:px-4 focus:py-2 focus:bg-theme-accent focus:text-theme-accent-text focus:rounded-lg focus:text-sm focus:font-medium">
+          Skip to main content
+        </a>
         {children}
         <ScrollRestoration />
         <Scripts />
@@ -135,5 +141,9 @@ export default function Root() {
 }
 
 export function HydrateFallback() {
-  return <div className="min-h-screen" />;
+  return (
+    <div className="min-h-screen bg-theme-base">
+      <div className="h-12 bg-theme-base" />
+    </div>
+  );
 }

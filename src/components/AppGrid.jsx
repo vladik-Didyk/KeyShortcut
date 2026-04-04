@@ -66,12 +66,14 @@ export default function AppGrid({ appCategories }) {
         </div>
 
         <div className="text-center mt-10">
-          <Link
-            to="/macos"
+          <a
+            href="/macos"
+            target="_blank"
+            rel="noopener noreferrer"
             className="text-accent hover:underline font-medium"
           >
             {appGrid.viewAll} &rarr;
-          </Link>
+          </a>
         </div>
       </div>
     </section>

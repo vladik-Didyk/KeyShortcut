@@ -2,20 +2,58 @@ import { useNavigate } from 'react-router'
 import { ArrowRight } from '../utils/icons'
 import { parseKeyParts } from '../utils/platformHelpers'
 
-export default function SearchDropdown({ results, platform, onClose }) {
+const POPULAR_APPS = [
+  { slug: 'figma', name: 'Figma' },
+  { slug: 'chrome', name: 'Chrome' },
+  { slug: 'vs-code', name: 'VS Code' },
+  { slug: 'slack', name: 'Slack' },
+]
+
+export default function SearchDropdown({ results, platform, onClose, query }) {
   const navigate = useNavigate()
   const { appMatches = [], shortcutMatches = [], otherApps = [] } = results || {}
   const hasResults = appMatches.length > 0 || shortcutMatches.length > 0
-  if (!hasResults) return null
 
   const goTo = (href) => {
     navigate(href)
     onClose()
   }
 
+  if (!hasResults) {
+    if (!query) return null
+    return (
+      <div
+        className="absolute left-0 right-0 top-full mt-2 bg-theme-base border border-theme-border rounded-xl shadow-lg overflow-hidden z-50 p-4"
+        role="status"
+      >
+        <p className="text-sm text-theme-muted mb-3">No results for &ldquo;{query}&rdquo;</p>
+        <p className="text-[11px] font-semibold text-theme-muted uppercase tracking-wider mb-2">Try</p>
+        <div className="flex flex-wrap gap-2">
+          {POPULAR_APPS.map(app => (
+            <button
+              key={app.slug}
+              onClick={() => goTo(`/${platform}/${app.slug}`)}
+              className="flex items-center gap-2 px-3 py-1.5 rounded-lg border border-theme-border bg-theme-base-alt hover:border-theme-border-hover transition-colors cursor-pointer text-[13px] text-theme-text"
+            >
+              <img
+                src={`/images/app-icons/${app.slug}.webp`}
+                alt=""
+                width={16}
+                height={16}
+                className="rounded shrink-0"
+                onError={e => { e.target.style.display = 'none' }}
+              />
+              {app.name}
+            </button>
+          ))}
+        </div>
+      </div>
+    )
+  }
+
   return (
     <div
-      className="absolute left-0 right-0 top-full mt-2 bg-theme-base border border-theme-border rounded-xl shadow-lg overflow-hidden z-50 max-h-[420px] overflow-y-auto"
+      className="absolute left-0 right-0 top-full mt-2 bg-theme-base border border-theme-border rounded-xl shadow-lg overflow-hidden z-50 max-h-[min(420px,70vh)] overflow-y-auto"
       role="listbox"
     >
       {/* App matches */}

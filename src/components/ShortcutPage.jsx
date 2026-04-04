@@ -1,10 +1,12 @@
 import { Link, useLoaderData } from 'react-router'
-import React, { useState, useEffect, useMemo, useRef } from 'react'
+import React, { useState, useDeferredValue, useEffect, useMemo, useRef } from 'react'
 import { Search, X, Download, ExternalLink, Lightbulb, ChevronDown } from '../utils/icons'
 import LastCheckedBadge from './LastCheckedBadge'
+import MacAppStoreButton from './MacAppStoreButton'
 import AppIcon from './directory/AppIcon'
 import { useScrollspy } from '../hooks/useScrollspy'
 import { CONTENT } from '../data/content'
+import { APP_STORE_URL } from '../data/siteConfig'
 import AdSlot from './AdSlot'
 import { tokenize } from '../utils/searchHelpers'
 import { parseKeyParts } from '../utils/platformHelpers'
@@ -61,15 +63,16 @@ export default function ShortcutPage() {
   }, [])
 
   // Compute action tokens (stripping app name tokens from the query)
+  const deferredSearch = useDeferredValue(search)
   const actionTokens = useMemo(() => {
-    if (!search) return null
-    const allTokens = tokenize(search)
+    if (!deferredSearch) return null
+    const allTokens = tokenize(deferredSearch)
     if (allTokens.length === 0) return null
     const appNameLower = app.displayName.toLowerCase()
     const appSlugLower = app.slug.toLowerCase()
     const filtered = allTokens.filter(t => !appNameLower.includes(t) && !appSlugLower.includes(t))
     return filtered.length === 0 ? null : filtered
-  }, [search, app])
+  }, [deferredSearch, app])
 
   // Filter shortcuts by search — strips tokens matching the current app name
   const filteredSections = useMemo(() => {
@@ -222,6 +225,22 @@ export default function ShortcutPage() {
             ))}
           </ul>
         </div>
+
+        {/* ─── Inline CTA ─── */}
+        {APP_STORE_URL && (
+          <div className="mt-8 max-w-[720px] flex items-center gap-4 rounded-2xl border border-theme-border bg-theme-base-alt p-5">
+            <div className="flex-1 min-w-0">
+              <p className="text-[15px] font-medium">{sp.ctaTitle(app.displayName)}</p>
+              <p className="text-[13px] text-theme-muted mt-0.5">{sp.ctaSubtitle}</p>
+            </div>
+            <Link
+              to="/mac-hud"
+              className="shrink-0 px-4 py-2 rounded-full bg-theme-accent text-theme-accent-text text-[13px] font-medium no-underline hover:opacity-90 transition-opacity"
+            >
+              Learn more
+            </Link>
+          </div>
+        )}
       </div>
 
       {/* ─── Sidebar + Main ─── */}
@@ -282,6 +301,9 @@ export default function ShortcutPage() {
                     </span>
                   </h2>
                   <table className="shortcut-table">
+                    <thead className="sr-only">
+                      <tr><th>Action</th><th>Shortcut</th></tr>
+                    </thead>
                     <tbody>
                       {section.shortcuts.map((s, j) => (
                         <tr key={j} className={j % 2 === 1 ? 'shortcut-row-alt' : ''}>
@@ -337,12 +359,7 @@ export default function ShortcutPage() {
             <p className="text-theme-accent-text/80 text-[15px] leading-relaxed mb-6 max-w-md mx-auto">
               {sp.ctaSubtitle}
             </p>
-            <Link
-              to="/mac-hud"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-theme-base text-theme-accent font-semibold text-[15px] no-underline hover:opacity-90 transition-opacity"
-            >
-              {sp.ctaButton}
-            </Link>
+            <MacAppStoreButton />
           </div>
         </div>
       </div>

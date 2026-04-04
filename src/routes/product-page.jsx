@@ -6,8 +6,10 @@ import { APP_COUNT, PRICE, APP_STORE_URL, formatShortcutCount } from "../data/si
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import Problem from "../components/Problem";
+import SocialProof from "../components/SocialProof";
 import Features from "../components/Features";
 import Details from "../components/Details";
+import MacAppStoreButton from "../components/MacAppStoreButton";
 import ShortcutPreview from "../components/ShortcutPreview";
 import AppCoverage from "../components/AppCoverage";
 import AppGrid from "../components/AppGrid";
@@ -66,6 +68,7 @@ export default function ProductPageRoute() {
       <main>
         <Hero />
         <Problem />
+        <SocialProof />
         <Features />
         {/* <section className="py-20 md:py-28 px-5 md:px-6">
           <div className="mx-auto max-w-md">
@@ -73,6 +76,12 @@ export default function ProductPageRoute() {
           </div>
         </section> */}
         <Details />
+        <section className="py-14 px-5 md:px-6">
+          <div className="mx-auto max-w-md text-center">
+            <p className="text-theme-muted text-[15px] mb-5">Ready to try it?</p>
+            <MacAppStoreButton />
+          </div>
+        </section>
         <ShortcutPreview />
         <AppCoverage />
         <AppGrid appCategories={appCategories} />
