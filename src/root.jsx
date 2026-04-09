@@ -1,7 +1,9 @@
-import { Links, Meta, Outlet, Scripts, ScrollRestoration, useNavigation } from "react-router";
+import { useEffect } from "react";
+import { Links, Meta, Outlet, Scripts, ScrollRestoration, useLocation, useNavigation } from "react-router";
 import { ThemeProvider } from "./hooks/useTheme";
 import ErrorBoundary from "./components/ErrorBoundary";
 import CookieConsent from "./components/CookieConsent";
+import { hasConsented, initAnalytics, trackPageView } from "./lib/analytics";
 import { CONTENT } from "./data/content";
 import "./index.css";
 
@@ -15,13 +17,13 @@ export function Layout({ children }) {
           httpEquiv="Content-Security-Policy"
           content={[
             "default-src 'self'",
-            "script-src 'self' 'unsafe-inline' https://static.cloudflareinsights.com https://pagead2.googlesyndication.com https://partner.googleadservices.com",
+            "script-src 'self' 'unsafe-inline' https://static.cloudflareinsights.com https://pagead2.googlesyndication.com https://partner.googleadservices.com https://www.googletagmanager.com https://www.google-analytics.com https://www.clarity.ms https://*.clarity.ms https://*.posthog.com https://us-assets.i.posthog.com https://eu-assets.i.posthog.com",
             // 'unsafe-inline' required: dynamic style attributes for runtime colors, flex widths, and sizing
             // cannot use nonces/hashes (CSP only supports those for <style> blocks, not style attributes)
             "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
             "font-src 'self' data: https://fonts.gstatic.com",
-            "img-src 'self' data: https://hgxtwlynuixwwyjykiqd.supabase.co",
-            "connect-src 'self' https://*.cloudflareinsights.com https://cloudflareinsights.com https://pagead2.googlesyndication.com https://hgxtwlynuixwwyjykiqd.supabase.co",
+            "img-src 'self' data: https://hgxtwlynuixwwyjykiqd.supabase.co https://www.google-analytics.com https://*.google-analytics.com https://*.clarity.ms https://c.bing.com",
+            "connect-src 'self' https://*.cloudflareinsights.com https://cloudflareinsights.com https://pagead2.googlesyndication.com https://hgxtwlynuixwwyjykiqd.supabase.co https://www.google-analytics.com https://*.analytics.google.com https://*.google-analytics.com https://*.clarity.ms https://*.posthog.com https://us.i.posthog.com https://eu.i.posthog.com",
             "frame-src https://googleads.g.doubleclick.net",
             "object-src 'none'",
             "base-uri 'self'",
@@ -109,11 +111,25 @@ function NavigationLoader() {
   );
 }
 
+// Auto-inits analytics for returning visitors who already accepted the cookie
+// banner, and fires a page view on every client-side route change. For first-
+// time visitors, CookieConsent calls initAnalytics() directly on accept.
+function AnalyticsTracker() {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    if (hasConsented()) {
+      initAnalytics().then(() => trackPageView(pathname));
+    }
+  }, [pathname]);
+  return null;
+}
+
 export default function Root() {
   return (
     <ThemeProvider>
       <div className="relative">
         <NavigationLoader />
+        <AnalyticsTracker />
         <ErrorBoundary>
           <Outlet />
         </ErrorBoundary>

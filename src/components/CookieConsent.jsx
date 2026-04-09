@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { X } from '../utils/icons'
+import { initAnalytics, trackPageView } from '../lib/analytics'
 
 const CONSENT_KEY = 'cookie-consent'
 
@@ -23,9 +24,14 @@ export default function CookieConsent() {
       })
   }, [])
 
-  function accept() {
+  async function accept() {
     localStorage.setItem(CONSENT_KEY, 'accepted')
     setVisible(false)
+    await initAnalytics()
+    trackPageView(window.location.pathname)
+    // trackEvent is safe here: analytics just initialized above
+    const { trackEvent } = await import('../lib/analytics')
+    trackEvent('cookie_consent_accepted')
   }
 
   function decline() {
@@ -39,8 +45,9 @@ export default function CookieConsent() {
     <div className="fixed bottom-0 left-0 right-0 z-[9999] p-4 md:p-6">
       <div className="mx-auto max-w-[680px] bg-theme-accent text-theme-accent-text rounded-2xl px-6 py-5 flex flex-col sm:flex-row items-start sm:items-center gap-4 shadow-lg relative">
         <p className="text-[14px] leading-relaxed flex-1">
-          This website uses cookies for analytics and advertising (Google AdSense).
-          By continuing to browse, you consent to our use of cookies.{' '}
+          This website uses cookies for advertising (Google AdSense) and analytics
+          (Google Analytics, Microsoft Clarity, PostHog). By accepting, you consent
+          to our use of cookies.{' '}
           <a href="/privacy" className="underline hover:opacity-80">Learn more</a>.
         </p>
         <div className="flex items-center gap-2 shrink-0">

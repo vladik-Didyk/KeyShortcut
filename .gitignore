@@ -34,3 +34,12 @@ public/images/platform-icons/
 *.njsproj
 *.sln
 *.sw?
+
+# Claude Code local settings + skills
+.claude/
+
+# Playwright MCP browser session artifacts (local debug only)
+.playwright-mcp/
+
+# Orphan setup reports / scratch notes
+posthog-setup-report.md

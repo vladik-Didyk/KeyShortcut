@@ -189,6 +189,29 @@ Vitest with jsdom environment, globals enabled, setup in `src/test/setup.js` (im
 
 Flat config (`eslint.config.js`). `no-unused-vars` ignores names matching `^[A-Z_]`. `react-refresh/only-export-components` is disabled for route modules (`src/routes/`) since they export loaders/meta alongside components.
 
+### Analytics stack
+
+Three consent-gated tools live behind a single wrapper at `src/lib/analytics.js`. Each tool is independent — omit its env var to disable just that tool.
+
+| Tool | Env var | Notes |
+|---|---|---|
+| Google Analytics 4 | `VITE_GA4_ID` | Page views fired manually on every route change (`send_page_view: false`) |
+| Microsoft Clarity | `VITE_CLARITY_ID` | Heatmaps + session recordings |
+| PostHog | `VITE_POSTHOG_KEY`, `VITE_POSTHOG_HOST` (default `https://us.i.posthog.com`) | Loaded via dynamic `import("posthog-js")` to keep it out of the initial bundle |
+
+**Invariants — do not break:**
+
+1. **Consent gate** — nothing loads before `initAnalytics()`. There must be no pre-consent `<script>` tags for any of the three tools in `src/root.jsx`. All injection happens at runtime inside `src/lib/analytics.js`, only after `CookieConsent.accept()` runs or `AnalyticsTracker` detects existing consent on a returning visit.
+2. **CSP allowlist** — every analytics origin must be in the inline CSP meta tag in `src/root.jsx` (`script-src` / `connect-src` / `img-src`). Adding a new tool requires extending the allowlist in the same change; a missing origin makes the script silently fail.
+3. **SSR-safe** — every entry point in `analytics.js` must guard `if (typeof window === "undefined") return;`. This is a React Router v7 SSR app and the wrapper is imported by pre-rendered route modules.
+4. **Idempotent init** — `initAnalytics()` short-circuits on second call via the `initialized` flag. Safe to call from both `CookieConsent.accept()` and `AnalyticsTracker`.
+
+**Consent banner** lives at `src/components/CookieConsent.jsx`. The `cookie-consent` localStorage key holds `accepted` | `declined` (absent = banner shown). GDPR region detection runs through the Cloudflare Function at `functions/api/geo.js` to decide whether the Decline button is rendered.
+
+**Route-change page views** are fired by the `AnalyticsTracker` component in `src/root.jsx`, which watches `useLocation().pathname` and calls `trackPageView()` after re-confirming consent.
+
+Reference implementation (non-SSR variant) at `Personal-Portfolio/src/lib/analytics.js`.
+
 ### Deployment
 
 Hosted on **Cloudflare Pages** (project: `keyshortcut`). Domain: `keyshortcut.com` via Namecheap (nameservers pointed to Cloudflare).
