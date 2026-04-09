@@ -71,7 +71,7 @@ Route modules live in `src/routes/` and export `loader`, `meta`, and a default c
 - `guide-page.jsx` — `/guides/:slug` Individual guide (content from `src/data/guides/`)
 - `cheat-sheets.jsx` — `/cheat-sheets` PDF cheat sheet generator (uses jspdf)
 - `compare-index.jsx` — `/compare` App comparison listing
-- `compare-page.jsx` — `/compare/:pair` Side-by-side app shortcut comparison
+- `compare-page.jsx` — `/compare/:slug` Side-by-side app shortcut comparison (slug format: `appA-vs-appB`)
 - `privacy.jsx` — `/privacy` Privacy policy
 - `about.jsx` — `/about` About page
 - `redirect-directory.jsx` — `/directory` → `/` redirect (301)
