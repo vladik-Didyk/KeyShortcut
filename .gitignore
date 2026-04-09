@@ -35,8 +35,9 @@ public/images/platform-icons/
 *.sln
 *.sw?
 
-# Claude Code local settings + skills
+# Claude Code local settings, skills, and prompt data
 .claude/
+.github/prompts/
 
 # Playwright MCP browser session artifacts (local debug only)
 .playwright-mcp/

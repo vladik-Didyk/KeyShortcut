@@ -11,6 +11,7 @@ import { useInView } from '../hooks/useInView'
 import { CONTENT } from '../data/content'
 import AdSlot from './AdSlot'
 import { APP_STORE_URL } from '../data/siteConfig'
+import { trackEvent } from '../lib/analytics'
 
 export default function DirectoryHomepage() {
   const loaderData = useLoaderData()
@@ -119,12 +120,14 @@ export default function DirectoryHomepage() {
 
   const setCategory = useCallback((cat) => {
     setActiveCategory(cat)
-  }, [])
+    if (cat) trackEvent('category_filtered', { category: cat, platform: selectedPlatform })
+  }, [selectedPlatform])
 
   const setPlatform = useCallback((id) => {
     setSelectedPlatform(id)
     setActiveCategory(null)
     setSearch('')
+    trackEvent('platform_switched', { platform: id })
   }, [])
 
   // Platform is detected at initialization via useState initializer above
@@ -231,6 +234,7 @@ export default function DirectoryHomepage() {
                 onKeyDown={e => {
                   if (e.key === 'Enter' && search) {
                     e.preventDefault()
+                    trackEvent('directory_search_performed', { query: search, platform: selectedPlatform, has_results: hasSmartResults })
                     const topApp = smartResults.appMatches[0]
                     if (topApp) {
                       navigate(`/${selectedPlatform}/${topApp.slug}`)
@@ -446,6 +450,7 @@ export default function DirectoryHomepage() {
             <Link
               to="/mac-hud"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-theme-base text-theme-accent font-semibold text-[15px] no-underline hover:opacity-90 transition-opacity"
+              onClick={() => trackEvent('mac_hud_promo_clicked', { source: 'directory_homepage' })}
             >
               {CONTENT.home.promo.button}
               <ArrowRight size={16} />

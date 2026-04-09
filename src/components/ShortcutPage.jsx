@@ -10,6 +10,7 @@ import { APP_STORE_URL } from '../data/siteConfig'
 import AdSlot from './AdSlot'
 import { tokenize } from '../utils/searchHelpers'
 import { parseKeyParts } from '../utils/platformHelpers'
+import { trackEvent } from '../lib/analytics'
 
 function Keycap({ children }) {
   return <kbd className="keycap">{children}</kbd>
@@ -45,6 +46,12 @@ export default function ShortcutPage() {
     ro.observe(el)
     return () => ro.disconnect()
   }, [])
+
+  // Track shortcut page view (top of conversion funnel)
+  useEffect(() => {
+    trackEvent('shortcut_page_viewed', { app: slug, platform, app_name: app.displayName })
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [slug, platform])
 
   // "/" keyboard shortcut to focus in-app search
   useEffect(() => {
@@ -169,6 +176,7 @@ export default function ShortcutPage() {
               onClick={async () => {
                 const { generateShortcutPDF } = await import('../utils/generateShortcutPDF')
                 generateShortcutPDF(app)
+                trackEvent('shortcut_pdf_downloaded', { app: slug, platform, app_name: app.displayName })
               }}
               className="p-1.5 rounded-lg border border-theme-border hover:bg-theme-base-alt text-theme-muted hover:text-theme-text transition-colors shrink-0 cursor-pointer"
               title={sp.downloadTitle}
@@ -184,6 +192,7 @@ export default function ShortcutPage() {
                 className="p-1.5 rounded-lg border border-theme-border hover:bg-theme-base-alt text-theme-muted hover:text-theme-text transition-colors shrink-0 no-underline"
                 title="View official documentation"
                 aria-label="View official documentation"
+                onClick={() => trackEvent('docs_link_clicked', { app: slug, platform, app_name: app.displayName, docs_url: app.docsUrl })}
               >
                 <ExternalLink size={14} />
               </a>
@@ -416,7 +425,11 @@ function FaqAccordion({ question, answer }) {
   return (
     <div className="rounded-xl border border-theme-border overflow-hidden">
       <button
-        onClick={() => setOpen(!open)}
+        onClick={() => {
+          const next = !open
+          setOpen(next)
+          if (next) trackEvent('faq_item_expanded', { question })
+        }}
         className="w-full flex items-center justify-between px-5 py-4 text-left bg-transparent border-none cursor-pointer text-theme-text hover:bg-theme-base-alt transition-colors"
       >
         <span className="text-[15px] font-medium pr-4">{question}</span>

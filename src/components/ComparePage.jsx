@@ -1,7 +1,18 @@
 import { Link } from 'react-router'
+import { useEffect } from 'react'
 import AdSlot from './AdSlot'
+import { trackEvent } from '../lib/analytics'
 
 export default function ComparePage({ appA, appB, comparison }) {
+  // Track comparison page view (top of funnel)
+  useEffect(() => {
+    trackEvent('compare_page_viewed', {
+      app_a: appA.slug,
+      app_b: appB.slug,
+      platform: comparison.platform,
+    })
+  }, [appA.slug, appB.slug, comparison.platform])
+
   // Find overlapping section names (case-insensitive)
   const normalize = name => name.toLowerCase().trim()
   const sectionsA = new Map(appA.sections.map(s => [normalize(s.name), s]))

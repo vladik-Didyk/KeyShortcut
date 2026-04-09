@@ -451,8 +451,8 @@
       "displayName": "Maya",
       "tier": 3,
       "sources": {
-        "macos": { "url": "https://help.autodesk.com/view/MAYAUL/2024/ENU/?guid=GUID-D1D50B5A-CEF0-4C40-A820-4F1E0A7B2E28", "parser": "ai-extract" },
-        "windows": { "url": "https://help.autodesk.com/view/MAYAUL/2024/ENU/?guid=GUID-D1D50B5A-CEF0-4C40-A820-4F1E0A7B2E28", "parser": "ai-extract" }
+        "macos": { "url": "https://help.autodesk.com/view/MAYAUL/2024/ENU/?guid=GUID-30CACC9D-8FBE-4B85-8A8F-C5ADF32DDD4E", "parser": "ai-extract" },
+        "windows": { "url": "https://help.autodesk.com/view/MAYAUL/2024/ENU/?guid=GUID-30CACC9D-8FBE-4B85-8A8F-C5ADF32DDD4E", "parser": "ai-extract" }
       }
     },
     "messages": {

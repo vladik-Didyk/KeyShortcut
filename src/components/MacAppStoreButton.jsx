@@ -1,5 +1,6 @@
 import { APP_STORE_URL } from '../data/siteConfig'
 import { CONTENT } from '../data/content'
+import { trackEvent } from '../lib/analytics'
 
 export default function MacAppStoreButton({ href = APP_STORE_URL, className = '' }) {
   if (!href) return null
@@ -11,6 +12,7 @@ export default function MacAppStoreButton({ href = APP_STORE_URL, className = ''
       rel="noopener noreferrer"
       aria-label={CONTENT.shared.macAppStoreButton.ariaLabel}
       className={`inline-flex items-center justify-center transition-opacity hover:opacity-80 ${className}`}
+      onClick={() => trackEvent('app_store_clicked', { destination: href })}
     >
       <img
         src="/images/app-store-badge.png"
