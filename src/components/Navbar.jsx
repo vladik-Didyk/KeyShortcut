@@ -54,11 +54,9 @@ export default function Navbar() {
         </div>
 
         <div className="flex items-center gap-3">
-          {APP_STORE_URL && (
+          {APP_STORE_URL && isProductPage && (
             <a
-              href={isProductPage ? '#download' : APP_STORE_URL}
-              target={isProductPage ? undefined : '_blank'}
-              rel={isProductPage ? undefined : 'noopener noreferrer'}
+              href="#download"
               className="text-xs font-medium px-4 py-1.5 rounded-full no-underline transition-colors border-[1.5px] border-theme-accent hover:bg-theme-accent hover:text-theme-accent-text bg-theme-accent text-theme-accent-text"
             >
               {navbar.downloadLabel}
